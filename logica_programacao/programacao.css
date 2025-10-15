@@ -1,0 +1,413 @@
+/* programacao.css - Página Lógica de Programação */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header e Navegação - CORREÇÃO COMPLETA */
+header {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 100%;
+}
+
+nav {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    display: block;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    text-decoration: none !important;
+}
+
+/* Banner */
+.page-banner {
+    background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(52, 152, 219, 0.8)),
+        url('../img/banner5.png') center/cover;
+    padding: 100px 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* Centraliza horizontalmente */
+    justify-content: center;  /* Centraliza verticalmente */
+    text-align: center;
+    height: 100vh;            /* Ocupa toda a altura da tela */
+}
+
+.page-banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.page-banner p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Conteúdo Principal */
+.conteudo-principal {
+    padding: 60px 0;
+    background: white;
+}
+
+.introducao {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.introducao h2 {
+    color: #2c3e50;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.introducao p {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.topico {
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.topico h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+/* Linguagens de Programação */
+.linguagens-info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+.conceito-linguagens h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.linguagens-detalhes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.linguagem-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.linguagem-item h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.imagem-linguagem img {
+    width: 100%;
+    max-width: 100px;
+    margin: 1rem auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Comparação Linguagens */
+.comparacao-linguagens {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.tipo-linguagem {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.tipo-linguagem h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.imagem-processo img {
+    width: 100%;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/* HTML e CSS */
+.html-css-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.tecnologia-web {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.tecnologia-web h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.imagem-tecnologia img {
+    width: 100%;
+    max-width: 100px;
+    margin: 1rem auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* IDEs */
+.ides-info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+.conceito-ide h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.ides-populares {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.ide-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.ide-item h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.imagem-ide img {
+    width: 100%;
+    max-width: 80px;
+    margin: 1rem auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Scripts e Programas */
+.scripts-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.script-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.script-item h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.btn-script {
+    display: inline-block;
+    background: #3498db;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid #3498db;
+    margin-top: 1rem;
+}
+
+.btn-script:hover {
+    background: transparent;
+    color: #3498db;
+}
+
+/* Explicação Busca Linear */
+.explicacao-busca {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.texto-explicacao h3 {
+    color: #3498db;
+    margin: 1.5rem 0 1rem;
+}
+
+.texto-explicacao h3:first-child {
+    margin-top: 0;
+}
+
+.pseudocodigo h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+/* Exemplos de Código */
+.exemplo-codigo {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    overflow-x: auto;
+}
+
+.exemplo-codigo pre {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    white-space: pre-wrap;
+}
+
+/* Listas */
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0;
+}
+
+li {
+    padding: 0.5rem 0;
+}
+
+/* Footer */
+.site-footer {
+    background: #2c3e50;
+    color: white;
+    padding: 50px 0 20px;
+    margin: 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-coluna h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-coluna ul {
+    list-style: none;
+}
+
+.footer-coluna li {
+    margin-bottom: 0.5rem;
+    border-bottom: none;
+}
+
+.footer-coluna a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-coluna a:hover {
+    color: #3498db;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #34495e;
+    color: #95a5a6;
+}

@@ -1,0 +1,417 @@
+/* ti.css - Página Fundamentos de TI */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header e Navegação */
+header {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 100%;
+}
+
+nav {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    display: block;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    text-decoration: none !important;
+}
+
+/* Banner */
+.page-banner {
+    background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(52, 152, 219, 0.8)),
+        url('../img/banner5.png') center/cover;
+    padding: 100px 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* Centraliza horizontalmente */
+    justify-content: center;  /* Centraliza verticalmente */
+    text-align: center;
+    height: 100vh;            /* Ocupa toda a altura da tela */
+}
+
+.page-banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.page-banner p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Conteúdo Principal */
+.conteudo-principal {
+    padding: 60px 0;
+    background: white;
+}
+
+.introducao {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.introducao h2 {
+    color: #2c3e50;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.introducao p {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.topico {
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.topico h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+/* Hardware */
+.hardware-info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+.conceito-hardware h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.componentes-hardware {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.componente-hardware {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.componente-hardware h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.imagem-componente img {
+    width: 100%;
+    max-width: 200px;
+    margin: 1rem auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Sistema Operacional */
+.sistema-operacional-info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+.conceito-so h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.exemplos-so h3 {
+    color: #3498db;
+    margin-bottom: 1.5rem;
+}
+
+.so-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.so-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.so-item h4 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.imagem-so img {
+    width: 100%;
+    max-width: 80px;
+    margin: 1rem auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Sistema de Arquivos */
+.sistema-arquivos-info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+.conceito-sistema-arquivos h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.modos-acesso {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.modo-acesso {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.modo-acesso h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.imagem-modo img {
+    width: 100%;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/* Software de Escritório */
+.software-escritorio-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.conceito-software-escritorio h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.exemplos-software {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.software-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.software-item h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.imagem-software img {
+    width: 100%;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.exercicio-exemplo {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    border-left: 4px solid #3498db;
+}
+
+.exercicio-exemplo h4 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.alternativas-software h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.alternativas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.alternativa {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.alternativa h4 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+/* Exemplos de Código */
+.exemplo-codigo {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    overflow-x: auto;
+}
+
+.exemplo-codigo pre {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    white-space: pre-wrap;
+}
+
+/* Listas */
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0;
+}
+
+li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+/* Footer */
+.site-footer {
+    background: #2c3e50;
+    color: white;
+    padding: 50px 0 20px;
+    margin: 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-coluna h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-coluna ul {
+    list-style: none;
+}
+
+.footer-coluna li {
+    margin-bottom: 0.5rem;
+    border-bottom: none;
+}
+
+.footer-coluna a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-coluna a:hover {
+    color: #3498db;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #34495e;
+    color: #95a5a6;
+}

@@ -1,0 +1,520 @@
+/* banco_dados.css - Página Fundamentos de Banco de Dados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header e Navegação */
+header {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Banner */
+.page-banner {
+     background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(52, 152, 219, 0.8)),
+        url('../img/banner5.png') center/cover;
+    padding: 100px 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* Centraliza horizontalmente */
+    justify-content: center;  /* Centraliza verticalmente */
+    text-align: center;
+    height: 100vh;            /* Ocupa toda a altura da tela */
+}
+
+.page-banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.page-banner p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Conteúdo Principal */
+.conteudo-principal {
+    padding: 60px 0;
+    background: white;
+}
+
+.introducao {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.introducao h2 {
+    color: #2c3e50;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.introducao p {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.topico {
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.topico h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+.sgbd-info {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.texto-sgbd h3 {
+    color: #3498db;
+    margin: 1.5rem 0 1rem;
+}
+
+.tipos-sgbd {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.tipo {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 3px solid #3498db;
+}
+
+.texto-sgbd ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.texto-sgbd li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.texto-sgbd li:before {
+    content: "•";
+    color: #3498db;
+    margin-right: 10px;
+}
+
+.imagem-sgbd img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.bancos-dados {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.categoria-bancos h3 {
+    color: #3498db;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.banco-lista {
+    display: grid;
+    gap: 1rem;
+}
+
+.banco-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 3px solid #3498db;
+}
+
+.dicionario-dados {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.tipos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.tipo-dado-bd {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.tipo-dado-bd h4 {
+    color: #2c3e50;
+    margin-bottom: 0.8rem;
+    border-bottom: 1px solid #ecf0f1;
+    padding-bottom: 0.5rem;
+}
+
+.tipo-dado-bd ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.tipo-dado-bd li {
+    padding: 0.3rem 0;
+    font-size: 0.9rem;
+}
+
+.modelagem-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.elementos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.elemento {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    border-top: 3px solid #3498db;
+}
+
+.exemplo-der,
+.exemplo-mer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.estrutura-mer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.entidade-mer {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #3498db;
+}
+
+.imagem-der img,
+.imagem-mer img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.formulario-cadastro {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.tabela-estrutura {
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+.tabela-estrutura table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.tabela-estrutura th,
+.tabela-estrutura td {
+    padding: 0.8rem;
+    text-align: left;
+    border: 1px solid #ecf0f1;
+}
+
+.tabela-estrutura th {
+    background: #3498db;
+    color: white;
+    font-weight: 600;
+}
+
+.tabela-estrutura tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.formulario-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.form-cadastro {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.campo-form {
+    margin-bottom: 1rem;
+}
+
+.campo-form label {
+    display: block;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.campo-form input,
+.campo-form select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.campo-form input:focus,
+.campo-form select:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.acoes-form {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.btn-submit,
+.btn-reset {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-submit {
+    background: #3498db;
+    color: white;
+}
+
+.btn-reset {
+    background: #95a5a6;
+    color: white;
+}
+
+.btn-submit:hover {
+    background: #2980b9;
+}
+
+.btn-reset:hover {
+    background: #7f8c8d;
+}
+
+.dados-simulados {
+    background: #2c3e50;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.dados-exemplo pre {
+    background: #34495e;
+    padding: 1rem;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+.site-footer {
+    background: #2c3e50;
+    color: white;
+    padding: 50px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-coluna h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-coluna ul {
+    list-style: none;
+}
+
+.footer-coluna li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-coluna a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-coluna a:hover {
+    color: #3498db;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #34495e;
+    color: #95a5a6;
+}
+
+.bancos-dados {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+}
+
+.categoria-bancos h3 {
+    color: #3498db;
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    border-bottom: 1px solid #ecf0f1;
+    padding-bottom: 0.5rem;
+}
+
+.banco-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.banco-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.banco-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.banco-logo {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 8px;
+    padding: 8px;
+    border: 2px solid #ecf0f1;
+}
+
+.banco-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.banco-info {
+    flex: 1;
+}
+
+.banco-info h4 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.banco-info p {
+    color: #7f8c8d;
+    line-height: 1.5;
+    margin: 0;
+}

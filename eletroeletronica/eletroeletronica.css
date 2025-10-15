@@ -1,0 +1,573 @@
+/* eletroeletronica.css - Página Fundamentos de Eletroeletrônica */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header e Navegação */
+header {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Banner */
+.page-banner {
+    background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(52, 152, 219, 0.8)),
+        url('../img/banner5.png') center/cover;
+    padding: 100px 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* Centraliza horizontalmente */
+    justify-content: center;  /* Centraliza verticalmente */
+    text-align: center;
+    height: 100vh;            /* Ocupa toda a altura da tela */
+}
+
+.page-banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.page-banner p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Conteúdo Principal */
+.conteudo-principal {
+    padding: 60px 0;
+    background: white;
+}
+
+.introducao {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.introducao h2 {
+    color: #2c3e50;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.introducao p {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.topico {
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.topico h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+/* Componentes */
+.componentes-grid,
+.sensores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.componente,
+.sensor {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.componente:hover,
+.sensor:hover {
+    transform: translateY(-5px);
+}
+
+.imagem-componente img,
+.imagem-sensor img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.componente h3,
+.sensor h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+/* Arduino */
+.arduino-info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.imagem-arduino img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.texto-arduino h3 {
+    color: #3498db;
+    margin: 1.5rem 0 1rem;
+}
+
+.texto-arduino h3:first-child {
+    margin-top: 0;
+}
+
+.texto-arduino ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.texto-arduino li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.texto-arduino li:before {
+    content: "•";
+    color: #3498db;
+    margin-right: 10px;
+}
+
+/* Funcionamento Arduino */
+.funcionamento-arduino h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.funcionamento-arduino ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0;
+}
+
+.funcionamento-arduino li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.funcionamento-arduino li:before {
+    content: "•";
+    color: #3498db;
+    margin-right: 10px;
+}
+
+/* Linguagens Programação */
+.linguagens-programacao h3 {
+    color: #3498db;
+    margin: 1.5rem 0 1rem;
+}
+
+.linguagens-programacao ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.linguagens-programacao li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+/* Entradas e Saídas */
+.entradas-saidas,
+.analogicas {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.entradas-saidas h3,
+.analogicas h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.imagem-entradas-saidas img,
+.imagem-analogicas img {
+    width: 100%;
+    max-width: 400px;
+    margin: 1rem auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Scripts */
+.scripts-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.script-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.script-item h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.btn-script {
+    display: inline-block;
+    background: #3498db;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid #3498db;
+    margin-top: 1rem;
+}
+
+.btn-script:hover {
+    background: transparent;
+    color: #3498db;
+}
+
+/* Diodos e Display */
+.diodos-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.item-diodo {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.item-diodo h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.imagem-diodo img,
+.imagem-led img,
+.imagem-display img {
+    width: 100%;
+    max-width: 200px;
+    margin: 1rem auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Footer */
+.site-footer {
+    background: #2c3e50;
+    color: white;
+    padding: 50px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-coluna h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-coluna ul {
+    list-style: none;
+}
+
+.footer-coluna li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-coluna a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-coluna a:hover {
+    color: #3498db;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #34495e;
+    color: #95a5a6;
+}
+
+/* Calculadora Lei de Ohm */
+main {
+    background: #f8f9fa;
+    min-height: calc(100vh - 160px);
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+main > p {
+    color: #7f8c8d;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+main > div {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+    margin-bottom: 1rem;
+    transform: scale(1.2);
+}
+
+label {
+    color: #2c3e50;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+label:hover {
+    color: #3498db;
+}
+
+#camposEntrada {
+    background: #f8f9fa;
+    border: 2px solid #ecf0f1;
+}
+
+#camposEntrada h3 {
+    color: #3498db;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.grupo-input {
+    margin-bottom: 1.5rem;
+}
+
+.grupo-input label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.grupo-input input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ecf0f1;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.grupo-input input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+button {
+    background: #3498db;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 10px;
+    border: 2px solid #3498db;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+button:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+button:last-of-type {
+    background: #95a5a6;
+    border-color: #95a5a6;
+}
+
+button:last-of-type:hover {
+    background: #7f8c8d;
+}
+
+#resultado {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2rem;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent;
+    margin-top: 2rem;
+}
+
+.resultado-sucesso {
+    color: #27ae60;
+    background: #d5f4e6;
+    border-color: #27ae60;
+}
+
+.resultado-erro {
+    color: #e74c3c;
+    background: #fadbd8;
+    border-color: #e74c3c;
+}
+
+.botoes-container {
+    text-align: center;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 1rem !important;
+    margin-top: 2rem;
+}
+
+/* Botão Voltar */
+.btn-voltar {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #3498db;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid #3498db;
+    margin: 20px 0;
+}
+
+.btn-voltar:hover {
+    background: transparent;
+    color: #3498db;
+    transform: translateX(-5px);
+}
+
+.btn-voltar::before {
+    content: "←";
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-voltar:hover::before {
+    transform: translateX(-3px);
+}
+
+/* Container do botão voltar */
+.voltar-container {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    padding: 0 20px;
+}
+
