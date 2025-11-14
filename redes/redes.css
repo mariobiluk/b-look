@@ -1,15 +1,7 @@
-/* desenvolvimento.css - Página em Desenvolvimento */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow-x: hidden;
 }
 
 body {
@@ -17,9 +9,7 @@ body {
     line-height: 1.6;
     color: #2c3e50;
     background: #f8f9fa;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    text-decoration: none;
 }
 
 .container {
@@ -28,20 +18,10 @@ body {
     padding: 0 20px;
 }
 
-/* Header e Navegação */
+/* Header e Navegação - EXATAMENTE IGUAL AO ORIGINAL */
 header {
     background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
     color: white;
-    margin: 0;
-    padding: 0;
-    border: none;
-    width: 100%;
-}
-
-nav {
-    margin: 0;
-    padding: 0;
-    width: 100%;
 }
 
 .nav-container {
@@ -51,52 +31,34 @@ nav {
     padding: 1rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    width: 100%;
 }
 
 .logo img {
     height: 50px;
     width: auto;
-    display: block;
 }
 
 nav ul {
     display: flex;
     list-style: none;
     gap: 2rem;
-    margin: 0;
-    padding: 0;
-}
-
-nav li {
-    margin: 0;
-    padding: 0;
 }
 
 nav a {
     color: white;
-    text-decoration: none !important;
+    text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
     padding: 0.5rem 1rem;
     border-radius: 5px;
-    display: block;
 }
 
 nav a:hover {
     background: rgba(255, 255, 255, 0.1);
     transform: translateY(-2px);
-    text-decoration: none !important;
 }
 
-/* Conteúdo Principal */
-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
+/* Banner */
 .page-banner {
     background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(52, 152, 219, 0.8)),
         url('../img/banner5.png') center/cover;
@@ -110,141 +72,324 @@ main {
     height: 100vh;            /* Ocupa toda a altura da tela */
 }
 
-.conteudo-principal {
-    padding: 80px 0;
-    background: white;
-    text-align: center;
-}
-
-.desenvolvimento-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.fa-tools {
-    font-size: 4rem;
-    color: #3498db;
-    margin-bottom: 2rem;
-}
-
-.desenvolvimento-content h1 {
-    color: #2c3e50;
+.page-banner h1 {
     font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.page-banner p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Conteúdo Principal */
+.conteudo-principal {
+    padding: 60px 0;
+    background: white;
+}
+
+.introducao {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.introducao h2 {
+    color: #2c3e50;
+    font-size: 2.2rem;
     margin-bottom: 1.5rem;
 }
 
-.desenvolvimento-content p {
+.introducao p {
     color: #7f8c8d;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
     line-height: 1.7;
 }
 
-/* Informações Adicionais */
-.info-desenvolvimento {
+.topico {
+    margin-bottom: 4rem;
+    padding: 2rem;
     background: #f8f9fa;
-    padding: 2rem;
     border-radius: 10px;
-    margin: 3rem 0;
-    text-align: left;
 }
 
-.info-desenvolvimento h2 {
+.topico h2 {
     color: #2c3e50;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-.info-desenvolvimento ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.info-desenvolvimento li {
-    padding: 0.8rem 0;
-    border-bottom: 1px solid #ecf0f1;
-    margin-bottom: 0.5rem;
-}
-
-.info-desenvolvimento a {
-    color: #3498db;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.info-desenvolvimento a:hover {
-    color: #2980b9;
-    text-decoration: underline;
-}
-
-/* Status do Desenvolvimento */
-.status-desenvolvimento {
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    border: 2px solid #3498db;
-    margin: 2rem 0;
-}
-
-.status-desenvolvimento h3 {
-    color: #2c3e50;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.status-desenvolvimento p {
-    margin-bottom: 0.5rem;
-}
-
-.status-desenvolvimento strong {
-    color: #3498db;
-}
-
-/* Seção de Contato */
-.contato-rapido {
-    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
-    color: white;
-    padding: 60px 0;
-    text-align: center;
-}
-
-.contato-rapido h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.contato-rapido p {
-    font-size: 1.1rem;
-    opacity: 0.9;
+    font-size: 1.8rem;
     margin-bottom: 2rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
 }
 
-.botoes-contato {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
+/* Conceitos Fundamentais */
+.conceitos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
 }
 
-.btn-contato {
-    display: inline-block;
+.conceito-item {
     background: white;
-    color: #3498db;
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    border: 2px solid white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
-.btn-contato:hover {
-    background: transparent;
-    color: white;
-    transform: translateY(-2px);
+.conceito-item h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.conceito-item ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0;
+}
+
+.conceito-item li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.conceito-item li:before {
+    content: "•";
+    color: #3498db;
+    margin-right: 10px;
+}
+
+/* Infraestrutura */
+.infraestrutura-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.texto-infraestrutura h3 {
+    color: #3498db;
+    margin: 1.5rem 0 1rem;
+}
+
+.texto-infraestrutura h3:first-child {
+    margin-top: 0;
+}
+
+.imagem-mapa img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.legenda-mapa {
+    text-align: center;
+    color: #7f8c8d;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+/* Hardware de Redes */
+.hardware-redes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.tipo-rede {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.tipo-rede h3 {
+    color: #3498db;
+    margin-bottom: 1.5rem;
+}
+
+.componentes-lista {
+    display: grid;
+    gap: 1rem;
+}
+
+.componente-rede {
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 5px;
+    border-left: 3px solid #3498db;
+}
+
+.componente-rede h4 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+/* Protocolos e Modelos */
+.protocolos-info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+.conceito-protocolo h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.modelos-comparacao {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.modelo-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.modelo-item h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.modelo-item ol {
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+}
+
+.modelo-item li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+/* Protocolos IP */
+.protocolos-ip {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.ip-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.ip-item h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+/* Programação Backend */
+.programacao-backend {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.exemplo-codigo {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 1.5rem;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.exemplo-codigo pre {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    white-space: pre-wrap;
+}
+
+.exemplo-codigo h3 {
+    color: #ecf0f1;
+    margin-bottom: 1rem;
+}
+
+.explicacao-codigo h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+/* Protocolos Web */
+.protocolos-web {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.protocolo-web-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.protocolo-web-item h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+/* Frameworks Node.js */
+.frameworks-node {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.framework-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.framework-item h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.exemplo-framework {
+    margin-top: 1.5rem;
+}
+
+.exemplo-framework h4 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.outros-frameworks h3 {
+    color: #3498db;
+    margin-bottom: 1.5rem;
+}
+
+.framework-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.framework-alternativo {
+    background: white;
+    padding: 1rem;
+    border-radius: 5px;
+    border-left: 3px solid #3498db;
+}
+
+.framework-alternativo h4 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+/* Listas */
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0;
 }
 
 /* Footer */
@@ -252,7 +397,6 @@ main {
     background: #2c3e50;
     color: white;
     padding: 50px 0 20px;
-    margin: 0;
 }
 
 .footer-content {
@@ -270,7 +414,6 @@ main {
 
 .footer-coluna ul {
     list-style: none;
-    padding: 0;
 }
 
 .footer-coluna li {
@@ -293,4 +436,3 @@ main {
     border-top: 1px solid #34495e;
     color: #95a5a6;
 }
-

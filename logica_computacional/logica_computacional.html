@@ -259,200 +259,39 @@ cadeia nomes[3] = {"Ana", "Bruno", "Carla"}
                     <h2>6. Exemplos de Programas em Portugol com Funções</h2>
                     <div class="exemplos-funcoes">
                         <div class="exemplo-programa">
-                            <h3>Exemplo 1: Calculadora Básica</h3>
-                            <div class="codigo-portugol">
-                                <pre>
-programa
-{
-    funcao inicio()
-    {
-        real numero1, numero2, resultado
-        cadeia operacao
-        
-        escreva("Digite o primeiro número: ")
-        leia(numero1)
-        escreva("Digite a operação (+, -, *, /): ")
-        leia(operacao)
-        escreva("Digite o segundo número: ")
-        leia(numero2)
-        
-        se (operacao == "+") {
-            resultado = numero1 + numero2
-        } senao se (operacao == "-") {
-            resultado = numero1 - numero2
-        } senao se (operacao == "*") {
-            resultado = numero1 * numero2
-        } senao se (operacao == "/") {
-            resultado = numero1 / numero2
-        } senao {
-            escreva("Operação inválida!\n")
-            retorne
-        }
-        
-        escreva("Resultado: ", resultado, "\n")
-    }
-}
-                                </pre>
+                            <h3>Exemplo 1: Cálculo de área das figuras geométricas:</h3>
+                            <div class="imagem-exemplo01">
+                                <img src="../img/img_computacional/imgExemplo01.png" alt="Exemplo de Algoritmo">
                             </div>
-                        </div>
-
-                        <div class="exemplo-programa">
-                            <h3>Exemplo 2: Verificador de Idade</h3>
-                            <div class="codigo-portugol">
-                                <pre>
-programa
-{
-    funcao inicio()
-    {
-        inteiro idade
-        
-        escreva("Digite sua idade: ")
-        leia(idade)
-        
-        se (idade >= 18) {
-            escreva("Você é maior de idade!\n")
-        } senao {
-            escreva("Você é menor de idade!\n")
-        }
-        
-        se (idade >= 65) {
-            escreva("Você é idoso!\n")
-        }
-    }
-}
-                                </pre>
+                                <h3>Exemplo 2: Conversão de unidades de pressão:</h3>
+                                <div class="imagem-exemplo02">
+                                    <img src="../img/img_computacional/imgExemplo02.png" alt="Exemplo de Algoritmo">
+                                </div>
+                                <h3>Exemplo 3: Cálculo de desconto:</h3>
+                                <div class="imagem-exemplo03">
+                                    <img src="../img/img_computacional/imgExemplo03.png" alt="Exemplo de Algoritmo">
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="exemplo-programa">
-                            <h3>Exemplo 3: Contador Regressivo</h3>
-                            <div class="codigo-portugol">
-                                <pre>
-programa
-{
-    funcao inicio()
-    {
-        inteiro numero, i
-        
-        escreva("Digite um número para contagem regressiva: ")
-        leia(numero)
-        
-        para (i = numero; i >= 1; i--) {
-            escreva(i, "...\n")
-        }
-        
-        escreva("Fogo!\n")
-    }
-}
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
                 </article>
 
                 <!-- Exemplos com Vetores -->
                 <article class="topico">
-                    <h2>7. Exemplos de Programas em Portugol com Vetores</h2>
+                    <h2>6. Exemplos de Programas em Portugol com Vetores</h2>
                     <div class="exemplos-vetores">
                         <div class="exemplo-programa">
-                            <h3>Exemplo 1: Média de Notas</h3>
-                            <div class="codigo-portugol">
-                                <pre>
-programa
-{
-    funcao inicio()
-    {
-        real notas[5]
-        real soma = 0.0, media
-        inteiro i
-        
-        escreva("Digite 5 notas:\n")
-        
-        para (i = 0; i < 5; i++) {
-            escreva("Nota ", i + 1, ": ")
-            leia(notas[i])
-            soma = soma + notas[i]
-        }
-        
-        media = soma / 5
-        escreva("Média das notas: ", media, "\n")
-    }
-}
-                                </pre>
+                            <h3>Exemplo 1: Multiplicação de elementos em um vetor:</h3>
+                            <div class="imagem-exemplo01">
+                                <img src="../img/img_computacional/imgExemploVetor01.png" alt="Exemplo de Algoritmo">
                             </div>
-                        </div>
-
-                        <div class="exemplo-programa">
-                            <h3>Exemplo 2: Busca em Vetor</h3>
-                            <div class="codigo-portugol">
-                                <pre>
-programa
-{
-    funcao inicio()
-    {
-        inteiro numeros[8] = {10, 25, 30, 45, 50, 65, 70, 85}
-        inteiro busca, i
-        logico encontrou = falso
-        
-        escreva("Digite um número para buscar: ")
-        leia(busca)
-        
-        para (i = 0; i < 8; i++) {
-            se (numeros[i] == busca) {
-                escreva("Número encontrado na posição ", i, "\n")
-                encontrou = verdadeiro
-            }
-        }
-        
-        se (nao encontrou) {
-            escreva("Número não encontrado!\n")
-        }
-    }
-}
-                                </pre>
+                                <h3>Exemplo 2: Multiplicação de elementos em um vetor por um número escolhido pelo usuário:</h3>
+                                <div class="imagem-exemplo02">
+                                    <img src="../img/img_computacional/vetor2.png" alt="Exemplo de Algoritmo">
+                                </div>
+                                <h3>Exemplo 3: Média dos elementos de um vetor:</h3>
+                                <div class="imagem-exemplo03">
+                                    <img src="../img/img_computacional/vetor3.png" alt="Exemplo de Algoritmo">
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="exemplo-programa">
-                            <h3>Exemplo 3: Ordenação de Nomes</h3>
-                            <div class="codigo-portugol">
-                                <pre>
-programa
-{
-    funcao inicio()
-    {
-        cadeia nomes[4] = {"Carlos", "Ana", "Bruno", "Diana"}
-        cadeia temp
-        inteiro i, j
-        
-        escreva("Nomes desordenados:\n")
-        para (i = 0; i < 4; i++) {
-            escreva(nomes[i], " ")
-        }
-        escreva("\n")
-        
-        // Ordenação por bolha
-        para (i = 0; i < 3; i++) {
-            para (j = i + 1; j < 4; j++) {
-                se (nomes[i] > nomes[j]) {
-                    temp = nomes[i]
-                    nomes[i] = nomes[j]
-                    nomes[j] = temp
-                }
-            }
-        }
-        
-        escreva("Nomes ordenados:\n")
-        para (i = 0; i < 4; i++) {
-            escreva(nomes[i], " ")
-        }
-        escreva("\n")
-    }
-}
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
                 </article>
             </div>
         </section>
