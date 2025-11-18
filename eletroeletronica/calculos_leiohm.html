@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./eletroeletronica.css">
+    <script src="leideohm.js" defer></script>
+    <title>Calculadora Lei de Ohm</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../img/logo (2).png" alt="Agência b-Look Logo">
+                    </a>
+                </div>
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="../algoritmos.html">Algoritmos & Lógica</a></li>
+                    <li><a href="../componentes.html">Componentes</a></li>
+                    <li><a href="../contato.html">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Calculadora Lei de Ohm</h1>
+        <p>V = I × R (Tensão = Corrente × Resistência)</p>
+
+        <div class="voltar-container">
+            <a href="eletroeletronica.html" class="btn-voltar">Voltar</a>
+        </div>
+
+        <div>
+            <h2>Selecione o que deseja calcular:</h2>
+            <input type="radio" id="calcTensao" name="calculo" value="tensao" checked>
+            <label for="calcTensao">Calcular Tensão (V)</label><br>
+
+            <input type="radio" id="calcCorrente" name="calculo" value="corrente">
+            <label for="calcCorrente">Calcular Corrente (I)</label><br>
+
+            <input type="radio" id="calcResistencia" name="calculo" value="resistencia">
+            <label for="calcResistencia">Calcular Resistência (R)</label>
+        </div>
+
+        <div id="camposEntrada">
+            <!-- Os campos serão atualizados dinamicamente -->
+        </div>
+
+        <button onclick="calcular()">Calcular</button>
+        <button onclick="limpar()">Limpar</button>
+
+        <div id="resultado" style="margin-top: 20px; font-weight: bold;"></div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-coluna">
+                    <h3>Sobre nós</h3>
+                    <ul>
+                        <li><a href="../sobre_nos.html">Descubra quem somos</a></li>
+                        <li><a href="../missao.html">Nossa missão</a></li>
+                        <li><a href="../equipe.html">Nossa equipe</a></li>
+                    </ul>
+                </div>
+                <div class="footer-coluna">
+                    <h3>Navegação</h3>
+                    <ul>
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="../algoritmos.html">Algoritmos & Lógica</a></li>
+                        <li><a href="../componentes.html">Componentes</a></li>
+                        <li><a href="../contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-coluna">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><a href="https://wa.me/5548999545106" target="_blank"><i class="fab fa-whatsapp"></i>
+                                WhatsApp</a></li>
+                        <li><a href="https://github.com/mariobiluk" target="_blank"><i class="fab fa-github"></i>
+                                GitHub</a></li>
+                        <li><a href="mailto:contato@agenciablook.com"><i class="fas fa-envelope"></i> E-mail</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Agência b-Look. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

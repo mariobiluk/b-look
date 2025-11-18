@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bd.css">
+    <title>Fundamentos de Banco de Dados - Agência b-Look</title>
+</head>
+
+<body>
+    <!-- Cabeçalho com navegação -->
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../img/logo (2).png" alt="Agência b-Look Logo">
+                    </a>
+                </div>
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="../algoritmos/algoritmos.html">Algoritmos & Lógica</a></li>
+                    <li><a href="../componentes.html">Componentes</a></li>
+                    <li><a href="../contato.html">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Banner da página -->
+        <section class="page-banner">
+            <div class="banner-content">
+                <h1>Fundamentos de Banco de Dados</h1>
+                <p>Como organizar, estruturar e dar vida às informações que movem o mundo digital</p>
+            </div>
+        </section>
+
+        <!-- Conteúdo principal -->
+        <section class="conteudo-principal">
+            <div class="container">
+                <!-- Introdução -->
+                <article class="introducao">
+                    <h2>Banco de Dados: O Coração dos Sistemas de Informação</h2>
+                    <p>Os bancos de dados são a espinha dorsal de qualquer sistema moderno. Eles permitem armazenar,
+                        organizar, recuperar e gerenciar dados de forma eficiente, garantindo integridade e segurança
+                        das informações.</p>
+                </article>
+
+                <!-- SGBD -->
+                <article class="topico">
+                    <h2>1. O que é um SGBD? Tipos e Aplicações</h2>
+                    <div class="sgbd-info">
+                        <div class="texto-sgbd">
+                            <h3>Sistema Gerenciador de Banco de Dados (SGBD)</h3>
+                            <p>Um SGBD é um software que permite criar, manter e manipular bancos de dados. Ele atua
+                                como uma interface entre os usuários/aplicações e o banco de dados físico.</p>
+
+                            <h3>Tipos de SGBD</h3>
+                            <div class="tipos-sgbd">
+                                <div class="tipo">
+                                    <h4>Relacional (SQL)</h4>
+                                    <p>Organiza dados em tabelas relacionadas. Ex: MySQL, PostgreSQL, Oracle</p>
+                                </div>
+                                <div class="tipo">
+                                    <h4>Não-Relacional (NoSQL)</h4>
+                                    <p>Armazena dados em formatos flexíveis. Ex: MongoDB, Cassandra, Redis</p>
+                                </div>
+                                <div class="tipo">
+                                    <h4>Orientado a Objetos</h4>
+                                    <p>Armazena objetos complexos. Ex: db4o, Versant</p>
+                                </div>
+                                <div class="tipo">
+                                    <h4>Em Memória</h4>
+                                    <p>Armazena dados na memória RAM. Ex: Redis, Memcached</p>
+                                </div>
+                            </div>
+
+                            <h3>Aplicações</h3>
+                            <ul>
+                                <li>Sistemas bancários e financeiros</li>
+                                <li>E-commerce e comércio eletrônico</li>
+                                <li>Redes sociais</li>
+                                <li>Sistemas de saúde</li>
+                                <li>Gestão empresarial (ERP)</li>
+                            </ul>
+                        </div>
+                        <div class="imagem-sgbd">
+                            <!-- Espaço para imagem ilustrativa de SGBD -->
+                            <img src="../img/img_bd/sgbd.png" alt="Arquitetura de SGBD">
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Principais Bancos de Dados -->
+                <article class="topico">
+                    <h2>2. Principais Bancos de Dados do Mercado</h2>
+                    <div class="bancos-dados">
+                        <div class="categoria-bancos">
+                            <h3>Bancos Relacionais (SQL)</h3>
+                            <div class="banco-lista">
+                                <div class="banco-item">
+                                    <div class="banco-logo">
+                                        <img src="../img/img_bd/mysql.png" alt="MySQL Logo">
+                                    </div>
+                                    <div class="banco-info">
+                                        <h4>MySQL</h4>
+                                        <p>Open source, amplamente utilizado em aplicações web</p>
+                                    </div>
+                                </div>
+                                <div class="banco-item">
+                                    <div class="banco-logo">
+                                        <img src="../img/img_bd/postgree.png" alt="PostgreSQL Logo">
+                                    </div>
+                                    <div class="banco-info">
+                                        <h4>PostgreSQL</h4>
+                                        <p>Open source avançado, com recursos enterprise</p>
+                                    </div>
+                                </div>
+                                <div class="banco-item">
+                                    <div class="banco-logo">
+                                        <img src="../img/img_bd/oracle.png" alt="Oracle Database Logo">
+                                    </div>
+                                    <div class="banco-info">
+                                        <h4>Oracle Database</h4>
+                                        <p>Solução enterprise robusta para grandes corporações</p>
+                                    </div>
+                                </div>
+                                <div class="banco-item">
+                                    <div class="banco-logo">
+                                        <img src="../img/img_bd/sqlserver.png" alt="Microsoft SQL Server Logo">
+                                    </div>
+                                    <div class="banco-info">
+                                        <h4>Microsoft SQL Server</h4>
+                                        <p>Solução Microsoft integrada ao ecossistema .NET</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="categoria-bancos">
+                            <h3>Bancos Não-Relacionais (NoSQL)</h3>
+                            <div class="banco-lista">
+                                <div class="banco-item">
+                                    <div class="banco-logo">
+                                        <img src="../img/img_bd/mongodb.png" alt="MongoDB Logo">
+                                    </div>
+                                    <div class="banco-info">
+                                        <h4>MongoDB</h4>
+                                        <p>Banco de dados orientado a documentos</p>
+                                    </div>
+                                </div>
+                                <div class="banco-item">
+                                    <div class="banco-logo">
+                                        <img src="../img/img_bd/redis.png" alt="Redis Logo">
+                                    </div>
+                                    <div class="banco-info">
+                                        <h4>Redis</h4>
+                                        <p>Banco chave-valor em memória</p>
+                                    </div>
+                                </div>
+                                <div class="banco-item">
+                                    <div class="banco-logo">
+                                        <img src="../img/img_bd/cassandra.png" alt="Cassandra Logo">
+                                    </div>
+                                    <div class="banco-info">
+                                        <h4>Cassandra</h4>
+                                        <p>Banco column-family para big data</p>
+                                    </div>
+                                </div>
+                                <div class="banco-item">
+                                    <div class="banco-logo">
+                                        <img src="../img/img_bd/neo4j.png" alt="Neo4j Logo">
+                                    </div>
+                                    <div class="banco-info">
+                                        <h4>Neo4j</h4>
+                                        <p>Banco de dados orientado a grafos</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Dicionário de Dados -->
+                <article class="topico">
+                    <h2>3. Dicionário de Dados e Tipos de Dados</h2>
+                    <div class="dicionario-dados">
+                        <div class="conceito-dicionario">
+                            <h3>O que é um Dicionário de Dados?</h3>
+                            <p>É um repositório centralizado de metadados que descreve a estrutura, relações e
+                                características dos dados armazenados no banco de dados.</p>
+
+                            <h3>Informações Contidas</h3>
+                            <ul>
+                                <li>Nomes de tabelas e colunas</li>
+                                <li>Tipos de dados de cada campo</li>
+                                <li>Restrições e chaves</li>
+                                <li>Relações entre tabelas</li>
+                                <li>Descrições dos campos</li>
+                            </ul>
+                        </div>
+
+                        <div class="tipos-dados-bd">
+                            <h3>Tipos de Dados em Bancos de Dados</h3>
+                            <div class="tipos-grid">
+                                <div class="tipo-dado-bd">
+                                    <h4>Numéricos</h4>
+                                    <ul>
+                                        <li>INTEGER - Números inteiros</li>
+                                        <li>DECIMAL - Números decimais</li>
+                                        <li>FLOAT - Números de ponto flutuante</li>
+                                    </ul>
+                                </div>
+                                <div class="tipo-dado-bd">
+                                    <h4>Texto</h4>
+                                    <ul>
+                                        <li>VARCHAR - Texto de tamanho variável</li>
+                                        <li>CHAR - Texto de tamanho fixo</li>
+                                        <li>TEXT - Texto longo</li>
+                                    </ul>
+                                </div>
+                                <div class="tipo-dado-bd">
+                                    <h4>Data/Hora</h4>
+                                    <ul>
+                                        <li>DATE - Data</li>
+                                        <li>TIME - Hora</li>
+                                        <li>DATETIME - Data e hora</li>
+                                    </ul>
+                                </div>
+                                <div class="tipo-dado-bd">
+                                    <h4>Especiais</h4>
+                                    <ul>
+                                        <li>BOOLEAN - Valores verdadeiro/falso</li>
+                                        <li>BLOB - Dados binários</li>
+                                        <li>JSON - Dados estruturados</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Modelagem de Dados -->
+                <article class="topico">
+                    <h2>4. Modelagem de Banco de Dados: DER e MER</h2>
+                    <div class="modelagem-info">
+                        <div class="conceito-modelagem">
+                            <h3>O que é Modelagem de Dados?</h3>
+                            <p>É o processo de criar um modelo abstrato que representa a estrutura, relações e
+                                restrições dos dados de um sistema.</p>
+
+                            <h3>Modelo DER (Diagrama Entidade-Relacionamento)</h3>
+                            <p>Representa graficamente as entidades (objetos do mundo real), seus atributos e os
+                                relacionamentos entre elas.</p>
+
+                            <h3>Modelo MER (Modelo Entidade-Relacionamento)</h3>
+                            <p>É a representação conceitual do DER, focando na estrutura lógica dos dados sem considerar
+                                implementação física.</p>
+                        </div>
+
+                        <div class="elementos-modelagem">
+                            <h3>Elementos do DER/MER</h3>
+                            <div class="elementos-grid">
+                                <div class="elemento">
+                                    <h4>Entidade</h4>
+                                    <p>Objeto do mundo real (ex: Cliente, Produto)</p>
+                                </div>
+                                <div class="elemento">
+                                    <h4>Atributo</h4>
+                                    <p>Característica da entidade (ex: Nome, Preço)</p>
+                                </div>
+                                <div class="elemento">
+                                    <h4>Relacionamento</h4>
+                                    <p>Associação entre entidades (ex: Compra, Pertence)</p>
+                                </div>
+                                <div class="elemento">
+                                    <h4>Cardinalidade</h4>
+                                    <p>Quantidade de relacionamentos (1:1, 1:N, N:M)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Exemplo DER -->
+                <article class="topico">
+                    <h2>5. Exemplo de Diagrama DER</h2>
+                    <div class="exemplo-der">
+                        <div class="descricao-der">
+                            <h3>Sistema de Biblioteca - DER</h3>
+                            <p>Exemplo de diagrama para um sistema de gerenciamento de biblioteca:</p>
+
+                            <h4>Entidades Principais</h4>
+                            <ul>
+                                <li><strong>Livro:</strong> ISBN, Título, Autor, Ano</li>
+                                <li><strong>Autor:</strong> ID, Nome, Nacionalidade</li>
+                                <li><strong>Usuário:</strong> ID, Nome, Email, Telefone</li>
+                                <li><strong>Empréstimo:</strong> ID, Data_Empréstimo, Data_Devolução</li>
+                            </ul>
+
+                            <h4>Relacionamentos</h4>
+                            <ul>
+                                <li>Autor <strong>escreve</strong> Livro (1:N)</li>
+                                <li>Usuário <strong>realiza</strong> Empréstimo (1:N)</li>
+                                <li>Livro <strong>está em</strong> Empréstimo (1:1)</li>
+                            </ul>
+                        </div>
+                        <div class="imagem-der">
+                            <!-- Espaço para diagrama DER -->
+                            <img src="../img/img_bd/diagrama_der.png" alt="Diagrama DER - Sistema de Biblioteca">
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Exemplo MER -->
+                <article class="topico">
+                    <h2>6. Exemplo de Diagrama MER</h2>
+                    <div class="exemplo-mer">
+                        <div class="descricao-mer">
+                            <h3>Sistema de Vendas - MER</h3>
+                            <p>Modelo entidade-relacionamento para um sistema de e-commerce:</p>
+
+                            <h4>Estrutura do MER</h4>
+                            <div class="estrutura-mer">
+                                <div class="entidade-mer">
+                                    <h5>CLIENTE</h5>
+                                    <p>ID_Cliente (PK)<br>
+                                        Nome<br>
+                                        Email<br>
+                                        Telefone</p>
+                                </div>
+                                <div class="entidade-mer">
+                                    <h5>PEDIDO</h5>
+                                    <p>ID_Pedido (PK)<br>
+                                        Data_Pedido<br>
+                                        Status<br>
+                                        ID_Cliente (FK)</p>
+                                </div>
+                                <div class="entidade-mer">
+                                    <h5>PRODUTO</h5>
+                                    <p>ID_Produto (PK)<br>
+                                        Nome<br>
+                                        Preço<br>
+                                        Estoque</p>
+                                </div>
+                                <div class="entidade-mer">
+                                    <h5>ITEM_PEDIDO</h5>
+                                    <p>ID_Pedido (FK)<br>
+                                        ID_Produto (FK)<br>
+                                        Quantidade<br>
+                                        Preço_Unitário</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="imagem-mer">
+                            <!-- Espaço para diagrama MER -->
+                            <img src="../img/img_bd/mer.png" alt="Diagrama MER - Sistema de Vendas">
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Formulário de Cadastro -->
+                <article class="topico">
+                    <h2>7. Formulário de Cadastro - Sistema de Clientes</h2>
+                    <div class="formulario-cadastro">
+                        <div class="descricao-formulario">
+                            <h3>Simulação de Cadastro em Banco de Dados</h3>
+                            <p>Formulário para demonstração de como os dados seriam coletados e armazenados em um banco
+                                de dados relacional.</p>
+
+                            <h4>Estrutura da Tabela CLIENTES</h4>
+                            <div class="tabela-estrutura">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Campo</th>
+                                            <th>Tipo</th>
+                                            <th>Descrição</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>id_cliente</td>
+                                            <td>INT AUTO_INCREMENT</td>
+                                            <td>Chave primária</td>
+                                        </tr>
+                                        <tr>
+                                            <td>nome</td>
+                                            <td>VARCHAR(100)</td>
+                                            <td>Nome completo</td>
+                                        </tr>
+                                        <tr>
+                                            <td>email</td>
+                                            <td>VARCHAR(100)</td>
+                                            <td>E-mail único</td>
+                                        </tr>
+                                        <tr>
+                                            <td>telefone</td>
+                                            <td>VARCHAR(20)</td>
+                                            <td>Telefone para contato</td>
+                                        </tr>
+                                        <tr>
+                                            <td>data_nascimento</td>
+                                            <td>DATE</td>
+                                            <td>Data de nascimento</td>
+                                        </tr>
+                                        <tr>
+                                            <td>cidade</td>
+                                            <td>VARCHAR(50)</td>
+                                            <td>Cidade de residência</td>
+                                        </tr>
+                                        <tr>
+                                            <td>data_cadastro</td>
+                                            <td>TIMESTAMP</td>
+                                            <td>Data do cadastro (automática)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="formulario-container">
+                            <div class="formulario-layout">
+                                <form id="formCliente" class="form-cadastro">
+                                    <h3>Cadastro de Cliente</h3>
+
+                                    <div class="campo-form">
+                                        <label for="nome">Nome Completo</label>
+                                        <input type="text" id="nome" name="nome" required
+                                            placeholder="Digite seu nome completo">
+                                    </div>
+
+                                    <div class="campo-form">
+                                        <label for="email">E-mail</label>
+                                        <input type="email" id="email" name="email" required
+                                            placeholder="seu@email.com">
+                                    </div>
+
+                                    <div class="campo-form">
+                                        <label for="telefone">Telefone</label>
+                                        <input type="tel" id="telefone" name="telefone" required
+                                            placeholder="(48) 99999-9999">
+                                    </div>
+
+                                    <div class="campo-form">
+                                        <label for="data_nascimento">Data de Nascimento</label>
+                                        <input type="date" id="data_nascimento" name="data_nascimento">
+                                    </div>
+
+                                    <div class="campo-form">
+                                        <label for="cidade">Cidade</label>
+                                        <input type="text" id="cidade" name="cidade" placeholder="Sua cidade">
+                                    </div>
+
+                                    <div class="campo-form">
+                                        <label for="estado">Estado</label>
+                                        <select id="estado" name="estado">
+                                            <option value="">Selecione...</option>
+                                            <option value="SC">Santa Catarina</option>
+                                            <option value="PR">Paraná</option>
+                                            <option value="RS">Rio Grande do Sul</option>
+                                            <option value="SP">São Paulo</option>
+                                            <option value="RJ">Rio de Janeiro</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="campo-form-checkbox">
+                                        <input type="checkbox" id="newsletter" name="newsletter" value="1">
+                                        <label for="newsletter">Desejo receber newsletter</label>
+                                    </div>
+
+                                    <div class="acoes-form">
+                                        <button type="submit" class="btn-submit">Cadastrar Cliente</button>
+                                        <button type="reset" class="btn-reset">Limpar Formulário</button>
+                                    </div>
+
+                                    <div class="info-form">
+                                        <p><small>* Campos obrigatórios</small></p>
+                                        <p><small>Este formulário simula o cadastro em um banco de dados
+                                                relacional</small></p>
+                                    </div>
+                                </form>
+
+                                <div class="dados-simulados">
+                                    <h4>Dados que seriam gravados no BD:</h4>
+                                    <div class="dados-exemplo">
+                                        <pre>
+INSERT INTO clientes (nome, email, telefone, data_nascimento, cidade, estado, newsletter) 
+VALUES ('João Silva', 'joao@email.com', '(48) 99999-9999', '1990-05-15', 'Florianópolis', 'SC', 1);
+                        </pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-coluna">
+                    <h3>Sobre nós</h3>
+                    <ul>
+                        <li><a href="../sobre_nos.html">Descubra quem somos</a></li>
+                        <li><a href="../missao.html">Nossa missão</a></li>
+                        <li><a href="../equipe.html">Nossa equipe</a></li>
+                    </ul>
+                </div>
+                <div class="footer-coluna">
+                    <h3>Navegação</h3>
+                    <ul>
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="../algoritmos/algoritmos.html">Algoritmos & Lógica</a></li>
+                        <li><a href="../componentes.html">Componentes</a></li>
+                        <li><a href="../contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-coluna">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><a href="https://wa.me/5548999545106" target="_blank"><i class="fab fa-whatsapp"></i>
+                                WhatsApp</a></li>
+                        <li><a href="https://github.com/mariobiluk" target="_blank"><i class="fab fa-github"></i>
+                                GitHub</a></li>
+                        <li><a href="mailto:contato@agenciablook.com"><i class="fas fa-envelope"></i> E-mail</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Agência b-Look. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,757 @@
+/* programacao.css - Página Lógica de Programação */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header e Navegação - CORREÇÃO COMPLETA */
+header {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 100%;
+}
+
+nav {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+.logo a {
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    display: block;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    text-decoration: none !important;
+}
+
+/* Banner */
+.page-banner {
+    background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(52, 152, 219, 0.8)),
+        url('../img/banner5.png') center/cover;
+    padding: 100px 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centraliza horizontalmente */
+    justify-content: center;
+    /* Centraliza verticalmente */
+    text-align: center;
+    height: 100vh;
+    /* Ocupa toda a altura da tela */
+}
+
+.page-banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.page-banner p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Conteúdo Principal */
+.conteudo-principal {
+    padding: 60px 0;
+    background: white;
+}
+.voltar-banner {
+    position: fixed;   /* agora ele fica fixo na tela inteira */
+    top: 20px;
+    right: 20px;
+
+    padding: 10px 18px;
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    z-index: 9999; /* garante que apareça acima do conteúdo */
+    transition: 0.2s;
+}
+
+.voltar-banner:hover {
+    background: #ffffff;
+    color: black;
+}
+
+.voltar-banner:active {
+    transform: scale(0.97);
+}
+
+.introducao {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.introducao h2 {
+    color: #2c3e50;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.introducao p {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.topico {
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.topico h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+/* Linguagens de Programação */
+.linguagens-info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+.conceito-linguagens h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.linguagens-detalhes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.linguagem-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.linguagem-item h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.imagem-linguagem img {
+    width: 100%;
+    max-width: 100px;
+    margin: 1rem auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Comparação Linguagens */
+.comparacao-linguagens {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.tipo-linguagem {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tipo-linguagem h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.imagem-processo img {
+    width: 100%;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/* HTML e CSS */
+.html-css-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.tecnologia-web {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tecnologia-web h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.imagem-tecnologia img {
+    width: 100%;
+    max-width: 100px;
+    margin: 1rem auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* IDEs */
+.ides-info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+.conceito-ide h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.ides-populares {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.ide-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ide-item h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.imagem-ide img {
+    width: 100%;
+    max-width: 80px;
+    margin: 1rem auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Scripts e Programas */
+.scripts-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.script-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.script-item h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.btn-script {
+    display: inline-block;
+    background: #3498db;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid #3498db;
+    margin-top: 1rem;
+}
+
+.btn-script:hover {
+    background: transparent;
+    color: #3498db;
+}
+
+/* Explicação Busca Linear */
+.explicacao-busca {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.texto-explicacao h3 {
+    color: #3498db;
+    margin: 1.5rem 0 1rem;
+}
+
+.texto-explicacao h3:first-child {
+    margin-top: 0;
+}
+
+.pseudocodigo h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+/* Exemplos de Código */
+.exemplo-codigo {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    overflow-x: auto;
+}
+
+.exemplo-codigo pre {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    white-space: pre-wrap;
+}
+
+/* Listas */
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0;
+}
+
+li {
+    padding: 0.5rem 0;
+}
+
+/* PÁGINA DE ORDENAÇÃO */
+
+.conteudo-principal {
+    padding: 60px 0;
+    background: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Botão de Ordenação */
+.container button {
+    display: block;
+    margin: 2rem auto;
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.container button:hover {
+    background: linear-gradient(135deg, #2980b9 0%, #2573a7 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(52, 152, 219, 0.4);
+}
+
+/* Área de Resultados */
+#res {
+    background: #f8f9fa;
+    padding: 2.5rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e9ecef;
+}
+
+/* Container dos Arrays */
+.arrays-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.array-box {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #3498db;
+}
+
+.array-box h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #ecf0f1;
+    padding-bottom: 0.5rem;
+}
+
+/* Visualização dos Arrays */
+.array-visual {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 6px;
+    min-height: 80px;
+    align-items: center;
+    justify-content: center;
+}
+
+.numero-item {
+    background: #3498db;
+    color: white;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    min-width: 45px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.numero-item.original {
+    background: #95a5a6;
+}
+
+.numero-item.crescente {
+    background: #27ae60;
+}
+
+.numero-item.decrescente {
+    background: #e74c3c;
+}
+
+/* Estados de Destaque */
+.numero-item.destaque {
+    animation: highlight 0.5s ease;
+}
+
+@keyframes highlight {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Mensagens de Status */
+.status-message {
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.status-message.info {
+    background: #d6eaf8;
+    color: #2874a6;
+    border: 1px solid #aed6f1;
+}
+
+.status-message.success {
+    background: #d5f4e6;
+    color: #27ae60;
+    border: 1px solid #a3e4d7;
+}
+
+/* Título da Página */
+.page-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.page-title h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.page-title p {
+    color: #7f8c8d;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* PÁGINA CALCULADORA DE IMC */
+.form-imc {
+    background: white;
+    padding: 2rem;
+    max-width: 450px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #3498db;
+}
+
+.form-imc label {
+    display: block;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+}
+
+.form-imc input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #dfe6e9;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+}
+
+.form-imc input:focus {
+    border-color: #3498db;
+    background: white;
+    box-shadow: 0 0 6px rgba(52, 152, 219, 0.3);
+    outline: none;
+}
+
+.form-imc button {
+    width: 100%;
+    margin-top: 1.5rem;
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: white;
+    border: none;
+    padding: 0.9rem;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.form-imc button:hover {
+    background: linear-gradient(135deg, #2980b9 0%, #2573a7 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(52, 152, 219, 0.4);
+}
+
+/* PÁGINA DE CONVERSÃO DE TEMPERATURA */
+.form-imc select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background: #fff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.form-imc select:hover {
+    border-color: #888;
+}
+
+.form-imc select:focus {
+    outline: none;
+    border-color: #2196f3;
+    box-shadow: 0 0 4px rgba(33, 150, 243, 0.4);
+}
+
+
+/* PÁGINA DE BUSCA LINEAR */
+.form-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 450px;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 1px solid #e9ecef;
+}
+
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+}
+
+/* Inputs */
+.form-box label {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.form-box input {
+    width: 100%;
+    padding: 0.7rem;
+    margin: 0.7rem 0 1.2rem 0;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+/* Botão */
+.form-box button {
+    width: 100%;
+    padding: 0.9rem;
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.form-box button:hover {
+    background: linear-gradient(135deg, #2980b9 0%, #2573a7 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(52, 152, 219, 0.4);
+}
+
+/* Resultado */
+#res {
+    background: #f8f9fa;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 1px solid #e9ecef;
+    font-size: 1.1rem;
+}
+
+/* Footer */
+.site-footer {
+    background: #2c3e50;
+    color: white;
+    padding: 50px 0 20px;
+    margin: 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-coluna h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-coluna ul {
+    list-style: none;
+}
+
+.footer-coluna li {
+    margin-bottom: 0.5rem;
+    border-bottom: none;
+}
+
+.footer-coluna a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-coluna a:hover {
+    color: #3498db;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #34495e;
+    color: #95a5a6;
+}
