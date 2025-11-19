@@ -427,6 +427,12 @@ nav a:hover {
     border-top: 2px solid #ecf0f1;
 }
 
+.projeto-redes {
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 2px solid #ecf0f1;
+}
+
 .projetos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
