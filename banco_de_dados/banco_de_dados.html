@@ -9,7 +9,6 @@
 </head>
 
 <body>
-    <!-- Cabeçalho com navegação -->
     <header>
         <nav>
             <div class="nav-container">
@@ -29,18 +28,14 @@
     </header>
 
     <main>
-        <!-- Banner da página -->
         <section class="page-banner">
             <div class="banner-content">
                 <h1>Fundamentos de Banco de Dados</h1>
                 <p>Como organizar, estruturar e dar vida às informações que movem o mundo digital</p>
             </div>
         </section>
-
-        <!-- Conteúdo principal -->
         <section class="conteudo-principal">
             <div class="container">
-                <!-- Introdução -->
                 <article class="introducao">
                     <h2>Banco de Dados: O Coração dos Sistemas de Informação</h2>
                     <p>Os bancos de dados são a espinha dorsal de qualquer sistema moderno. Eles permitem armazenar,
@@ -48,7 +43,7 @@
                         das informações.</p>
                 </article>
 
-                <!-- SGBD -->
+                <!-- sgbd -->
                 <article class="topico">
                     <h2>1. O que é um SGBD? Tipos e Aplicações</h2>
                     <div class="sgbd-info">
@@ -87,13 +82,12 @@
                             </ul>
                         </div>
                         <div class="imagem-sgbd">
-                            <!-- Espaço para imagem ilustrativa de SGBD -->
                             <img src="../img/img_bd/sgbd.png" alt="Arquitetura de SGBD">
                         </div>
                     </div>
                 </article>
 
-                <!-- Principais Bancos de Dados -->
+                <!-- principais bando de dados -->
                 <article class="topico">
                     <h2>2. Principais Bancos de Dados do Mercado</h2>
                     <div class="bancos-dados">
@@ -183,7 +177,7 @@
                     </div>
                 </article>
 
-                <!-- Dicionário de Dados -->
+                <!-- pesquisar sobre dicionário de dados e inserir -->
                 <article class="topico">
                     <h2>3. Dicionário de Dados e Tipos de Dados</h2>
                     <div class="dicionario-dados">
@@ -242,7 +236,7 @@
                     </div>
                 </article>
 
-                <!-- Modelagem de Dados -->
+                <!-- modelagem de dados -preencher texto -->
                 <article class="topico">
                     <h2>4. Modelagem de Banco de Dados: DER e MER</h2>
                     <div class="modelagem-info">
@@ -250,7 +244,6 @@
                             <h3>O que é Modelagem de Dados?</h3>
                             <p>É o processo de criar um modelo abstrato que representa a estrutura, relações e
                                 restrições dos dados de um sistema.</p>
-
                             <h3>Modelo DER (Diagrama Entidade-Relacionamento)</h3>
                             <p>Representa graficamente as entidades (objetos do mundo real), seus atributos e os
                                 relacionamentos entre elas.</p>
@@ -284,7 +277,7 @@
                     </div>
                 </article>
 
-                <!-- Exemplo DER -->
+                <!-- pesquisar exemplo der -->
                 <article class="topico">
                     <h2>5. Exemplo de Diagrama DER</h2>
                     <div class="exemplo-der">
@@ -308,13 +301,13 @@
                             </ul>
                         </div>
                         <div class="imagem-der">
-                            <!-- Espaço para diagrama DER -->
-                            <img src="../img/img_bd/diagrama_der.png" alt="Diagrama DER - Sistema de Biblioteca">
+                            <!-- imagem der -->
+                            <img src="../img/img_bd/diagrama_der.png" alt="Diagrama DER - Sistema de Aluguel">
                         </div>
                     </div>
                 </article>
 
-                <!-- Exemplo MER -->
+                <!-- mer -->
                 <article class="topico">
                     <h2>6. Exemplo de Diagrama MER</h2>
                     <div class="exemplo-mer">
@@ -355,13 +348,13 @@
                             </div>
                         </div>
                         <div class="imagem-mer">
-                            <!-- Espaço para diagrama MER -->
-                            <img src="../img/img_bd/mer.png" alt="Diagrama MER - Sistema de Vendas">
+                            <!-- imagem mer -->
+                            <img src="../img/img_bd/mer.png" alt="Diagrama MER - Sistema de Atendimento no Hospital">
                         </div>
                     </div>
                 </article>
 
-                <!-- Formulário de Cadastro -->
+                <!-- criar um formulário falso de banco de dados para simular (exemplo feito com IA) -->
                 <article class="topico">
                     <h2>7. Formulário de Cadastro - Sistema de Clientes</h2>
                     <div class="formulario-cadastro">
@@ -372,17 +365,23 @@
 
                             <h4>Estrutura da Tabela CLIENTES</h4>
                             <div class="tabela-estrutura">
+                                <!-- table cria a tabela geral  -->
                                 <table>
                                     <thead>
+                                        <!-- thread para definir o título das colunas da tabela -->
                                         <tr>
+                                            <!-- tr cria uma nova linha -->
                                             <th>Campo</th>
+                                            <!-- th é cada uma das células de cabeçalho dessa liha -->
                                             <th>Tipo</th>
                                             <th>Descrição</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <!-- body é a parte onde ficam os dados da tabela, não os cabeçalhos -->
                                         <tr>
                                             <td>id_cliente</td>
+                                            <!-- td são os dados de células comuns -->
                                             <td>INT AUTO_INCREMENT</td>
                                             <td>Chave primária</td>
                                         </tr>
@@ -425,9 +424,9 @@
                             <div class="formulario-layout">
                                 <form id="formCliente" class="form-cadastro">
                                     <h3>Cadastro de Cliente</h3>
-
                                     <div class="campo-form">
                                         <label for="nome">Nome Completo</label>
+                                        <!-- required define o campo obrigatório no formulário -->
                                         <input type="text" id="nome" name="nome" required
                                             placeholder="Digite seu nome completo">
                                     </div>
@@ -456,6 +455,7 @@
 
                                     <div class="campo-form">
                                         <label for="estado">Estado</label>
+                                        <!-- select cria o menu suspenso (excel) ou caixas de seleção no formulário -->
                                         <select id="estado" name="estado">
                                             <option value="">Selecione...</option>
                                             <option value="SC">Santa Catarina</option>
@@ -463,6 +463,7 @@
                                             <option value="RS">Rio Grande do Sul</option>
                                             <option value="SP">São Paulo</option>
                                             <option value="RJ">Rio de Janeiro</option>
+                                            <!-- continuar aqui com o resto das cidades -->
                                         </select>
                                     </div>
 
@@ -480,6 +481,7 @@
                                         <p><small>* Campos obrigatórios</small></p>
                                         <p><small>Este formulário simula o cadastro em um banco de dados
                                                 relacional</small></p>
+                                        <!-- small deixa a letra miúda -->
                                     </div>
                                 </form>
 
@@ -523,11 +525,11 @@ VALUES ('João Silva', 'joao@email.com', '(48) 99999-9999', '1990-05-15', 'Flori
                 <div class="footer-coluna">
                     <h3>Contato</h3>
                     <ul>
-                        <li><a href="https://wa.me/5548999545106" target="_blank"><i class="fab fa-whatsapp"></i>
+                        <li><a href="https://wa.me/5548999545106" target="_blank">
                                 WhatsApp</a></li>
-                        <li><a href="https://github.com/mariobiluk" target="_blank"><i class="fab fa-github"></i>
+                        <li><a href="https://github.com/mariobiluk" target="_blank">
                                 GitHub</a></li>
-                        <li><a href="mailto:contato@agenciablook.com"><i class="fas fa-envelope"></i> E-mail</a></li>
+                        <li><a href="mailto:contato@agenciablook.com">E-mail</a></li>
                     </ul>
                 </div>
             </div>

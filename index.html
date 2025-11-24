@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Agência b-Look - Soluções em Tecnologia</title>
 </head>
-
 <body>
     <header>
         <nav>
@@ -27,22 +25,24 @@
             </div>
         </nav>
 
-        <!-- Banner -->
+        <!-- Banner da página //inserir canva -->
         <div class="banner">
             <div class="banner-content">
                 <h1>AGÊNCIA b-LOOK</h1>
                 <p>Um segundo olhar para a tecnologia</p>
+                <!-- #serviços leva direto pra section que eu criei (usado IA) -->
                 <a href="#servicos" class="btn">Nossos Serviços</a>
             </div>
         </div>
     </header>
 
     <main>
+        <!-- seção com o grid dos serviços (matérias do técnico) -->
         <section id="servicos" class="servicos">
             <div class="container">
                 <h2>NOSSOS SERVIÇOS</h2>
                 <div class="grid">
-
+                    <!-- article englobando algumas divs (facilita o css depois) -->
                     <article>
                         <a href="./eletroeletronica/eletroeletronica.html">
                             <div class="icon"><i class="fas fa-microchip"></i></div>
@@ -97,11 +97,12 @@
         </section>
 
 
-        <!-- Seção de localização -->
+        <!-- Seção de localização - inserir mapa -->
         <section id="localizacao" class="localizacao">
             <div class="container">
                 <h2>ONDE ESTAMOS</h2>
                 <div class="mapa-container">
+                    <!-- importado do google maps -->
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3547.749793870228!2d-48.64643864712405!3d-27.22700428705615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d8abfb129cc8d9%3A0xc50c18ec370d0904!2sR.%20Ip%C3%AA%20Amarelo%2C%20222%20-%20Mata%20At%C3%A2ntica%201%2C%20Tijucas%20-%20SC%2C%2088200-000!5e0!3m2!1spt-BR!2sbr!4v1757681599342!5m2!1spt-BR!2sbr"
                         width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
@@ -137,11 +138,13 @@
                 <div class="footer-coluna">
                     <h3>Contato</h3>
                     <ul>
-                        <li><a href="https://wa.me/5548999545106" target="_blank"><i class="fab fa-whatsapp"></i>
+                        <!-- target = blank faz abrir o link numa nova página, não da mesma do site -->
+                        <li><a href="https://wa.me/5548999545106" target="_blank">
                                 WhatsApp</a></li>
-                        <li><a href="https://github.com/mariobiluk" target="_blank"><i class="fab fa-github"></i>
+                        <li><a href="https://github.com/mariobiluk" target="_blank">
                                 GitHub</a></li>
-                        <li><a href="mailto:contato@agenciablook.com"><i class="fas fa-envelope"></i> E-mail</a></li>
+                        <!-- criar esse e-mail depois -->
+                        <li><a href="mailto:contato@agenciablook.com"> E-mail</a></li>
                     </ul>
                 </div>
             </div>

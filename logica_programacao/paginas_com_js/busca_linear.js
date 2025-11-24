@@ -1,11 +1,14 @@
-let res = document.getElementById("res")
-let array = []   // GLOBAL para exibir e buscar
+let res = document.getElementById("res") //declaração as variáveis globais
+let arr = []
 
-// ----- GERA UM ARRAY ALEATÓRIO -----
+function gerarAleatório(min, max) {
+    return (Math.floor(Math.random() * (max - min + 1)) + min)
+}
+
+//função que gera um array aleatório
 function gerarArray(qtd, min, max) {
-    array = []
-    for (let i = 0; i < qtd; i++) {
-        array.push(Math.floor(Math.random() * (max - min + 1)) + min)
+    for(let i = 0;i<qtd;i++){
+        arr.push(gerarAleatório(min,max))
     }
 }
 
@@ -40,6 +43,6 @@ function btnBuscar() {
     if (pos === -1) {
         res.innerHTML += `O valor <strong>${valor}</strong> NÃO foi encontrado no array.`
     } else {
-        res.innerHTML += `O valor <strong>${valor}</strong> foi encontrado na posição <strong>${pos+1}</strong>.`
+        res.innerHTML += `O valor <strong>${valor}</strong> foi encontrado na posição <strong>${pos + 1}</strong>.`
     }
 }

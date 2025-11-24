@@ -1,16 +1,10 @@
-/* ti.css - Página Fundamentos de TI */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow-x: hidden;
-}
+
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -25,20 +19,9 @@ body {
     padding: 0 20px;
 }
 
-/* Header e Navegação */
 header {
     background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
     color: white;
-    margin: 0;
-    padding: 0;
-    border: none;
-    width: 100%;
-}
-
-nav {
-    margin: 0;
-    padding: 0;
-    width: 100%;
 }
 
 .nav-container {
@@ -48,43 +31,35 @@ nav {
     padding: 1rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    width: 100%;
 }
 
 .logo img {
     height: 50px;
     width: auto;
-    display: block;
 }
 
 nav ul {
     display: flex;
     list-style: none;
     gap: 2rem;
-    margin: 0;
-    padding: 0;
-}
-
-nav li {
-    margin: 0;
-    padding: 0;
 }
 
 nav a {
     color: white;
-    text-decoration: none !important;
+    text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
     padding: 0.5rem 1rem;
     border-radius: 5px;
-    display: block;
 }
 
 nav a:hover {
     background: rgba(255, 255, 255, 0.1);
     transform: translateY(-2px);
-    text-decoration: none !important;
 }
+
+
+
 
 /* Banner */
 .page-banner {
@@ -364,7 +339,10 @@ ul {
     margin: 1rem 0;
 }
 
-li {
+main li,
+section li,
+article li,
+.conteudo-principal li {
     padding: 0.5rem 0;
     border-bottom: 1px solid #ecf0f1;
 }
@@ -415,3 +393,4 @@ li {
     border-top: 1px solid #34495e;
     color: #95a5a6;
 }
+

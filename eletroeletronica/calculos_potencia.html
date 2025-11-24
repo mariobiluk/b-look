@@ -31,12 +31,16 @@
         <p>P = V × I (Potência = Tensão × Corrente)</p>
 
         <div class="voltar-container">
-            <a href="eletroeletronica.html" class="btn-voltar">Voltar</a>
+            <!-- pesquisar na internet como colocar um botão que volta exatamente para a parte da página anterior que o usuário estava -->
+            <button class="btn-voltar" onclick="history.back()">Voltar</button>
         </div>
 
         <div>
+            <!-- type radio coloca aquela caixinha para seleção -->
+             <!-- checked deixa define a caixinha marcada por padrão -->
             <h2>Selecione o que deseja calcular:</h2>
             <input type="radio" id="calcPotenciaVI" name="calculo" value="potenciaVI" checked>
+            <!-- value serve para dizer para o js qual valor vai ser lido por ele quando essa caixinha tiver selecionada -->
             <label for="calcPotenciaVI">Calcular Potência (P = V × I)</label><br>
 
             <input type="radio" id="calcPotenciaRI" name="calculo" value="potenciaRI">
@@ -56,7 +60,7 @@
         </div>
 
         <div id="camposEntrada">
-            <!-- Os campos serão atualizados dinamicamente -->
+            <!-- div pros campos serem atualizados automaticamente conforme seleciona - feito no js com IA -->
         </div>
 
         <div class="botoes-container">
@@ -90,11 +94,11 @@
                 <div class="footer-coluna">
                     <h3>Contato</h3>
                     <ul>
-                        <li><a href="https://wa.me/5548999545106" target="_blank"><i class="fab fa-whatsapp"></i>
+                        <li><a href="https://wa.me/5548999545106" target="_blank">
                                 WhatsApp</a></li>
-                        <li><a href="https://github.com/mariobiluk" target="_blank"><i class="fab fa-github"></i>
+                        <li><a href="https://github.com/mariobiluk" target="_blank">
                                 GitHub</a></li>
-                        <li><a href="mailto:contato@agenciablook.com"><i class="fas fa-envelope"></i> E-mail</a></li>
+                        <li><a href="mailto:contato@agenciablook.com"> E-mail</a></li>
                     </ul>
                 </div>
             </div>
