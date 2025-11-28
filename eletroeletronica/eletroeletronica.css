@@ -1,4 +1,3 @@
-/* eletroeletronica.css - Página Fundamentos de Eletroeletrônica */
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +17,6 @@ body {
     padding: 0 20px;
 }
 
-/* Header e Navegação */
 header {
     background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
     color: white;
@@ -58,7 +56,6 @@ nav a:hover {
     transform: translateY(-2px);
 }
 
-/* Banner */
 .page-banner {
     background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(52, 152, 219, 0.8)),
         url('../img/banner5.png') center/cover;
@@ -83,7 +80,6 @@ nav a:hover {
     opacity: 0.9;
 }
 
-/* Conteúdo Principal */
 .conteudo-principal {
     padding: 60px 0;
     background: white;
@@ -123,7 +119,6 @@ nav a:hover {
     padding-bottom: 0.5rem;
 }
 
-/* Componentes */
 .componentes-grid,
 .sensores-grid {
     display: grid;
@@ -160,7 +155,6 @@ nav a:hover {
     margin-bottom: 1rem;
 }
 
-/* Arduino */
 .arduino-info {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -199,7 +193,6 @@ nav a:hover {
     margin-right: 10px;
 }
 
-/* Funcionamento Arduino */
 .funcionamento-arduino h3 {
     color: #3498db;
     margin-bottom: 1rem;
@@ -222,7 +215,6 @@ nav a:hover {
     margin-right: 10px;
 }
 
-/* Linguagens Programação */
 .linguagens-programacao h3 {
     color: #3498db;
     margin: 1.5rem 0 1rem;
@@ -238,7 +230,6 @@ nav a:hover {
     border-bottom: 1px solid #ecf0f1;
 }
 
-/* Entradas e Saídas */
 .entradas-saidas,
 .analogicas {
     background: white;
@@ -262,7 +253,6 @@ nav a:hover {
     border-radius: 8px;
 }
 
-/* Scripts */
 .scripts-links {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -300,7 +290,6 @@ nav a:hover {
     color: #3498db;
 }
 
-/* Diodos e Display */
 .diodos-display {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -393,7 +382,6 @@ nav a:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer */
 .site-footer {
     background: #2c3e50;
     color: white;
@@ -438,7 +426,6 @@ nav a:hover {
     color: #95a5a6;
 }
 
-/* Calculadora Lei de Ohm */
 main {
     background: #f8f9fa;
     min-height: calc(100vh - 160px);
@@ -593,7 +580,6 @@ button {
     margin-top: 2rem;
 }
 
-/* Botão Voltar */
 .btn-voltar {
     display: inline-flex;
     align-items: center;
@@ -625,7 +611,6 @@ button {
     transform: translateX(-3px);
 }
 
-/* Container do botão voltar */
 .voltar-container {
     max-width: 600px;
     margin: 0 auto 2rem auto;

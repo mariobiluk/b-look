@@ -1,4 +1,3 @@
-/* computacional.css - Página Lógica Computacional */
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +17,6 @@ body {
     padding: 0 20px;
 }
 
-/* Header e Navegação - EXATAMENTE IGUAL AO ORIGINAL */
 header {
     background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
     color: white;
@@ -58,7 +56,6 @@ nav a:hover {
     transform: translateY(-2px);
 }
 
-/* Banner */
 .page-banner {
     background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(52, 152, 219, 0.8)),
         url('../img/banner5.png') center/cover;
@@ -82,7 +79,6 @@ nav a:hover {
     opacity: 0.9;
 }
 
-/* Conteúdo Principal */
 .conteudo-principal {
     padding: 60px 0;
     background: white;
@@ -122,7 +118,6 @@ nav a:hover {
     padding-bottom: 0.5rem;
 }
 
-/* Layouts de Grid */
 .fluxograma-info,
 .algoritmos-info,
 .portugol-info,
@@ -136,7 +131,6 @@ nav a:hover {
     align-items: start;
 }
 
-/* Simbologia Fluxograma */
 .simbolos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -175,7 +169,6 @@ nav a:hover {
     border-bottom: 20px solid transparent;
 }
 
-/* Aplicações Algoritmos */
 .aplicacoes-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -195,7 +188,6 @@ nav a:hover {
     margin-bottom: 0.5rem;
 }
 
-/* Variáveis e Constantes */
 .variaveis-constantes {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
@@ -213,7 +205,6 @@ nav a:hover {
     margin-bottom: 1rem;
 }
 
-/* Tipos de Dados */
 .tipos-dados {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
@@ -231,7 +222,6 @@ nav a:hover {
     margin-bottom: 1rem;
 }
 
-/* Exemplos de Código */
 .exemplo-codigo,
 .codigo-portugol {
     background: #2c3e50;
@@ -250,7 +240,6 @@ nav a:hover {
     white-space: pre-wrap;
 }
 
-/* Programas Exemplo */
 .exemplo-programa {
     background: white;
     padding: 1.5rem;
@@ -266,7 +255,6 @@ nav a:hover {
     padding-bottom: 0.5rem;
 }
 
-/* Imagens */
 .imagem-fluxograma img,
 .imagem-algoritmo img,
 .imagem-portugol-studio img {
@@ -275,7 +263,6 @@ nav a:hover {
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
-/* Listas - REMOVIDOS OS PONTOS E SUBLINHADOS */
 .algoritmos-info ul,
 .portugol-info ul {
     list-style: none;
@@ -289,7 +276,6 @@ nav a:hover {
     border-bottom: 1px solid #ecf0f1;
 }
 
-/* Footer - EXATAMENTE IGUAL AO ORIGINAL */
 .site-footer {
     background: #2c3e50;
     color: white;

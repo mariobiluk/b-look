@@ -1,4 +1,3 @@
-/* banco_dados.css - Página Fundamentos de Banco de Dados */
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +17,6 @@ body {
     padding: 0 20px;
 }
 
-/* Header e Navegação */
 header {
     background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
     color: white;
@@ -58,7 +56,6 @@ nav a:hover {
     transform: translateY(-2px);
 }
 
-/* Banner */
 .page-banner {
      background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(52, 152, 219, 0.8)),
         url('../img/banner5.png') center/cover;
@@ -82,7 +79,6 @@ nav a:hover {
     opacity: 0.9;
 }
 
-/* Conteúdo Principal */
 .conteudo-principal {
     padding: 60px 0;
     background: white;
@@ -278,7 +274,7 @@ nav a:hover {
     border-radius: 8px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
-/* ===== CORREÇÕES PARA O FORMULÁRIO ===== */
+/*CORREÇÕES PARA O FORMULÁRIO*/
 
 .formulario-cadastro {
     background: white;
@@ -351,7 +347,6 @@ nav a:hover {
     transition: background 0.3s ease;
 }
 
-/* Layout do formulário e dados lado a lado */
 .formulario-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -482,7 +477,6 @@ nav a:hover {
     margin: 0.3rem 0;
 }
 
-/* Área de dados simulados */
 .dados-simulados {
     background: #2c3e50;
     color: white;
@@ -517,7 +511,6 @@ nav a:hover {
     word-wrap: break-word;
 }
 
-/* Estados de validação */
 .campo-form.validado input:valid {
     border-color: #27ae60;
 }
@@ -526,7 +519,6 @@ nav a:hover {
     border-color: #e74c3c;
 }
 
-/* Animações suaves */
 @keyframes slideIn {
     from {
         opacity: 0;
@@ -542,7 +534,6 @@ nav a:hover {
     animation: slideIn 0.5s ease-out;
 }
 
-/* Indicador de campo obrigatório */
 .campo-form label::after {
     content: " *";
     color: #e74c3c;
@@ -553,7 +544,6 @@ nav a:hover {
     content: "";
 }
 
-/* Footer */
 .site-footer {
     background: #2c3e50;
     color: white;
