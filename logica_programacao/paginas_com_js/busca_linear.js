@@ -45,6 +45,6 @@ function btnBuscar() {
     if (pos === -1) {
         res.innerHTML += `O valor <strong>${valor}</strong> NÃO foi encontrado no array.`
     } else {
-        res.innerHTML += `O valor <strong>${valor}</strong> foi encontrado na posição <strong>${pos}</strong> (índice ${pos}).`
+        res.innerHTML += `O valor <strong>${valor}</strong> foi encontrado na posição <strong>${pos+1}</strong>.`
     }
 }
