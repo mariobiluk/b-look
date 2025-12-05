@@ -437,3 +437,130 @@ nav a:hover {
     border-top: 1px solid #34495e;
     color: #95a5a6;
 }
+
+.pagina-calculadora {
+    padding: 2rem 1rem;
+    background: #f8f9fa;
+    min-height: calc(100vh - 300px);
+}
+
+/* Banner */
+.banner-calculadora {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.banner-calculadora h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.banner-calculadora p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Container principal */
+.container-calculadora {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Títulos */
+.formulario-circuito h2,
+.resultado-calculo h2,
+.info-circuito h2 {
+    color: #2c3e50;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #3498db;
+}
+
+/* Cartões */
+.formulario-circuito,
+.resultado-calculo,
+.info-circuito {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    margin-bottom: 2rem;
+}
+
+/* Campos */
+.campo-entrada {
+    margin-bottom: 1.2rem;
+}
+
+.campo-entrada label {
+    display: block;
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.campo-entrada input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.campo-entrada input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52,152,219,0.2);
+}
+
+/* Botão */
+.acoes-formulario button {
+    width: 100%;
+    padding: 12px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.acoes-formulario button:hover {
+    background: #2980b9;
+}
+
+/* Resultados */
+#resultado {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 5px;
+    min-height: 60px;
+}
+
+/* Informações */
+.configuracao {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 5px;
+    border-left: 4px solid #3498db;
+}
+
+.configuracao h3 {
+    color: #2c3e50;
+    margin-bottom: 0.8rem;
+}
+
+.configuracao p {
+    color: #34495e;
+    margin-bottom: 0.5rem;
+}
