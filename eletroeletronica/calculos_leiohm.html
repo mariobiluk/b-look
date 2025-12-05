@@ -26,37 +26,58 @@
             </div>
         </nav>
     </header>
+           <main>
+            <h1>Calculadora de Circuito com 3 Resistores</h1>
+            <p>Preencha os valores do circuito para calcular correntes, tensões e potências</p>
+            <section class="formulario-circuito">
+                <h2>Dados do Circuito</h2>
+                <form id="formCircuito">
+                    <div class="campo-entrada">
+                        <label for="voltagem">Voltagem da Fonte (V):</label>
+                        <input type="number" id="voltagem" step="0.1" placeholder="Ex: 12">
+                    </div>
 
-    <main>
-        <h1>Calculadora Lei de Ohm</h1>
-        <p>V = I × R (Tensão = Corrente × Resistência)</p>
+                    <div class="campo-entrada">
+                        <label for="resistenciaA">Resistor A (Ω):</label>
+                        <input type="number" id="resistenciaA" step="0.1" placeholder="Ex: 100">
+                    </div>
 
-        <div class="voltar-container">
-            <button class="btn-voltar" onclick="history.back()">Voltar</button>
-        </div>
-        
-        <div>
-            <h2>Selecione o que deseja calcular:</h2>
-            <input type="radio" id="calcTensao" name="calculo" value="tensao" checked>
-            <label for="calcTensao">Calcular Tensão (V)</label><br>
+                    <div class="campo-entrada">
+                        <label for="resistenciaB">Resistor B (Ω):</label>
+                        <input type="number" id="resistenciaB" step="0.1" placeholder="Ex: 200">
+                    </div>
 
-            <input type="radio" id="calcCorrente" name="calculo" value="corrente">
-            <label for="calcCorrente">Calcular Corrente (I)</label><br>
+                    <div class="campo-entrada">
+                        <label for="resistenciaC">Resistor C (Ω):</label>
+                        <input type="number" id="resistenciaC" step="0.1" placeholder="Ex: 300">
+                    </div>
 
-            <input type="radio" id="calcResistencia" name="calculo" value="resistencia">
-            <label for="calcResistencia">Calcular Resistência (R)</label>
-        </div>
+                    <div class="acoes-formulario">
+                        <button type="button" onclick="iniciarCalculo()">Calcular Circuito</button>
+                        <button type="reset">Limpar Valores</button>
+                    </div>
+                </form>
+            </section>
 
-        <div id="camposEntrada">
-            <!-- Os campos serão atualizados dinamicamente -->
-        </div>
+            <section class="resultado-calculo">
+                <h2>Resultados do Cálculo</h2>
+                <div id="resultado">
+                    <!-- Resultados serão inseridos aqui pelo JavaScript -->
+                    <p>Preencha os valores acima e clique em "Calcular Circuito"</p>
+                </div>
+            </section>
 
-        <button onclick="calcular()">Calcular</button>
-        <button onclick="limpar()">Limpar</button>
-
-        <div id="resultado"></div>
-    </main>
-
+            <section class="info-circuito">
+                <h2>Informações sobre o Circuito</h2>
+                <div class="configuracao">
+                    <h3>Configuração do Circuito:</h3>
+                    <p>• Resistor A está em série com a combinação paralela de B e C</p>
+                    <p>• Fórmula do paralelo: R<sub>paralelo</sub> = (R<sub>B</sub> × R<sub>C</sub>) ÷ (R<sub>B</sub> + R<sub>C</sub>)</p>
+                    <p>• Resistência total: R<sub>total</sub> = R<sub>A</sub> + R<sub>paralelo</sub></p>
+                </div>
+            </section>
+        </main>
+    
     <footer class="site-footer">
         <div class="container">
             <div class="footer-content">
