@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../img/icone.png" type="image/png">
     <link rel="stylesheet" href="./eletroeletronica.css">
-    <script src="potencia.js" defer></script>
-    <title>Calculadora de Potência Elétrica</title>
+    <script src="leideohm.js" defer></script>
+    <title>Calculadora Lei de Ohm</title>
 </head>
 <body>
     <header>
@@ -26,52 +26,58 @@
             </div>
         </nav>
     </header>
+           <main>
+            <h1>Calculadora de Circuito com 3 Resistores</h1>
+            <p>Preencha os valores do circuito para calcular correntes, tensões e potências</p>
+            <section class="formulario-circuito">
+                <h2>Dados do Circuito</h2>
+                <form id="formCircuito">
+                    <div class="campo-entrada">
+                        <label for="voltagem">Voltagem da Fonte (V):</label>
+                        <input type="number" id="voltagem" step="0.1" placeholder="Ex: 12">
+                    </div>
 
-    <main>
-        <h1>Calculadora de Potência Elétrica</h1>
-        <p>P = V × I (Potência = Tensão × Corrente)</p>
+                    <div class="campo-entrada">
+                        <label for="resistenciaA">Resistor A (Ω):</label>
+                        <input type="number" id="resistenciaA" step="0.1" placeholder="Ex: 100">
+                    </div>
 
-        <div class="voltar-container">
-            <!-- pesquisar na internet como colocar um botão que volta exatamente para a parte da página anterior que o usuário estava -->
-            <button class="btn-voltar" onclick="history.back()">Voltar</button>
-        </div>
+                    <div class="campo-entrada">
+                        <label for="resistenciaB">Resistor B (Ω):</label>
+                        <input type="number" id="resistenciaB" step="0.1" placeholder="Ex: 200">
+                    </div>
 
-        <div>
-            <!-- type radio coloca aquela caixinha para seleção -->
-             <!-- checked deixa define a caixinha marcada por padrão -->
-            <h2>Selecione o que deseja calcular:</h2>
-            <input type="radio" id="calcPotenciaVI" name="calculo" value="potenciaVI" checked>
-            <!-- value serve para dizer para o js qual valor vai ser lido por ele quando essa caixinha tiver selecionada -->
-            <label for="calcPotenciaVI">Calcular Potência (P = V × I)</label><br>
+                    <div class="campo-entrada">
+                        <label for="resistenciaC">Resistor C (Ω):</label>
+                        <input type="number" id="resistenciaC" step="0.1" placeholder="Ex: 300">
+                    </div>
 
-            <input type="radio" id="calcPotenciaRI" name="calculo" value="potenciaRI">
-            <label for="calcPotenciaRI">Calcular Potência (P = R × I²)</label><br>
+                    <div class="acoes-formulario">
+                        <button type="button" onclick="iniciarCalculo()">Calcular Circuito</button>
+                        <button type="reset">Limpar Valores</button>
+                    </div>
+                </form>
+            </section>
 
-            <input type="radio" id="calcPotenciaVR" name="calculo" value="potenciaVR">
-            <label for="calcPotenciaVR">Calcular Potência (P = V² ÷ R)</label><br>
+            <section class="resultado-calculo">
+                <h2>Resultados do Cálculo</h2>
+                <div id="resultado">
+                    <!-- Resultados serão inseridos aqui pelo JavaScript -->
+                    <p>Preencha os valores acima e clique em "Calcular Circuito"</p>
+                </div>
+            </section>
 
-            <input type="radio" id="calcTensao" name="calculo" value="tensao">
-            <label for="calcTensao">Calcular Tensão (V = P ÷ I)</label><br>
-
-            <input type="radio" id="calcCorrente" name="calculo" value="corrente">
-            <label for="calcCorrente">Calcular Corrente (I = P ÷ V)</label><br>
-
-            <input type="radio" id="calcResistencia" name="calculo" value="resistencia">
-            <label for="calcResistencia">Calcular Resistência (R = V² ÷ P)</label>
-        </div>
-
-        <div id="camposEntrada">
-            <!-- div pros campos serem atualizados automaticamente conforme seleciona - feito no js com IA -->
-        </div>
-
-        <div class="botoes-container">
-            <button onclick="calcular()">Calcular</button>
-            <button onclick="limpar()">Limpar</button>
-        </div>
-
-        <div id="resultado"></div>
-    </main>
-
+            <section class="info-circuito">
+                <h2>Informações sobre o Circuito</h2>
+                <div class="configuracao">
+                    <h3>Configuração do Circuito:</h3>
+                    <p>• Resistor A está em série com a combinação paralela de B e C</p>
+                    <p>• Fórmula do paralelo: R<sub>paralelo</sub> = (R<sub>B</sub> × R<sub>C</sub>) ÷ (R<sub>B</sub> + R<sub>C</sub>)</p>
+                    <p>• Resistência total: R<sub>total</sub> = R<sub>A</sub> + R<sub>paralelo</sub></p>
+                </div>
+            </section>
+        </main>
+    
     <footer class="site-footer">
         <div class="container">
             <div class="footer-content">
@@ -99,7 +105,7 @@
                                 WhatsApp</a></li>
                         <li><a href="https://github.com/mariobiluk" target="_blank">
                                 GitHub</a></li>
-                        <li><a href="mailto:contato@agenciablook.com"> E-mail</a></li>
+                        <li><a href="mailto:contato@agenciablook.com">E-mail</a></li>
                     </ul>
                 </div>
             </div>
@@ -109,4 +115,5 @@
         </div>
     </footer>
 </body>
+
 </html>
