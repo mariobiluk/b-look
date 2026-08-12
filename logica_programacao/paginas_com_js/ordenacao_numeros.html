@@ -7,21 +7,82 @@
     <script src="./ordenacaoNumeros.js" defer></script>
     <link rel="stylesheet" href="../programacao.css">
     <title>Ordenação - Agência b-Look</title>
+    <style>
+        /* ========== DROPDOWN ========== */
+        nav ul li.dropdown {
+            position: relative;
+        }
+
+        nav ul li.dropdown .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #1a1a1a;
+            min-width: 180px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            border-radius: 4px;
+            padding: 0.5rem 0;
+            z-index: 9999;
+            list-style: none;
+            margin: 0;
+        }
+
+        nav ul li.dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        nav ul li.dropdown .dropdown-menu li {
+            display: block;
+            margin: 0;
+        }
+
+        nav ul li.dropdown .dropdown-menu li a {
+            display: block;
+            padding: 0.5rem 1.2rem;
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+            white-space: nowrap;
+        }
+
+        nav ul li.dropdown .dropdown-menu li a:hover {
+            background: #d62828;
+        }
+
+        .fa-caret-down {
+            margin-left: 5px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav>
             <div class="nav-container">
                 <div class="logo">
-                    <a href="../../index.html">
-                        <img src="../../img/logoOficial.png" alt="Agência b-Look Logo">
+                    <a href="../index.html">
+                        <img src="../img/logoOficial.png" alt="Agência b-Look Logo">
                     </a>
                 </div>
                 <ul>
-                    <li><a href="../../index.html">Início</a></li>
-                    <li><a href="../../algoritmos/algoritmos.html">Algoritmos & Lógica</a></li>
-                    <li><a href="../../componentes.html">Componentes</a></li>
-                    <li><a href="../../contato.html">Contato</a></li>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="../algoritmos/algoritmos.html">Algoritmos & Lógica</a></li>
+                    <li><a href="../componentes.html">Componentes</a></li>
+                    <li><a href="../contato.html">Contato</a></li>
+                    <li class="dropdown">
+                        <a href="./robotica.html">Robotização <i class="fas fa-caret-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../robots/cartesiano.html">Robô Cartesiano</a></li>
+                            <li><a href="../robots/scara.html">Robô SCARA</a></li>
+                            <li><a href="../robots/articulado.html">Robô Articulado</a></li>
+                            <li><a href="../robots/cilindrico.html">Robô Cilíndrico</a></li>
+                            <li><a href="../robots/delta.html">Robô Delta</a></li>
+                            <li><a href="../robots/polar.html">Robô Polar</a></li>
+                            <li><a href="../robots/colaborativo.html">Robô Colaborativo</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../sensores.html">Sensores</a></li>
                 </ul>
             </div>
         </nav>

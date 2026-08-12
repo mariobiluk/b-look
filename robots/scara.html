@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/icone.png" type="image/png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Agência b-Look - Robô SCARA</title>
+    <style>
+        /* ===== Dropdown ===== */
+        nav ul li.dropdown {
+            position: relative;
+        }
+        nav ul li.dropdown .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #1a1a1a;
+            min-width: 180px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            border-radius: 4px;
+            padding: 0.5rem 0;
+            z-index: 9999;
+            list-style: none;
+            margin: 0;
+        }
+        nav ul li.dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        nav ul li.dropdown .dropdown-menu li {
+            display: block;
+            margin: 0;
+        }
+        nav ul li.dropdown .dropdown-menu li a {
+            display: block;
+            padding: 0.5rem 1.2rem;
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+            white-space: nowrap;
+        }
+        nav ul li.dropdown .dropdown-menu li a:hover {
+            background: #d62828;
+        }
+        .fa-caret-down {
+            margin-left: 5px;
+        }
+
+        /* ===== Estilos específicos ===== */
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .spec-item {
+            background: #f0f0f0;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+        }
+        .spec-item strong {
+            display: block;
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 0.3rem;
+        }
+        .lista-aplicacoes {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.8rem;
+            margin-top: 2rem;
+            padding: 0;
+        }
+        .lista-aplicacoes li {
+            background: #e8e8e8;
+            padding: 0.8rem 1rem;
+            border-radius: 6px;
+            font-weight: 500;
+            color: #222;
+        }
+        .modelos-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .modelo-card {
+            background: #fafafa;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            text-align: center;
+            max-width: 250px;
+            transition: transform 0.2s;
+        }
+        .modelo-card:hover {
+            transform: translateY(-5px);
+        }
+        .modelo-card img {
+            max-width: 100%;
+            height: 130px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+        }
+        .modelo-card h4 {
+            margin: 0.5rem 0 0.2rem;
+            font-size: 1.1rem;
+        }
+        .modelo-card p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .modelo-card p strong {
+            color: #222;
+        }
+        .subtitulo {
+            font-size: 1.2rem;
+            color: #444;
+            margin-top: -0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .destaque {
+            background: #fff3cd;
+            border-left: 4px solid #d62828;
+            padding: 1rem 1.5rem;
+            border-radius: 4px;
+            margin-top: 1.5rem;
+        }
+        .destaque p {
+            margin: 0;
+            font-weight: 500;
+        }
+        .destaque i {
+            color: #d62828;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../img/logoOficial.png" alt="Agência b-Look Logo">
+                    </a>
+                </div>
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="../algoritmos/algoritmos.html">Algoritmos & Lógica</a></li>
+                    <li><a href="../componentes.html">Componentes</a></li>
+                    <li><a href="../contato.html">Contato</a></li>
+                    <li class="dropdown">
+                        <a href="../robotica.html">Robotização <i class="fas fa-caret-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="cartesiano.html">Robô Cartesiano</a></li>
+                            <li><a href="scara.html">Robô SCARA</a></li>
+                            <li><a href="articulado.html">Robô Articulado</a></li>
+                            <li><a href="cilindrico.html">Robô Cilíndrico</a></li>
+                            <li><a href="delta.html">Robô Delta</a></li>
+                            <li><a href="polar.html">Robô Polar</a></li>
+                            <li><a href="colaborativo.html">Robô Colaborativo</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../sensores.html">Sensores</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Banner -->
+        <div class="banner">
+            <div class="banner-content">
+                <h1>ROBÔ SCARA</h1>
+                <p>Selective Compliance Assembly Robot Arm</p>
+                <a href="#conceito" class="btn">Explorar</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== SEÇÃO: CONCEITO ===== -->
+        <section id="conceito" class="servicos">
+            <div class="container">
+                <h2>O QUE É UM ROBÔ SCARA?</h2>
+                <div class="grid-texto">
+                    <p>
+                        O <strong>robô SCARA</strong> (Selective Compliance Assembly Robot Arm) é um robô com 
+                        geometria de quatro eixos – três rotativos e um linear vertical. Sua principal 
+                        característica é a <strong>complacência seletiva</strong>: alta rigidez no plano horizontal 
+                        (XY) e flexibilidade controlada no eixo vertical (Z). Essa combinação o torna ideal 
+                        para operações de inserção e montagem de precisão.
+                    </p>
+                    <p>
+                        Desenvolvido originalmente no Japão, o SCARA combina dois braços articulados no plano 
+                        horizontal, permitindo movimentos rápidos e precisos, enquanto o eixo Z vertical garante 
+                        força controlada para encaixes e montagens delicadas.
+                    </p>
+                    <div class="destaque">
+                        <p><i class="fas fa-arrows-alt-v"></i> Diferencial: complacência seletiva – rígido no plano XY, flexível no eixo Z.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: CARACTERÍSTICAS TÉCNICAS ===== -->
+        <section id="especificacoes" class="servicos" style="background: #f5f5f5;">
+            <div class="container">
+                <h2>ESPECIFICAÇÕES TÉCNICAS</h2>
+                <div class="specs-grid">
+                    <div class="spec-item"><strong>Graus de liberdade</strong> 4 (J1, J2, Z, R)</div>
+                    <div class="spec-item"><strong>Repetibilidade</strong> ±0,01 mm a ±0,05 mm</div>
+                    <div class="spec-item"><strong>Carga útil</strong> 1 kg a 50 kg</div>
+                    <div class="spec-item"><strong>Velocidade</strong> Até 5 m/s (plano XY)</div>
+                    <div class="spec-item"><strong>Alcance</strong> 120 mm a 1200 mm</div>
+                    <div class="spec-item"><strong>Acionamento</strong> Servomotores AC</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: APLICAÇÕES ===== -->
+        <section id="aplicacoes" class="servicos">
+            <div class="container">
+                <h2>APLICAÇÕES INDUSTRIAIS</h2>
+                <ul class="lista-aplicacoes">
+                    <li><i class="fas fa-arrows-alt" style="color:#d62828; margin-right:8px;"></i> Pick and place de alta velocidade</li>
+                    <li><i class="fas fa-microchip" style="color:#d62828; margin-right:8px;"></i> Montagem de precisão (placas de circuito)</li>
+                    <li><i class="fas fa-puzzle-piece" style="color:#d62828; margin-right:8px;"></i> Encaixe de peças e componentes</li>
+                    <li><i class="fas fa-box" style="color:#d62828; margin-right:8px;"></i> Embalagem de produtos</li>
+                    <li><i class="fas fa-pallet" style="color:#d62828; margin-right:8px;"></i> Paletização de pequenos itens</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: MODELOS COMERCIAIS ===== -->
+        <section id="modelos" class="servicos" style="background: #f5f5f5;">
+            <div class="container">
+                <h2>MODELOS COMERCIAIS</h2>
+                <p class="subtitulo">Fabricantes de referência</p>
+                <div class="modelos-grid">
+                    <div class="modelo-card">
+                        <img src="../img/scara_epson.png" alt="Epson LS-B Series" loading="lazy">
+                        <h4>Epson LS-B Series</h4>
+                        <p><strong>Fabricante:</strong> Epson Robots (Japão)</p>
+                        <p>Robôs SCARA de alta performance para montagem e inspeção.</p>
+                    </div>
+                    <div class="modelo-card">
+                        <img src="../img/scara_yamaha.png" alt="Yamaha YK-X Series" loading="lazy">
+                        <h4>Yamaha YK-X Series</h4>
+                        <p><strong>Fabricante:</strong> Yamaha Robotics (Japão)</p>
+                        <p>Linha versátil para aplicações de pick and place e montagem.</p>
+                    </div>
+                    <div class="modelo-card">
+                        <img src="../img/scara_abb.png" alt="ABB IRB 910SC" loading="lazy">
+                        <h4>ABB IRB 910SC</h4>
+                        <p><strong>Fabricante:</strong> ABB (Suíça/Suécia)</p>
+                        <p>Robô SCARA robusto e preciso para automação industrial.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-coluna">
+                    <h3>Sobre nós</h3>
+                    <ul>
+                        <li><a href="../sobre_nos.html">Descubra quem somos</a></li>
+                        <li><a href="../missao.html">Nossa missão</a></li>
+                        <li><a href="../equipe.html">Nossa equipe</a></li>
+                    </ul>
+                </div>
+                <div class="footer-coluna">
+                    <h3>Navegação</h3>
+                    <ul>
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="../algoritmos/algoritmos.html">Algoritmos & Lógica</a></li>
+                        <li><a href="../componentes.html">Componentes</a></li>
+                        <li><a href="../contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-coluna">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><a href="https://wa.me/5548999545106" target="_blank">WhatsApp</a></li>
+                        <li><a href="https://github.com/mariobiluk" target="_blank">GitHub</a></li>
+                        <li><a href="mailto:contato@agenciablook.com">E-mail</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Agência b-Look. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

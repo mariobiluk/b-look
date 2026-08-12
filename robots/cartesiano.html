@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/icone.png" type="image/png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Agência b-Look - Robô Cartesiano</title>
+    <style>
+        /* ===== Dropdown ===== */
+        nav ul li.dropdown {
+            position: relative;
+        }
+        nav ul li.dropdown .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #1a1a1a;
+            min-width: 180px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            border-radius: 4px;
+            padding: 0.5rem 0;
+            z-index: 9999;
+            list-style: none;
+            margin: 0;
+        }
+        nav ul li.dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        nav ul li.dropdown .dropdown-menu li {
+            display: block;
+            margin: 0;
+        }
+        nav ul li.dropdown .dropdown-menu li a {
+            display: block;
+            padding: 0.5rem 1.2rem;
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+            white-space: nowrap;
+        }
+        nav ul li.dropdown .dropdown-menu li a:hover {
+            background: #d62828;
+        }
+        .fa-caret-down {
+            margin-left: 5px;
+        }
+
+        /* ===== Estilos específicos ===== */
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .spec-item {
+            background: #f0f0f0;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+        }
+        .spec-item strong {
+            display: block;
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 0.3rem;
+        }
+        .lista-aplicacoes {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.8rem;
+            margin-top: 2rem;
+            padding: 0;
+        }
+        .lista-aplicacoes li {
+            background: #e8e8e8;
+            padding: 0.8rem 1rem;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+        .modelos-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .modelo-card {
+            background: #fafafa;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            text-align: center;
+            max-width: 250px;
+            transition: transform 0.2s;
+        }
+        .modelo-card:hover {
+            transform: translateY(-5px);
+        }
+        .modelo-card img {
+            max-width: 100%;
+            height: 130px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+        }
+        .modelo-card h4 {
+            margin: 0.5rem 0 0.2rem;
+            font-size: 1.1rem;
+        }
+        .modelo-card p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .modelo-card p strong {
+            color: #222;
+        }
+        .subtitulo {
+            font-size: 1.2rem;
+            color: #444;
+            margin-top: -0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .destaque {
+            background: #fff3cd;
+            border-left: 4px solid #d62828;
+            padding: 1rem 1.5rem;
+            border-radius: 4px;
+            margin-top: 1.5rem;
+        }
+        .destaque p {
+            margin: 0;
+            font-weight: 500;
+        }
+        .destaque i {
+            color: #d62828;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../img/logoOficial.png" alt="Agência b-Look Logo">
+                    </a>
+                </div>
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="../algoritmos/algoritmos.html">Algoritmos & Lógica</a></li>
+                    <li><a href="../componentes.html">Componentes</a></li>
+                    <li><a href="../contato.html">Contato</a></li>
+                    <li class="dropdown">
+                        <a href="../robotica.html">Robotização <i class="fas fa-caret-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="cartesiano.html">Robô Cartesiano</a></li>
+                            <li><a href="scara.html">Robô SCARA</a></li>
+                            <li><a href="articulado.html">Robô Articulado</a></li>
+                            <li><a href="cilindrico.html">Robô Cilíndrico</a></li>
+                            <li><a href="delta.html">Robô Delta</a></li>
+                            <li><a href="polar.html">Robô Polar</a></li>
+                            <li><a href="colaborativo.html">Robô Colaborativo</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../sensores.html">Sensores</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Banner -->
+        <div class="banner">
+            <div class="banner-content">
+                <h1>ROBÔ CARTESIANO</h1>
+                <p>Coordenadas retangulares · Movimento linear</p>
+                <a href="#conceito" class="btn">Explorar</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== SEÇÃO: CONCEITO ===== -->
+        <section id="conceito" class="servicos">
+            <div class="container">
+                <h2>O QUE É UM ROBÔ CARTESIANO?</h2>
+                <div class="grid-texto">
+                    <p>
+                        Também conhecido como <strong>robô de pórtico</strong> ou <strong>robô linear</strong>, 
+                        o robô cartesiano opera em três eixos lineares perpendiculares (X, Y, Z), formando um 
+                        volume de trabalho cúbico ou retangular. É a configuração mais simples e precisa da 
+                        robótica industrial, sendo amplamente utilizada em tarefas que exigem alta exatidão e 
+                        repetibilidade.
+                    </p>
+                    <p>
+                        Seu movimento ocorre exclusivamente por guias lineares e atuadores como fusos de esferas, 
+                        correias dentadas ou cilindros pneumáticos. A programação ponto a ponto é direta, e a 
+                        rigidez estrutural garante excelente desempenho mesmo com cargas elevadas.
+                    </p>
+                    <div class="destaque">
+                        <p><i class="fas fa-arrows-alt"></i> Características principais: 3 graus de liberdade, alta precisão (±0,01 mm) e grande capacidade de carga.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: PRINCÍPIO DE FUNCIONAMENTO ===== -->
+        <section id="funcionamento" class="servicos" style="background: #f5f5f5;">
+            <div class="container">
+                <h2>PRINCÍPIO DE FUNCIONAMENTO</h2>
+                <div class="grid-texto">
+                    <p>
+                        Cada eixo (X, Y, Z) é acionado por um motor independente – geralmente um <strong>servomotor</strong> 
+                        ou <strong>motor de passo</strong>. Um controlador CNC ou CLP interpreta as coordenadas cartesianas 
+                        e comanda os motores para posicionar o efetuador final no ponto desejado. A trajetória é calculada 
+                        por interpolação linear entre os pontos, garantindo movimentos suaves e precisos.
+                    </p>
+                    <p>
+                        Sensores de posição (codificadores) em cada eixo fornecem realimentação ao controlador, 
+                        fechando o loop de controle e assegurando a repetibilidade do movimento.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: CARACTERÍSTICAS TÉCNICAS ===== -->
+        <section id="especificacoes" class="servicos">
+            <div class="container">
+                <h2>ESPECIFICAÇÕES TÉCNICAS</h2>
+                <div class="specs-grid">
+                    <div class="spec-item"><strong>Graus de liberdade</strong> 3 (X, Y, Z)</div>
+                    <div class="spec-item"><strong>Repetibilidade</strong> ±0,01 mm a ±0,1 mm</div>
+                    <div class="spec-item"><strong>Carga útil</strong> Até 500 kg</div>
+                    <div class="spec-item"><strong>Velocidade</strong> Até 2 m/s</div>
+                    <div class="spec-item"><strong>Envelope de trabalho</strong> Retangular, expansível</div>
+                    <div class="spec-item"><strong>Acionamento</strong> Servomotores, motores de passo</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: APLICAÇÕES INDUSTRIAIS ===== -->
+        <section id="aplicacoes" class="servicos" style="background: #f5f5f5;">
+            <div class="container">
+                <h2>APLICAÇÕES INDUSTRIAIS</h2>
+                <ul class="lista-aplicacoes">
+                    <li><i class="fas fa-check-circle" style="color:#d62828; margin-right:8px;"></i> Máquinas CNC – carga e descarga de peças</li>
+                    <li><i class="fas fa-check-circle" style="color:#d62828; margin-right:8px;"></i> Impressoras 3D de grande porte</li>
+                    <li><i class="fas fa-check-circle" style="color:#d62828; margin-right:8px;"></i> Corte a plasma e laser</li>
+                    <li><i class="fas fa-check-circle" style="color:#d62828; margin-right:8px;"></i> Montagem de componentes eletrônicos</li>
+                    <li><i class="fas fa-check-circle" style="color:#d62828; margin-right:8px;"></i> Dosagem de fluidos (dispensers)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: INTEGRAÇÃO COM AUTOMAÇÃO E IoT ===== -->
+        <section id="iot" class="servicos">
+            <div class="container">
+                <h2>INTEGRAÇÃO COM AUTOMAÇÃO E IOT</h2>
+                <div class="grid-texto">
+                    <p>
+                        Robôs cartesianos modernos conectam-se a <strong>gateways IoT</strong> via protocolos como 
+                        <strong>MQTT</strong> ou <strong>OPC UA</strong>. Sensores de corrente e vibração instalados 
+                        nos eixos permitem a implementação de <strong>manutenção preditiva</strong>, monitorando o 
+                        desgaste de componentes em tempo real.
+                    </p>
+                    <p>
+                        A integração com sistemas MES/ERP possibilita rastreabilidade completa da produção, 
+                        coleta de dados de ciclo e ajustes automáticos de parâmetros, otimizando o desempenho 
+                        e reduzindo o tempo de inatividade.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: MODELOS COMERCIAIS ===== -->
+        <section id="modelos" class="servicos" style="background: #f5f5f5;">
+            <div class="container">
+                <h2>MODELOS COMERCIAIS</h2>
+                <p class="subtitulo">Fabricantes de destaque no mercado</p>
+                <div class="modelos-grid">
+                    <div class="modelo-card">
+                        <img src="../img/cartesiano_festo.png" alt="Festo EXCM" loading="lazy">
+                        <h4>Festo EXCM</h4>
+                        <p><strong>Fabricante:</strong> Festo (Alemanha)</p>
+                        <p>Sistema compacto de pórtico com controlador integrado e conectividade IO-Link para IoT.</p>
+                    </div>
+                    <div class="modelo-card">
+                        <img src="../img/cartesiano_bosch.png" alt="Bosch Rexroth MKK" loading="lazy">
+                        <h4>Bosch Rexroth MKK/MKR</h4>
+                        <p><strong>Fabricante:</strong> Bosch Rexroth (Alemanha)</p>
+                        <p>Módulos lineares de alta rigidez para cargas pesadas e aplicações de precisão.</p>
+                    </div>
+                    <div class="modelo-card">
+                        <img src="../img/cartesiano_yamaha.png" alt="Yamaha XY-X" loading="lazy">
+                        <h4>Yamaha XY-X</h4>
+                        <p><strong>Fabricante:</strong> Yamaha Motor (Japão)</p>
+                        <p>Robôs cartesianos de alta velocidade para montagem e manipulação industrial.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-coluna">
+                    <h3>Sobre nós</h3>
+                    <ul>
+                        <li><a href="../sobre_nos.html">Descubra quem somos</a></li>
+                        <li><a href="../missao.html">Nossa missão</a></li>
+                        <li><a href="../equipe.html">Nossa equipe</a></li>
+                    </ul>
+                </div>
+                <div class="footer-coluna">
+                    <h3>Navegação</h3>
+                    <ul>
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="../algoritmos/algoritmos.html">Algoritmos & Lógica</a></li>
+                        <li><a href="../componentes.html">Componentes</a></li>
+                        <li><a href="../contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-coluna">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><a href="https://wa.me/5548999545106" target="_blank">WhatsApp</a></li>
+                        <li><a href="https://github.com/mariobiluk" target="_blank">GitHub</a></li>
+                        <li><a href="mailto:contato@agenciablook.com">E-mail</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Agência b-Look. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/icone.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Agência b-Look - Robotização</title>
+    <style>
+        /* ========== DROPDOWN ========== */
+        nav ul li.dropdown {
+            position: relative;
+        }
+
+        nav ul li.dropdown .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #1a1a1a;
+            min-width: 180px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            border-radius: 4px;
+            padding: 0.5rem 0;
+            z-index: 9999;
+            list-style: none;
+            margin: 0;
+        }
+
+        nav ul li.dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        nav ul li.dropdown .dropdown-menu li {
+            display: block;
+            margin: 0;
+        }
+
+        nav ul li.dropdown .dropdown-menu li a {
+            display: block;
+            padding: 0.5rem 1.2rem;
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+            white-space: nowrap;
+        }
+
+        nav ul li.dropdown .dropdown-menu li a:hover {
+            background: #d62828;
+        }
+
+        .fa-caret-down {
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="./index.html">
+                        <img src="./img/logoOficial.png" alt="Agência b-Look Logo">
+                    </a>
+                </div>
+                <ul>
+                    <li><a href="./index.html">Início</a></li>
+                    <li><a href="./algoritmos/algoritmos.html">Algoritmos & Lógica</a></li>
+                    <li><a href="./componentes.html">Componentes</a></li>
+                    <li><a href="./contato.html">Contato</a></li>
+                    <li class="dropdown">
+                        <a href="./robotica.html">Robotização <i class="fas fa-caret-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./robots/cartesiano.html">Robô Cartesiano</a></li>
+                            <li><a href="./robots/scara.html">Robô SCARA</a></li>
+                            <li><a href="./robots/articulado.html">Robô Articulado</a></li>
+                            <li><a href="./robots/cilindrico.html">Robô Cilíndrico</a></li>
+                            <li><a href="./robots/delta.html">Robô Delta</a></li>
+                            <li><a href="./robots/polar.html">Robô Polar</a></li>
+                            <li><a href="./robots/colaborativo.html">Robô Colaborativo</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./sensores.html">Sensores</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Banner da página -->
+        <div class="banner">
+            <div class="banner-content">
+                <h1>ROBOTIZAÇÃO</h1>
+                <p>Conceitos, componentes e aplicações práticas</p>
+                <a href="#conceitos" class="btn">Explorar</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção: O que é Robótica? -->
+        <section id="conceitos" class="servicos">
+            <div class="container">
+                <h2>O QUE É ROBÓTICA?</h2>
+                <div class="grid-texto">
+                    <p>
+                        A <strong>robótica</strong> é uma área multidisciplinar que integra engenharia mecânica, 
+                        eletrônica e ciência da computação para desenvolver máquinas capazes de executar tarefas 
+                        de forma autônoma ou semiautônoma. Esses dispositivos, os robôs, percebem o ambiente por 
+                        meio de sensores, processam informações em um controlador e agem sobre o mundo físico 
+                        utilizando atuadores.
+                    </p>
+                    <p>
+                        No dia a dia, a robótica está presente em aspiradores automáticos, drones, veículos 
+                        autônomos e braços industriais, transformando a maneira como vivemos e produzimos.
+                    </p>
+                    <div class="destaque">
+                        <p><i class="fas fa-robot"></i> Exemplos cotidianos: robôs aspiradores, drones, carros autônomos e braços robóticos em fábricas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção: História da Robótica (linha do tempo) -->
+        <section id="historia" class="servicos" style="background: #f5f5f5;">
+            <div class="container">
+                <h2>JORNADA DA ROBÓTICA</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">1920</div>
+                        <p>O termo "robô" surge na peça <em>R.U.R.</em> (Rossum's Universal Robots), de Karel Čapek.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">1954</div>
+                        <p>George Devol patenteia o <strong>Unimate</strong>, o primeiro robô industrial programável.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">1969</div>
+                        <p>O <strong>Shakey</strong>, do Stanford Research Institute, combina visão computacional e planejamento de ações.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2005</div>
+                        <p>O <strong>Arduino</strong> populariza a robótica educacional, permitindo protótipos de baixo custo.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">Atualidade</div>
+                        <p>Robôs autônomos e colaborativos atuam em fábricas, hospitais, exploração espacial e muito mais.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção: Componentes Básicos de um Robô -->
+        <section id="componentes" class="servicos">
+            <div class="container">
+                <h2>COMPONENTES ESSENCIAIS</h2>
+                <div class="grid">
+                    <article>
+                        <div class="icon"><i class="fas fa-eye"></i></div>
+                        <h3>Sensores</h3>
+                        <p>Captam dados do ambiente: ultrassom, infravermelho, câmeras, giroscópios, entre outros.</p>
+                    </article>
+                    <article>
+                        <div class="icon"><i class="fas fa-cogs"></i></div>
+                        <h3>Atuadores</h3>
+                        <p>Executam ações mecânicas: motores DC, servomotores, relés e garras robóticas.</p>
+                    </article>
+                    <article>
+                        <div class="icon"><i class="fas fa-microchip"></i></div>
+                        <h3>Controladores</h3>
+                        <p>Processam dados e tomam decisões: Arduino, ESP32, Raspberry Pi e outros microcontroladores.</p>
+                    </article>
+                    <article>
+                        <div class="icon"><i class="fas fa-bolt"></i></div>
+                        <h3>Fonte de Energia</h3>
+                        <p>Alimenta todo o sistema com baterias, pilhas ou fontes de bancada.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção: Classificação dos Robôs -->
+        <section id="classificacao" class="servicos" style="background: #f5f5f5;">
+            <div class="container">
+                <h2>CLASSIFICAÇÃO DOS ROBÔS</h2>
+                <div class="grid">
+                    <article>
+                        <div class="icon"><i class="fas fa-industry"></i></div>
+                        <h3>Industriais</h3>
+                        <p>Braços robóticos usados em soldagem, montagem e pintura automatizada.</p>
+                    </article>
+                    <article>
+                        <div class="icon"><i class="fas fa-car"></i></div>
+                        <h3>Móveis</h3>
+                        <p>Robôs que se deslocam, como seguidores de linha, carrinhos autônomos e drones terrestres.</p>
+                    </article>
+                    <article>
+                        <div class="icon"><i class="fas fa-water"></i></div>
+                        <h3>Aquáticos / Submarinos</h3>
+                        <p>Veículos operados remotamente para exploração subaquática e monitoramento.</p>
+                    </article>
+                    <article>
+                        <div class="icon"><i class="fas fa-handshake"></i></div>
+                        <h3>Colaborativos (Cobots)</h3>
+                        <p>Projetados para trabalhar lado a lado com humanos em segurança.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção: Exemplos Práticos -->
+        <section id="exemplos" class="servicos">
+            <div class="container">
+                <h2>PROJETOS PRÁTICOS COM ARDUINO</h2>
+                <p class="subtitulo">Confira alguns projetos que ilustram os princípios da robótica:</p>
+                <div class="grid">
+                    <article>
+                        <img src="./img/robo-seguidor-linha.png" alt="Robô Seguidor de Linha" loading="lazy">
+                        <h3>Seguidor de Linha</h3>
+                        <p>Utiliza sensores infravermelhos para percorrer um trajeto predefinido no chão.</p>
+                    </article>
+                    <article>
+                        <img src="./img/braco-robotico.png" alt="Braço Robótico" loading="lazy">
+                        <h3>Braço Robótico</h3>
+                        <p>Controlado por servomotores, reproduz movimentos articulados similares aos humanos.</p>
+                    </article>
+                    <article>
+                        <img src="./img/carrinho-robo.png" alt="Carrinho Bluetooth" loading="lazy">
+                        <h3>Carrinho Bluetooth</h3>
+                        <p>Comandado via aplicativo no celular, utilizando comunicação serial sem fio.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-coluna">
+                    <h3>Sobre nós</h3>
+                    <ul>
+                        <li><a href="sobre_nos.html">Descubra quem somos</a></li>
+                        <li><a href="missao.html">Nossa missão</a></li>
+                        <li><a href="equipe.html">Nossa equipe</a></li>
+                    </ul>
+                </div>
+                <div class="footer-coluna">
+                    <h3>Navegação</h3>
+                    <ul>
+                        <li><a href="./index.html">Início</a></li>
+                        <li><a href="./algoritmos/algoritmos.html">Algoritmos & Lógica</a></li>
+                        <li><a href="./componentes.html">Componentes</a></li>
+                        <li><a href="./contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-coluna">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><a href="https://wa.me/5548999545106" target="_blank">WhatsApp</a></li>
+                        <li><a href="https://github.com/mariobiluk" target="_blank">GitHub</a></li>
+                        <li><a href="mailto:contato@agenciablook.com">E-mail</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Agência b-Look. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

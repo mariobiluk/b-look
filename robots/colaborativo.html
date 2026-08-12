@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/icone.png" type="image/png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Agência b-Look - Robô Colaborativo</title>
+    <style>
+        /* ===== Dropdown ===== */
+        nav ul li.dropdown {
+            position: relative;
+        }
+        nav ul li.dropdown .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #1a1a1a;
+            min-width: 180px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            border-radius: 4px;
+            padding: 0.5rem 0;
+            z-index: 9999;
+            list-style: none;
+            margin: 0;
+        }
+        nav ul li.dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        nav ul li.dropdown .dropdown-menu li {
+            display: block;
+            margin: 0;
+        }
+        nav ul li.dropdown .dropdown-menu li a {
+            display: block;
+            padding: 0.5rem 1.2rem;
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+            white-space: nowrap;
+        }
+        nav ul li.dropdown .dropdown-menu li a:hover {
+            background: #d62828;
+        }
+        .fa-caret-down {
+            margin-left: 5px;
+        }
+
+        /* ===== Estilos específicos ===== */
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .card-colab {
+            background: #f0f0f0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .card-colab:hover {
+            transform: translateY(-4px);
+        }
+        .card-colab h4 {
+            color: #d62828;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .card-colab p {
+            color: #333;
+            font-size: 0.95rem;
+        }
+        .lista-destaques {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.8rem;
+            margin-top: 2rem;
+            padding: 0;
+        }
+        .lista-destaques li {
+            background: #e8e8e8;
+            padding: 0.8rem 1rem;
+            border-radius: 6px;
+            font-weight: 500;
+            color: #222;
+        }
+        .modelos-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .modelo-card {
+            background: #fafafa;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            text-align: center;
+            max-width: 250px;
+            transition: transform 0.2s;
+        }
+        .modelo-card:hover {
+            transform: translateY(-5px);
+        }
+        .modelo-card img {
+            max-width: 100%;
+            height: 130px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+        }
+        .modelo-card h4 {
+            margin: 0.5rem 0 0.2rem;
+            font-size: 1.1rem;
+        }
+        .modelo-card p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .modelo-card p strong {
+            color: #222;
+        }
+        .subtitulo {
+            font-size: 1.2rem;
+            color: #444;
+            margin-top: -0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .destaque {
+            background: #fff3cd;
+            border-left: 4px solid #d62828;
+            padding: 1rem 1.5rem;
+            border-radius: 4px;
+            margin-top: 1.5rem;
+        }
+        .destaque p {
+            margin: 0;
+            font-weight: 500;
+        }
+        .destaque i {
+            color: #d62828;
+            margin-right: 0.5rem;
+        }
+        .grid-duas-colunas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .coluna-card {
+            background: #f0f0f0;
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+        .coluna-card h4 {
+            color: #d62828;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        .coluna-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .coluna-card ul li {
+            padding: 0.4rem 0;
+            color: #333;
+            border-bottom: 1px solid #ddd;
+        }
+        .coluna-card ul li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../img/logoOficial.png" alt="Agência b-Look Logo">
+                    </a>
+                </div>
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="../algoritmos/algoritmos.html">Algoritmos & Lógica</a></li>
+                    <li><a href="../componentes.html">Componentes</a></li>
+                    <li><a href="../contato.html">Contato</a></li>
+                    <li class="dropdown">
+                        <a href="../robotica.html">Robotização <i class="fas fa-caret-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="cartesiano.html">Robô Cartesiano</a></li>
+                            <li><a href="scara.html">Robô SCARA</a></li>
+                            <li><a href="articulado.html">Robô Articulado</a></li>
+                            <li><a href="cilindrico.html">Robô Cilíndrico</a></li>
+                            <li><a href="delta.html">Robô Delta</a></li>
+                            <li><a href="polar.html">Robô Polar</a></li>
+                            <li><a href="colaborativo.html">Robô Colaborativo</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../sensores.html">Sensores</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Banner -->
+        <div class="banner">
+            <div class="banner-content">
+                <h1>ROBÔ COLABORATIVO</h1>
+                <p>Segurança e cooperação homem-máquina</p>
+                <a href="#conceito" class="btn">Explorar</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== SEÇÃO: CONCEITO ===== -->
+        <section id="conceito" class="servicos">
+            <div class="container">
+                <h2>O QUE É UM ROBÔ COLABORATIVO?</h2>
+                <div class="grid-texto">
+                    <p>
+                        Os <strong>robôs colaborativos</strong> – ou <strong>cobots</strong> – representam uma 
+                        evolução na automação industrial ao permitirem a interação direta e segura entre humanos 
+                        e máquinas, sem a necessidade de barreiras físicas. Projetados para compartilhar o mesmo 
+                        espaço de trabalho, eles combinam sensibilidade, inteligência e controle de força para 
+                        operar ao lado de operadores.
+                    </p>
+                    <p>
+                        Baseados nas normas internacionais <strong>ISO 10218</strong> e <strong>ISO/TS 15066</strong>, 
+                        os cobots são leves, fáceis de programar e possuem sistemas de monitoramento que garantem 
+                        a segurança em todas as situações.
+                    </p>
+                    <div class="destaque">
+                        <p><i class="fas fa-handshake"></i> Diferencial: colaboração ativa com humanos, eliminando grades e aumentando a flexibilidade produtiva.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: MODOS DE COLABORAÇÃO ===== -->
+        <section id="modos" class="servicos" style="background: #f5f5f5;">
+            <div class="container">
+                <h2>MODOS DE COLABORAÇÃO</h2>
+                <p class="subtitulo">Quatro abordagens para interação segura</p>
+                <div class="grid-cards">
+                    <div class="card-colab">
+                        <h4><i class="fas fa-stop-circle"></i> Parada Monitorada</h4>
+                        <p>O robô interrompe seu movimento quando o operador entra na área de trabalho compartilhada.</p>
+                    </div>
+                    <div class="card-colab">
+                        <h4><i class="fas fa-hand-paper"></i> Condução Manual</h4>
+                        <p>O usuário guia fisicamente o robô para ensinar trajetórias e pontos de operação.</p>
+                    </div>
+                    <div class="card-colab">
+                        <h4><i class="fas fa-tachometer-alt"></i> Monitoramento de Velocidade e Separação</h4>
+                        <p>Sensores ajustam a velocidade do robô com base na distância do operador.</p>
+                    </div>
+                    <div class="card-colab">
+                        <h4><i class="fas fa-weight-hanging"></i> Limitação de Potência e Força</h4>
+                        <p>O robô é projetado para que forças de impacto fiquem abaixo dos limites seguros para humanos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: CARACTERÍSTICAS CONSTRUTIVAS ===== -->
+        <section id="caracteristicas" class="servicos">
+            <div class="container">
+                <h2>CARACTERÍSTICAS E TECNOLOGIAS</h2>
+                <ul class="lista-destaques">
+                    <li><i class="fas fa-microchip" style="color:#d62828; margin-right:8px;"></i> Sensores de torque integrados nas juntas</li>
+                    <li><i class="fas fa-shield-alt" style="color:#d62828; margin-right:8px;"></i> Superfícies arredondadas e sem pontos de esmagamento</li>
+                    <li><i class="fas fa-weight" style="color:#d62828; margin-right:8px;"></i> Materiais leves (alumínio, compósitos)</li>
+                    <li><i class="fas fa-tablet-alt" style="color:#d62828; margin-right:8px;"></i> Programação intuitiva por demonstração ou tablets</li>
+                    <li><i class="fas fa-exchange-alt" style="color:#d62828; margin-right:8px;"></i> Modularidade e fácil realocação na fábrica</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: APLICAÇÕES E VANTAGENS ===== -->
+        <section id="aplicacoes" class="servicos" style="background: #f5f5f5;">
+            <div class="container">
+                <h2>APLICAÇÕES E BENEFÍCIOS</h2>
+                <div class="grid-duas-colunas">
+                    <div class="coluna-card">
+                        <h4><i class="fas fa-tools"></i> Principais Aplicações</h4>
+                        <ul>
+                            <li>Montagem de componentes eletrônicos</li>
+                            <li>Pick and place colaborativo</li>
+                            <li>Inspeção de qualidade com visão</li>
+                            <li>Assistência em tarefas de precisão</li>
+                            <li>Redução de esforço ergonômico</li>
+                        </ul>
+                    </div>
+                    <div class="coluna-card">
+                        <h4><i class="fas fa-chart-line"></i> Vantagens Estratégicas</h4>
+                        <ul>
+                            <li>Flexibilidade extrema para mudanças de linha</li>
+                            <li>Menor custo de integração e instalação</li>
+                            <li>Ocupação reduzida no chão de fábrica</li>
+                            <li>Interface amigável para operadores</li>
+                            <li>Retorno sobre investimento acelerado</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: DESAFIOS ===== -->
+        <section id="desafios" class="servicos">
+            <div class="container">
+                <h2>DESAFIOS E LIMITAÇÕES</h2>
+                <ul class="lista-destaques" style="grid-template-columns: 1fr 1fr;">
+                    <li><i class="fas fa-exclamation-triangle" style="color:#d62828; margin-right:8px;"></i> Carga útil e velocidade limitadas (até ~20 kg e 2 m/s)</li>
+                    <li><i class="fas fa-balance-scale" style="color:#d62828; margin-right:8px;"></i> Equilíbrio constante entre produtividade e segurança</li>
+                    <li><i class="fas fa-wrench" style="color:#d62828; margin-right:8px;"></i> Manutenção periódica dos sensores de segurança</li>
+                    <li><i class="fas fa-lock" style="color:#d62828; margin-right:8px;"></i> Vulnerabilidades de cibersegurança em sistemas conectados</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: MODELOS COMERCIAIS ===== -->
+        <section id="modelos" class="servicos" style="background: #f5f5f5;">
+            <div class="container">
+                <h2>PRINCIPAIS FABRICANTES</h2>
+                <p class="subtitulo">Referências globais em cobots</p>
+                <div class="modelos-grid">
+                    <div class="modelo-card">
+                        <img src="../img/cobot_ur.png" alt="Universal Robots UR5e" loading="lazy">
+                        <h4>Universal Robots UR5e</h4>
+                        <p><strong>Fabricante:</strong> Universal Robots (Dinamarca)</p>
+                        <p>Líder mundial com ecossistema extenso e programação acessível.</p>
+                    </div>
+                    <div class="modelo-card">
+                        <img src="../img/cobot_fanuc.png" alt="FANUC CRX-10iA" loading="lazy">
+                        <h4>FANUC CRX-10iA</h4>
+                        <p><strong>Fabricante:</strong> FANUC (Japão)</p>
+                        <p>Linha colaborativa com sensores de torque e alta confiabilidade.</p>
+                    </div>
+                    <div class="modelo-card">
+                        <img src="../img/cobot_abb.png" alt="ABB GoFa" loading="lazy">
+                        <h4>ABB GoFa</h4>
+                        <p><strong>Fabricante:</strong> ABB (Suíça/Suécia)</p>
+                        <p>Alto desempenho com segurança certificada e integração digital.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: FUTURO ===== -->
+        <section id="futuro" class="servicos">
+            <div class="container">
+                <h2>O FUTURO DOS COBOTS</h2>
+                <ul class="lista-destaques">
+                    <li><i class="fas fa-brain" style="color:#d62828; margin-right:8px;"></i> Integração com IA para aprendizado de tarefas</li>
+                    <li><i class="fas fa-eye" style="color:#d62828; margin-right:8px;"></i> Visão computacional avançada para reconhecimento de objetos</li>
+                    <li><i class="fas fa-robot" style="color:#d62828; margin-right:8px;"></i> Cobots móveis integrados a plataformas autônomas (AMRs)</li>
+                    <li><i class="fas fa-chart-pie" style="color:#d62828; margin-right:8px;"></i> Manutenção preditiva via IoT e machine learning</li>
+                    <li><i class="fas fa-file-contract" style="color:#d62828; margin-right:8px;"></i> Evolução contínua das normas de segurança (ISO)</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-coluna">
+                    <h3>Sobre nós</h3>
+                    <ul>
+                        <li><a href="../sobre_nos.html">Descubra quem somos</a></li>
+                        <li><a href="../missao.html">Nossa missão</a></li>
+                        <li><a href="../equipe.html">Nossa equipe</a></li>
+                    </ul>
+                </div>
+                <div class="footer-coluna">
+                    <h3>Navegação</h3>
+                    <ul>
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="../algoritmos/algoritmos.html">Algoritmos & Lógica</a></li>
+                        <li><a href="../componentes.html">Componentes</a></li>
+                        <li><a href="../contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-coluna">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><a href="https://wa.me/5548999545106" target="_blank">WhatsApp</a></li>
+                        <li><a href="https://github.com/mariobiluk" target="_blank">GitHub</a></li>
+                        <li><a href="mailto:contato@agenciablook.com">E-mail</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Agência b-Look. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
