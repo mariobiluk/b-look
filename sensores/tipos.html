@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agência b-Look - Tipos de Sensores: catálogo completo de sensores para automação, IoT e projetos eletrônicos.">
+    <link rel="shortcut icon" href="../img/icone.png" type="image/png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Agência b-Look - Tipos de Sensores</title>
+    <style>
+        /* ===== Dropdown ===== */
+        nav ul li.dropdown {
+            position: relative;
+        }
+        nav ul li.dropdown .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #1a1a1a;
+            min-width: 180px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            border-radius: 4px;
+            padding: 0.5rem 0;
+            z-index: 9999;
+            list-style: none;
+            margin: 0;
+        }
+        nav ul li.dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        nav ul li.dropdown .dropdown-menu li {
+            display: block;
+            margin: 0;
+        }
+        nav ul li.dropdown .dropdown-menu li a {
+            display: block;
+            padding: 0.5rem 1.2rem;
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+            white-space: nowrap;
+        }
+        nav ul li.dropdown .dropdown-menu li a:hover {
+            background: #d62828;
+        }
+        .fa-caret-down {
+            margin-left: 5px;
+        }
+
+        /* ===== Estilos específicos ===== */
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 0.8rem;
+            margin-top: 1.5rem;
+        }
+        .spec-item {
+            background: #f0f0f0;
+            padding: 0.8rem 1rem;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 500;
+            color: #222;
+            font-size: 0.9rem;
+        }
+        .spec-item strong {
+            display: block;
+            color: #d62828;
+            font-size: 0.85rem;
+            margin-bottom: 0.2rem;
+        }
+        .exemplos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .exemplo-card {
+            background: #fafafa;
+            border-radius: 12px;
+            padding: 1.2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .exemplo-card:hover {
+            transform: translateY(-4px);
+        }
+        .exemplo-card img {
+            max-width: 100%;
+            height: 100px;
+            object-fit: contain;
+            margin-bottom: 0.8rem;
+            background: #fff;
+            padding: 0.3rem;
+            border-radius: 4px;
+        }
+        .exemplo-card h4 {
+            margin: 0.3rem 0 0.2rem;
+            font-size: 1rem;
+            color: #d62828;
+        }
+        .exemplo-card p {
+            font-size: 0.85rem;
+            color: #555;
+        }
+        .subtitulo {
+            font-size: 1.2rem;
+            color: #444;
+            margin-top: -0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .grid-texto p {
+            color: #333;
+            line-height: 1.6;
+        }
+        .destaque {
+            background: #fff3cd;
+            border-left: 4px solid #d62828;
+            padding: 1rem 1.5rem;
+            border-radius: 4px;
+            margin-top: 1.5rem;
+        }
+        .destaque p {
+            margin: 0;
+            font-weight: 500;
+        }
+        .destaque i {
+            color: #d62828;
+            margin-right: 0.5rem;
+        }
+        .categoria-titulo {
+            color: #d62828;
+            font-size: 1.3rem;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid #d62828;
+            padding-bottom: 0.3rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../img/logoOficial.png" alt="Agência b-Look Logo">
+                    </a>
+                </div>
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="../algoritmos/algoritmos.html">Algoritmos & Lógica</a></li>
+                    <li><a href="../componentes.html">Componentes</a></li>
+                    <li><a href="../contato.html">Contato</a></li>
+                    <li class="dropdown">
+                        <a href="../robotica.html">Robotização <i class="fas fa-caret-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../robots/cartesiano.html">Robô Cartesiano</a></li>
+                            <li><a href="../robots/scara.html">Robô SCARA</a></li>
+                            <li><a href="../robots/articulado.html">Robô Articulado</a></li>
+                            <li><a href="../robots/cilindrico.html">Robô Cilíndrico</a></li>
+                            <li><a href="../robots/delta.html">Robô Delta</a></li>
+                            <li><a href="../robots/polar.html">Robô Polar</a></li>
+                            <li><a href="../robots/colaborativo.html">Robô Colaborativo</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="../sensores.html">Sensores <i class="fas fa-caret-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="introducao.html">Introdução a Sensores</a></li>
+                            <li><a href="tipos.html">Tipos de Sensores</a></li>
+                            <li><a href="comunicacao.html">Comunicação</a></li>
+                            <li><a href="plataformas.html">Plataformas IoT</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Banner -->
+        <div class="banner">
+            <div class="banner-content">
+                <h1>TIPOS DE SENSORES</h1>
+                <p>Catálogo completo de sensores para automação e IoT</p>
+                <a href="#temperatura" class="btn">Explorar</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== SEÇÃO: INTRODUÇÃO ===== -->
+        <section id="introducao" class="servicos">
+            <div class="container">
+                <h2>CONHEÇA OS PRINCIPAIS SENSORES</h2>
+                <div class="grid-texto">
+                    <p>
+                        Os sensores são componentes essenciais em projetos de automação, IoT e prototipagem 
+                        eletrônica. Cada tipo possui características específicas de sinal, comunicação e 
+                        aplicação, sendo fundamental conhecer suas particularidades para escolher o modelo 
+                        mais adequado para cada projeto.
+                    </p>
+                    <p>
+                        A seguir, apresentamos um catálogo com os sensores mais utilizados, organizados por 
+                        categoria de grandeza medida.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: TEMPERATURA ===== -->
+        <section id="temperatura" class="servicos" style="background: #f5f5f5;">
+            <div class="container">
+                <h2 class="categoria-titulo"><i class="fas fa-thermometer-half"></i> Sensores de Temperatura</h2>
+                <div class="specs-grid">
+                    <div class="spec-item"><strong>LM35</strong> Analógico, saída 10 mV/°C, alimentação 5 V</div>
+                    <div class="spec-item"><strong>DHT11</strong> Digital, temperatura e umidade, alcance 0–50 °C</div>
+                    <div class="spec-item"><strong>DHT22</strong> Digital, temperatura e umidade, maior precisão</div>
+                    <div class="spec-item"><strong>DS18B20</strong> Digital, 1-Wire, múltiplos sensores no mesmo barramento</div>
+                    <div class="spec-item"><strong>Termopares</strong> Para altas temperaturas (até 1000+ °C)</div>
+                    <div class="spec-item"><strong>RTDs</strong> Precisão elevada para aplicações industriais</div>
+                </div>
+                <p><strong>Aplicações:</strong> Climatização, monitoramento de máquinas, processos industriais, estações meteorológicas e IoT.</p>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: UMIDADE ===== -->
+        <section id="umidade" class="servicos">
+            <div class="container">
+                <h2 class="categoria-titulo"><i class="fas fa-tint"></i> Sensores de Umidade</h2>
+                <div class="grid-texto">
+                    <p>
+                        Sensores como o <strong>DHT11</strong> e <strong>DHT22</strong> também medem umidade relativa 
+                        do ar, sendo amplamente utilizados em estações meteorológicas, automação residencial e 
+                        projetos IoT que necessitam de monitoramento ambiental.
+                    </p>
+                    <p><strong>Aplicações:</strong> Estufas agrícolas, climatização, monitoramento de museus e arquivos, sistemas de irrigação inteligente.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: DISTÂNCIA ===== -->
+        <section id="distancia" class="servicos" style="background: #f5f5f5;">
+            <div class="container">
+                <h2 class="categoria-titulo"><i class="fas fa-ruler-combined"></i> Sensores Ultrassônicos</h2>
+                <div class="grid-texto">
+                    <p>
+                        Utilizam ondas sonoras de alta frequência para medir distâncias. O princípio de funcionamento 
+                        é: <strong>emitir onda → atingir objeto → receber eco → calcular distância</strong>.
+                    </p>
+                    <p>
+                        O módulo <strong>HC-SR04</strong> é o mais popular, com pinos Trigger e Echo, muito utilizado 
+                        em robótica, medição de nível e detecção de obstáculos.
+                    </p>
+                    <p><strong>Aplicações:</strong> Medição de distância, robótica, detecção de obstáculos, nível de tanques, estacionamento assistido.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: LDR ===== -->
+        <section id="ldr" class="servicos">
+            <div class="container">
+                <h2 class="categoria-titulo"><i class="fas fa-sun"></i> LDR (Light Dependent Resistor)</h2>
+                <div class="grid-texto">
+                    <p>
+                        Resistor cuja resistência varia com a intensidade luminosa. Utilizado em circuitos de 
+                        leitura analógica para detectar níveis de luz ambiente.
+                    </p>
+                    <p><strong>Aplicações:</strong> Iluminação automática, monitoramento de luminosidade, automação residencial, projetos IoT.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: PIR ===== -->
+        <section id="pir" class="servicos" style="background: #f5f5f5;">
+            <div class="container">
+                <h2 class="categoria-titulo"><i class="fas fa-running"></i> Sensor PIR (Passive Infrared)</h2>
+                <div class="grid-texto">
+                    <p>
+                        Detecta movimento pela variação da radiação infravermelha no ambiente. Módulos comuns 
+                        oferecem saída digital, facilitando a integração com microcontroladores.
+                    </p>
+                    <p><strong>Aplicações:</strong> Iluminação automática, sistemas de segurança, automação residencial, monitoramento de presença.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: GÁS ===== -->
+        <section id="gas" class="servicos">
+            <div class="container">
+                <h2 class="categoria-titulo"><i class="fas fa-wind"></i> Sensores de Gás</h2>
+                <div class="grid-texto">
+                    <p>
+                        Detectam a presença ou concentração de gases no ambiente. Os modelos mais comuns incluem:
+                    </p>
+                    <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                        <li><i class="fas fa-check-circle" style="color:#d62828; margin-right:8px;"></i> <strong>MQ-2</strong> – Detecta gases inflamáveis e fumaça</li>
+                        <li><i class="fas fa-check-circle" style="color:#d62828; margin-right:8px;"></i> <strong>MQ-135</strong> – Monitora qualidade do ar (CO2, amônia, benzeno)</li>
+                        <li><i class="fas fa-check-circle" style="color:#d62828; margin-right:8px;"></i> <strong>MQ-7</strong> – Sensor específico para monóxido de carbono (CO)</li>
+                    </ul>
+                    <p style="margin-top: 1rem;">
+                        <em>Importante: sensores educacionais não substituem instrumentos industriais certificados para segurança.</em>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: BMP280 ===== -->
+        <section id="bmp280" class="servicos" style="background: #f5f5f5;">
+            <div class="container">
+                <h2 class="categoria-titulo"><i class="fas fa-cloud-rain"></i> BMP280</h2>
+                <div class="grid-texto">
+                    <p>
+                        Sensor digital de pressão atmosférica e temperatura, com comunicação I²C ou SPI. 
+                        Ideal para projetos que exigem medição precisa de altitude e condições climáticas.
+                    </p>
+                    <p><strong>Aplicações:</strong> Estações meteorológicas, altimetria, IoT, monitoramento ambiental, drones.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: MPU6050 ===== -->
+        <section id="mpu6050" class="servicos">
+            <div class="container">
+                <h2 class="categoria-titulo"><i class="fas fa-sync-alt"></i> MPU6050</h2>
+                <div class="grid-texto">
+                    <p>
+                        Módulo que combina acelerômetro e giroscópio em um único chip, com comunicação I²C. 
+                        Permite medir aceleração linear e rotação em três eixos.
+                    </p>
+                    <p><strong>Aplicações:</strong> Robótica, controle de movimento, orientação, detecção de inclinação, estabilização de drones.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: ACS712 ===== -->
+        <section id="acs712" class="servicos" style="background: #f5f5f5;">
+            <div class="container">
+                <h2 class="categoria-titulo"><i class="fas fa-bolt"></i> ACS712</h2>
+                <div class="grid-texto">
+                    <p>
+                        Sensor de corrente baseado em efeito Hall, com saída analógica proporcional à corrente 
+                        medida. Disponível em versões para diferentes faixas de corrente (5A, 20A, 30A).
+                    </p>
+                    <p><strong>Aplicações:</strong> Monitoramento elétrico, automação, sistemas embarcados, análise de consumo energético.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: INDUSTRIAIS ===== -->
+        <section id="industriais" class="servicos">
+            <div class="container">
+                <h2 class="categoria-titulo"><i class="fas fa-industry"></i> Sensores Industriais</h2>
+                <div class="specs-grid">
+                    <div class="spec-item"><strong>Indutivos</strong> Detectam objetos metálicos sem contato (contagem, posicionamento)</div>
+                    <div class="spec-item"><strong>Capacitivos</strong> Detectam diversos materiais (nível, contagem)</div>
+                    <div class="spec-item"><strong>Fotoelétricos</strong> Usam luz (barreira, retro-reflexivo, difuso)</div>
+                    <div class="spec-item"><strong>Pressão</strong> Medem força de fluidos/gases (hidráulica, pneumática)</div>
+                    <div class="spec-item"><strong>Nível</strong> Determinam altura de material (ultrassônico, capacitivo, boia, radar)</div>
+                    <div class="spec-item"><strong>Vazão</strong> Medem fluxo de fluidos (L/min, m³/h)</div>
+                    <div class="spec-item"><strong>Vibração</strong> Detectam oscilações (manutenção preditiva)</div>
+                </div>
+                <div class="destaque">
+                    <p><i class="fas fa-tools"></i> <strong>Manutenção Preditiva:</strong> Sensores de vibração, temperatura, corrente e pressão monitoram máquinas para identificar anormalidades antes da falha.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: CONTROLE DE PROCESSOS ===== -->
+        <section id="controle" class="servicos" style="background: #f5f5f5;">
+            <div class="container">
+                <h2 class="categoria-titulo"><i class="fas fa-chart-line"></i> Controle de Processos</h2>
+                <div class="grid-texto">
+                    <p>
+                        Em um processo industrial típico temos: <strong>Entrada → Processo → Saída</strong>. 
+                        Os sensores medem a saída ou o estado do processo, e o controlador compara com o valor 
+                        desejado, realizando os ajustes necessários.
+                    </p>
+                    <p>
+                        <strong>Exemplo prático:</strong> Temperatura desejada 80 °C, sensor mede 72 °C → 
+                        controlador aumenta o aquecimento até atingir o valor de referência.
+                    </p>
+                    <p>
+                        A tríade fundamental da automação é: <strong>Sensor → Controlador → Atuador</strong>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: APLICAÇÕES SETORIAIS ===== -->
+        <section id="aplicacoes" class="servicos">
+            <div class="container">
+                <h2>APLICAÇÕES DOS SENSORES POR SETOR</h2>
+                <div class="specs-grid">
+                    <div class="spec-item"><strong>Indústria</strong> Monitoramento de máquinas, controle de produção, manutenção preditiva</div>
+                    <div class="spec-item"><strong>Agricultura</strong> Umidade do solo, temperatura, irrigação automatizada</div>
+                    <div class="spec-item"><strong>Logística</strong> Rastreamento, temperatura, localização</div>
+                    <div class="spec-item"><strong>Edificações</strong> Presença, temperatura, iluminação, consumo energético</div>
+                    <div class="spec-item"><strong>Meio Ambiente</strong> Qualidade do ar, temperatura, umidade, pressão, qualidade da água</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: GALERIA ===== -->
+        <section id="galeria" class="servicos" style="background: #f5f5f5;">
+            <div class="container">
+                <h2>GALERIA DE SENSORES</h2>
+                <p class="subtitulo">Confira alguns exemplos visuais dos sensores mais utilizados</p>
+                <div class="exemplos-grid">
+                    <!-- Temperatura e Umidade -->
+                    <div class="exemplo-card">
+                        <img src="../img/sensor-lm35.png" alt="Sensor LM35" loading="lazy">
+                        <h4>LM35</h4>
+                        <p>Sensor analógico de temperatura</p>
+                    </div>
+                    <div class="exemplo-card">
+                        <img src="../img/sensor-dht11.png" alt="Sensor DHT11" loading="lazy">
+                        <h4>DHT11</h4>
+                        <p>Temp. e umidade básico</p>
+                    </div>
+                    <div class="exemplo-card">
+                        <img src="../img/sensor-dht22.png" alt="Sensor DHT22" loading="lazy">
+                        <h4>DHT22</h4>
+                        <p>Temp. e umidade preciso</p>
+                    </div>
+                    <div class="exemplo-card">
+                        <img src="../img/sensor-ds18b20.png" alt="Sensor DS18B20" loading="lazy">
+                        <h4>DS18B20</h4>
+                        <p>Digital 1-Wire</p>
+                    </div>
+                    <!-- Distância, Luz e Movimento -->
+                    <div class="exemplo-card">
+                        <img src="../img/sensor-ultrassonico.png" alt="Sensor HC-SR04" loading="lazy">
+                        <h4>HC-SR04</h4>
+                        <p>Ultrassônico de distância</p>
+                    </div>
+                    <div class="exemplo-card">
+                        <img src="../img/sensor-ldr.png" alt="Sensor LDR" loading="lazy">
+                        <h4>LDR</h4>
+                        <p>Fotorresistor</p>
+                    </div>
+                    <div class="exemplo-card">
+                        <img src="../img/sensor-pir.png" alt="Sensor PIR" loading="lazy">
+                        <h4>PIR</h4>
+                        <p>Movimento infravermelho</p>
+                    </div>
+                    <!-- Gás e Ambientais -->
+                    <div class="exemplo-card">
+                        <img src="../img/sensor-mq2.png" alt="Módulo MQ-2" loading="lazy">
+                        <h4>MQ-2</h4>
+                        <p>Gases inflamáveis</p>
+                    </div>
+                    <div class="exemplo-card">
+                        <img src="../img/sensor-mq135.png" alt="Módulo MQ-135" loading="lazy">
+                        <h4>MQ-135</h4>
+                        <p>Qualidade do ar</p>
+                    </div>
+                    <div class="exemplo-card">
+                        <img src="../img/sensor-bmp280.png" alt="Sensor BMP280" loading="lazy">
+                        <h4>BMP280</h4>
+                        <p>Pressão e temperatura</p>
+                    </div>
+                    <!-- Movimento e Corrente -->
+                    <div class="exemplo-card">
+                        <img src="../img/sensor-mpu6050.png" alt="Sensor MPU6050" loading="lazy">
+                        <h4>MPU6050</h4>
+                        <p>Acelerômetro + giroscópio</p>
+                    </div>
+                    <div class="exemplo-card">
+                        <img src="../img/sensor-acs712.png" alt="Sensor ACS712" loading="lazy">
+                        <h4>ACS712</h4>
+                        <p>Sensor de corrente Hall</p>
+                    </div>
+                    <!-- Industriais -->
+                    <div class="exemplo-card">
+                        <img src="../img/sensor-indutivo.png" alt="Sensor Indutivo" loading="lazy">
+                        <h4>Indutivo</h4>
+                        <p>Detecção de metais</p>
+                    </div>
+                    <div class="exemplo-card">
+                        <img src="../img/sensor-capacitivo.png" alt="Sensor Capacitivo" loading="lazy">
+                        <h4>Capacitivo</h4>
+                        <p>Detecção de materiais</p>
+                    </div>
+                    <div class="exemplo-card">
+                        <img src="../img/sensor-fotoeletrico.png" alt="Sensor Fotoelétrico" loading="lazy">
+                        <h4>Fotoelétrico</h4>
+                        <p>Detecção por feixe de luz</p>
+                    </div>
+                    <div class="exemplo-card">
+                        <img src="../img/transmissor-pressao.png" alt="Transmissor de Pressão" loading="lazy">
+                        <h4>Pressão Industrial</h4>
+                        <p>Transmissor de pressão</p>
+                    </div>
+                    <div class="exemplo-card">
+                        <img src="../img/sensor-nivel.png" alt="Sensor de Nível" loading="lazy">
+                        <h4>Nível</h4>
+                        <p>Monitoramento de tanques</p>
+                    </div>
+                    <div class="exemplo-card">
+                        <img src="../img/sensor-vazao.png" alt="Medidor de Vazão" loading="lazy">
+                        <h4>Vazão</h4>
+                        <p>Medição de fluxo</p>
+                    </div>
+                    <div class="exemplo-card">
+                        <img src="../img/sensor-vibracao.png" alt="Sensor de Vibração" loading="lazy">
+                        <h4>Vibração</h4>
+                        <p>Monitoramento de motores</p>
+                    </div>
+                    <div class="exemplo-card">
+                        <img src="../img/manutencao-preditiva.png" alt="Manutenção Preditiva" loading="lazy">
+                        <h4>Manutenção Preditiva</h4>
+                        <p>Saúde da máquina</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-coluna">
+                    <h3>Sobre nós</h3>
+                    <ul>
+                        <li><a href="../sobre_nos.html">Descubra quem somos</a></li>
+                        <li><a href="../missao.html">Nossa missão</a></li>
+                        <li><a href="../equipe.html">Nossa equipe</a></li>
+                    </ul>
+                </div>
+                <div class="footer-coluna">
+                    <h3>Navegação</h3>
+                    <ul>
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="../algoritmos/algoritmos.html">Algoritmos & Lógica</a></li>
+                        <li><a href="../componentes.html">Componentes</a></li>
+                        <li><a href="../contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-coluna">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><a href="https://wa.me/5548999545106" target="_blank">WhatsApp</a></li>
+                        <li><a href="https://github.com/mariobiluk" target="_blank">GitHub</a></li>
+                        <li><a href="mailto:contato@agenciablook.com">E-mail</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Agência b-Look. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

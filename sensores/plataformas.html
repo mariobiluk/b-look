@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agência b-Look - Plataformas & IoT: Arduino, ESP32, Raspberry Pi, CLP e integração com Internet das Coisas.">
+    <link rel="shortcut icon" href="../img/icone.png" type="image/png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Agência b-Look - Plataformas & IoT</title>
+    <style>
+        /* ===== Dropdown ===== */
+        nav ul li.dropdown {
+            position: relative;
+        }
+        nav ul li.dropdown .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #1a1a1a;
+            min-width: 180px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            border-radius: 4px;
+            padding: 0.5rem 0;
+            z-index: 9999;
+            list-style: none;
+            margin: 0;
+        }
+        nav ul li.dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        nav ul li.dropdown .dropdown-menu li {
+            display: block;
+            margin: 0;
+        }
+        nav ul li.dropdown .dropdown-menu li a {
+            display: block;
+            padding: 0.5rem 1.2rem;
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+            white-space: nowrap;
+        }
+        nav ul li.dropdown .dropdown-menu li a:hover {
+            background: #d62828;
+        }
+        .fa-caret-down {
+            margin-left: 5px;
+        }
+
+        /* ===== Estilos específicos ===== */
+        .img-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 1.5rem 0;
+        }
+        .img-componente {
+            max-width: 100%;
+            height: auto;
+            max-height: 200px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            background: #fff;
+            padding: 0.5rem;
+        }
+        .img-diagrama {
+            max-width: 100%;
+            height: auto;
+            max-height: 250px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            background: #fff;
+            padding: 0.5rem;
+        }
+        .img-caption {
+            font-size: 0.85rem;
+            color: #555;
+            margin-top: 0.5rem;
+            font-style: italic;
+            text-align: center;
+        }
+        .lista-aplicacoes {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.8rem;
+            margin-top: 1.5rem;
+            padding: 0;
+        }
+        .lista-aplicacoes li {
+            background: #e8e8e8;
+            padding: 0.8rem 1rem;
+            border-radius: 6px;
+            font-weight: 500;
+            color: #222;
+        }
+        .destaque {
+            background: #fff3cd;
+            border-left: 4px solid #d62828;
+            padding: 1rem 1.5rem;
+            border-radius: 4px;
+            margin-top: 1.5rem;
+        }
+        .destaque p {
+            margin: 0;
+            font-weight: 500;
+        }
+        .destaque i {
+            color: #d62828;
+            margin-right: 0.5rem;
+        }
+        .subtitulo {
+            font-size: 1.2rem;
+            color: #444;
+            margin-top: -0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .grid-texto p {
+            color: #333;
+            line-height: 1.6;
+        }
+        .plataforma-card {
+            background: #f0f0f0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #d62828;
+        }
+        .plataforma-card h3 {
+            color: #d62828;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .plataforma-card p {
+            color: #333;
+            line-height: 1.6;
+        }
+        .plataforma-card em {
+            color: #555;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../img/logoOficial.png" alt="Agência b-Look Logo">
+                    </a>
+                </div>
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="../algoritmos/algoritmos.html">Algoritmos & Lógica</a></li>
+                    <li><a href="../componentes.html">Componentes</a></li>
+                    <li><a href="../contato.html">Contato</a></li>
+                    <li class="dropdown">
+                        <a href="../robotica.html">Robotização <i class="fas fa-caret-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../robots/cartesiano.html">Robô Cartesiano</a></li>
+                            <li><a href="../robots/scara.html">Robô SCARA</a></li>
+                            <li><a href="../robots/articulado.html">Robô Articulado</a></li>
+                            <li><a href="../robots/cilindrico.html">Robô Cilíndrico</a></li>
+                            <li><a href="../robots/delta.html">Robô Delta</a></li>
+                            <li><a href="../robots/polar.html">Robô Polar</a></li>
+                            <li><a href="../robots/colaborativo.html">Robô Colaborativo</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="../sensores.html">Sensores <i class="fas fa-caret-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="introducao.html">Introdução a Sensores</a></li>
+                            <li><a href="tipos.html">Tipos de Sensores</a></li>
+                            <li><a href="comunicacao.html">Comunicação</a></li>
+                            <li><a href="plataformas.html">Plataformas IoT</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Banner -->
+        <div class="banner">
+            <div class="banner-content">
+                <h1>PLATAFORMAS & IoT</h1>
+                <p>Arduino · ESP32 · Raspberry Pi · CLP · IIoT</p>
+                <a href="#arduino" class="btn">Explorar</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== SEÇÃO: INTRODUÇÃO ===== -->
+        <section id="introducao" class="servicos">
+            <div class="container">
+                <h2>PLATAFORMAS PARA SENSORES</h2>
+                <div class="grid-texto">
+                    <p>
+                        Sensores não funcionam sozinhos – eles precisam de plataformas para processar os sinais, 
+                        comunicar dados e atuar sobre o ambiente. Conhecer as principais plataformas disponíveis 
+                        é essencial para escolher a solução mais adequada para cada projeto.
+                    </p>
+                    <p>
+                        Desde placas de prototipagem educacional até equipamentos industriais, cada plataforma 
+                        possui características específicas de processamento, conectividade e aplicação.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: ARDUINO ===== -->
+        <section id="arduino" class="servicos" style="background: #f5f5f5;">
+            <div class="container">
+                <div class="plataforma-card">
+                    <h3><i class="fas fa-microchip" style="color:#d62828;"></i> Arduino</h3>
+                    <div class="img-container">
+                        <img src="../img/arduino-uno.png" alt="Placa Arduino UNO" class="img-componente">
+                        <p class="img-caption">Figura 1: Arduino UNO, a placa de prototipagem mais popular do mundo</p>
+                    </div>
+                    <p>
+                        Plataforma de prototipagem eletrônica amplamente utilizada por sua simplicidade e 
+                        comunidade ativa. Conecta-se a diversos sensores e atuadores através de portas 
+                        analógicas e digitais.
+                    </p>
+                    <p>
+                        Estrutura básica de programação: <strong>setup()</strong> (executada uma vez ao iniciar) 
+                        e <strong>loop()</strong> (executada repetidamente).
+                    </p>
+                    <p><strong>Exemplo prático:</strong> Sensor de temperatura → Arduino → programa → ventilador.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: ESP32 ===== -->
+        <section id="esp32" class="servicos">
+            <div class="container">
+                <div class="plataforma-card">
+                    <h3><i class="fas fa-wifi" style="color:#d62828;"></i> ESP32</h3>
+                    <div class="img-container">
+                        <img src="../img/esp32-devkit.png" alt="Placa de desenvolvimento ESP32" class="img-componente">
+                        <p class="img-caption">Figura 2: Módulo ESP32 com suporte nativo a Wi-Fi e Bluetooth</p>
+                    </div>
+                    <p>
+                        Microcontrolador com conectividade Wi-Fi e Bluetooth integradas, ideal para projetos 
+                        de Internet das Coisas. Combina GPIOs, comunicação serial, interfaces digitais e 
+                        capacidade de processamento local.
+                    </p>
+                    <p><strong>Exemplo prático:</strong> Sensor DHT22 → ESP32 → Wi-Fi → servidor na nuvem.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: RASPBERRY PI ===== -->
+        <section id="raspberry" class="servicos" style="background: #f5f5f5;">
+            <div class="container">
+                <div class="plataforma-card">
+                    <h3><i class="fas fa-desktop" style="color:#d62828;"></i> Raspberry Pi</h3>
+                    <div class="img-container">
+                        <img src="../img/raspberry-pi.png" alt="Placa Raspberry Pi" class="img-componente">
+                        <p class="img-caption">Figura 3: Raspberry Pi, um computador completo de placa única</p>
+                    </div>
+                    <p>
+                        Computador de placa única com sistema operacional Linux e GPIOs. Suporta protocolos 
+                        como I²C, SPI, UART e PWM, podendo ser utilizado como servidor local, gateway IoT, 
+                        dashboard ou sistema de monitoramento.
+                    </p>
+                    <p><em>A documentação oficial confirma a presença dessas interfaces nos GPIOs.</em></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: CLP ===== -->
+        <section id="clp" class="servicos">
+            <div class="container">
+                <div class="plataforma-card">
+                    <h3><i class="fas fa-industry" style="color:#d62828;"></i> CLP (Controlador Lógico Programável)</h3>
+                    <div class="img-container">
+                        <img src="../img/clp-industrial.png" alt="Controlador Lógico Programável Industrial" class="img-componente">
+                        <p class="img-caption">Figura 4: CLP industrial com seus módulos de entrada e saída (I/O)</p>
+                    </div>
+                    <p>
+                        Equipamento fundamental na automação industrial. Recebe sinais de sensores, botões e 
+                        transmissores, executa a lógica programada e aciona saídas como motores, válvulas e relés.
+                    </p>
+                    <p>
+                        Funciona no princípio: <strong>Entradas → Lógica → Saídas</strong>, processando ciclos 
+                        em milissegundos para controle em tempo real.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: IOT ===== -->
+        <section id="iot" class="servicos" style="background: #f5f5f5;">
+            <div class="container">
+                <div class="plataforma-card">
+                    <h3><i class="fas fa-cloud" style="color:#d62828;"></i> Internet das Coisas (IoT) e IIoT</h3>
+                    <div class="img-container">
+                        <img src="../img/diagrama-iot.png" alt="Arquitetura Sensor para Nuvem" class="img-diagrama">
+                        <p class="img-caption">Figura 5: Fluxo de dados desde o sensor físico até a análise em nuvem (IoT)</p>
+                    </div>
+                    <p>
+                        A IoT conecta objetos físicos para coletar, processar e trocar informações. Na indústria, 
+                        chamamos de <strong>IIoT</strong> (Industrial Internet of Things), aplicando os mesmos 
+                        conceitos em ambientes fabris.
+                    </p>
+                    <p>
+                        <strong>Fluxo típico:</strong> Sensor → Microcontrolador → Rede → Servidor → Aplicação.
+                    </p>
+                    <p>
+                        Permite monitoramento remoto, alertas em tempo real, análise de dados e manutenção 
+                        preditiva, transformando a forma como gerenciamos processos.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: INDÚSTRIA 4.0 ===== -->
+        <section id="industria" class="servicos">
+            <div class="container">
+                <div class="plataforma-card">
+                    <h3><i class="fas fa-robot" style="color:#d62828;"></i> Indústria 4.0</h3>
+                    <div class="img-container">
+                        <img src="../img/arquitetura-iiot.png" alt="Arquitetura de uma fábrica conectada" class="img-diagrama">
+                        <p class="img-caption">Figura 6: Fábrica conectada com IIoT, Cloud Computing e Machine Learning</p>
+                    </div>
+                    <p>
+                        Transformação baseada na integração de tecnologias digitais, automação, comunicação e 
+                        análise de dados. Sensores fornecem os dados essenciais para que essas tecnologias 
+                        funcionem de forma integrada.
+                    </p>
+                    <p>
+                        <strong>Conceitos associados:</strong> IIoT, Big Data, computação em nuvem, inteligência 
+                        artificial, robótica e sistemas ciber-físicos.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: EXEMPLO COMPLETO ===== -->
+        <section id="exemplo" class="servicos" style="background: #f5f5f5;">
+            <div class="container">
+                <h2>EXEMPLO COMPLETO DE APLICAÇÃO</h2>
+                <div class="grid-texto">
+                    <p>
+                        Uma máquina industrial equipada com múltiplos sensores para monitoramento completo:
+                    </p>
+                    <ul class="lista-aplicacoes">
+                        <li><i class="fas fa-thermometer-half" style="color:#d62828; margin-right:8px;"></i> Sensor de temperatura</li>
+                        <li><i class="fas fa-wave-square" style="color:#d62828; margin-right:8px;"></i> Sensor de vibração</li>
+                        <li><i class="fas fa-bolt" style="color:#d62828; margin-right:8px;"></i> Sensor de corrente</li>
+                        <li><i class="fas fa-eye" style="color:#d62828; margin-right:8px;"></i> Sensor de presença</li>
+                    </ul>
+                    <p>
+                        Os sensores coletam dados continuamente, o CLP processa as informações, um sistema 
+                        supervisório acompanha o desempenho e os dados são armazenados para análise histórica.
+                    </p>
+                    <p>
+                        <strong>Fluxo completo:</strong> Sensores → CLP → Rede Industrial → Supervisório → 
+                        Banco de Dados → Dashboard.
+                    </p>
+                    <p>
+                        Se a temperatura ou vibração ultrapassar limites pré-definidos, um alerta é emitido 
+                        automaticamente, permitindo ação corretiva antes da falha.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: CONCLUSÃO ===== -->
+        <section id="conclusao" class="servicos">
+            <div class="container">
+                <h2>CONCLUSÃO</h2>
+                <div class="grid-texto">
+                    <p>
+                        Os sensores são a base da automação moderna e da IoT. Quando integrados a plataformas 
+                        como Arduino, ESP32, Raspberry Pi e CLPs, permitem monitorar e controlar processos de 
+                        forma inteligente e eficiente.
+                    </p>
+                    <p>
+                        A evolução rumo à Indústria 4.0 depende diretamente do sensoriamento e da comunicação 
+                        eficiente de dados. Compreender sensores é compreender a primeira etapa de qualquer 
+                        sistema automatizado.
+                    </p>
+                    <div class="destaque">
+                        <p><i class="fas fa-graduation-cap"></i> <strong>Mensagem final:</strong> O conhecimento sobre sensores e plataformas é a porta de entrada para o mundo da automação e IoT.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-coluna">
+                    <h3>Sobre nós</h3>
+                    <ul>
+                        <li><a href="../sobre_nos.html">Descubra quem somos</a></li>
+                        <li><a href="../missao.html">Nossa missão</a></li>
+                        <li><a href="../equipe.html">Nossa equipe</a></li>
+                    </ul>
+                </div>
+                <div class="footer-coluna">
+                    <h3>Navegação</h3>
+                    <ul>
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="../algoritmos/algoritmos.html">Algoritmos & Lógica</a></li>
+                        <li><a href="../componentes.html">Componentes</a></li>
+                        <li><a href="../contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-coluna">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><a href="https://wa.me/5548999545106" target="_blank">WhatsApp</a></li>
+                        <li><a href="https://github.com/mariobiluk" target="_blank">GitHub</a></li>
+                        <li><a href="mailto:contato@agenciablook.com">E-mail</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Agência b-Look. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

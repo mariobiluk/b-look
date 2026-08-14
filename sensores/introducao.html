@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agência b-Look - Introdução aos Sensores: fundamentos do sensoriamento, conceitos, características e classificação de sensores.">
+    <link rel="shortcut icon" href="../img/icone.png" type="image/png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Agência b-Look - Introdução aos Sensores</title>
+    <style>
+        /* ===== Dropdown ===== */
+        nav ul li.dropdown {
+            position: relative;
+        }
+        nav ul li.dropdown .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #1a1a1a;
+            min-width: 180px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            border-radius: 4px;
+            padding: 0.5rem 0;
+            z-index: 9999;
+            list-style: none;
+            margin: 0;
+        }
+        nav ul li.dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        nav ul li.dropdown .dropdown-menu li {
+            display: block;
+            margin: 0;
+        }
+        nav ul li.dropdown .dropdown-menu li a {
+            display: block;
+            padding: 0.5rem 1.2rem;
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+            white-space: nowrap;
+        }
+        nav ul li.dropdown .dropdown-menu li a:hover {
+            background: #d62828;
+        }
+        .fa-caret-down {
+            margin-left: 5px;
+        }
+
+        /* ===== Estilos específicos ===== */
+        .img-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 1.5rem 0;
+        }
+        .img-diagrama {
+            max-width: 100%;
+            height: auto;
+            max-height: 250px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            background: #fff;
+            padding: 0.5rem;
+        }
+        .img-caption {
+            font-size: 0.85rem;
+            color: #555;
+            margin-top: 0.5rem;
+            font-style: italic;
+            text-align: center;
+        }
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 0.8rem;
+            margin-top: 2rem;
+        }
+        .spec-item {
+            background: #f0f0f0;
+            padding: 0.8rem 1rem;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 500;
+            color: #222;
+            font-size: 0.9rem;
+        }
+        .spec-item strong {
+            display: block;
+            color: #d62828;
+            font-size: 0.85rem;
+            margin-bottom: 0.2rem;
+        }
+        .lista-aplicacoes {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.8rem;
+            margin-top: 1.5rem;
+            padding: 0;
+        }
+        .lista-aplicacoes li {
+            background: #e8e8e8;
+            padding: 0.8rem 1rem;
+            border-radius: 6px;
+            font-weight: 500;
+            color: #222;
+        }
+        .grid-duas-colunas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .destaque {
+            background: #fff3cd;
+            border-left: 4px solid #d62828;
+            padding: 1rem 1.5rem;
+            border-radius: 4px;
+            margin-top: 1.5rem;
+        }
+        .destaque p {
+            margin: 0;
+            font-weight: 500;
+        }
+        .destaque i {
+            color: #d62828;
+            margin-right: 0.5rem;
+        }
+        .subtitulo {
+            font-size: 1.2rem;
+            color: #444;
+            margin-top: -0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .grid-texto p {
+            color: #333;
+            line-height: 1.6;
+        }
+        .hero-lista {
+            margin-top: 1.5rem;
+        }
+        .hero-lista li {
+            padding: 0.4rem 0;
+            color: #333;
+        }
+        h3.sub-section {
+            color: #d62828;
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../img/logoOficial.png" alt="Agência b-Look Logo">
+                    </a>
+                </div>
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="../algoritmos/algoritmos.html">Algoritmos & Lógica</a></li>
+                    <li><a href="../componentes.html">Componentes</a></li>
+                    <li><a href="../contato.html">Contato</a></li>
+                    <li class="dropdown">
+                        <a href="../robotica.html">Robotização <i class="fas fa-caret-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../robots/cartesiano.html">Robô Cartesiano</a></li>
+                            <li><a href="../robots/scara.html">Robô SCARA</a></li>
+                            <li><a href="../robots/articulado.html">Robô Articulado</a></li>
+                            <li><a href="../robots/cilindrico.html">Robô Cilíndrico</a></li>
+                            <li><a href="../robots/delta.html">Robô Delta</a></li>
+                            <li><a href="../robots/polar.html">Robô Polar</a></li>
+                            <li><a href="../robots/colaborativo.html">Robô Colaborativo</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="../sensores.html">Sensores <i class="fas fa-caret-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="introducao.html">Introdução a Sensores</a></li>
+                            <li><a href="tipos.html">Tipos de Sensores</a></li>
+                            <li><a href="comunicacao.html">Comunicação</a></li>
+                            <li><a href="plataformas.html">Plataformas IoT</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Banner -->
+        <div class="banner">
+            <div class="banner-content">
+                <h1>INTRODUÇÃO AOS SENSORES</h1>
+                <p>Fundamentos do sensoriamento</p>
+                <a href="#conceito" class="btn">Explorar</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== SEÇÃO: INTRODUÇÃO ===== -->
+        <section id="conceito" class="servicos">
+            <div class="container">
+                <h2>O QUE SÃO SENSORES?</h2>
+                <div class="grid-texto">
+                    <p>
+                        A evolução da tecnologia trouxe sistemas capazes de monitorar, analisar e controlar 
+                        processos automaticamente. Dentro desse contexto, os <strong>sensores</strong> 
+                        desempenham um papel fundamental: obter informações do ambiente físico e transformá-las 
+                        em sinais interpretáveis por sistemas eletrônicos.
+                    </p>
+                    <p>
+                        Um <strong>sensor</strong> é um dispositivo que detecta uma grandeza física, química ou 
+                        ambiental e produz uma saída mensurável relacionada a ela. A grandeza detectada é 
+                        chamada de <strong>variável de processo</strong> ou <strong>variável física</strong>.
+                    </p>
+                    <div class="destaque">
+                        <p><i class="fas fa-lightbulb"></i> Exemplos: temperatura, pressão, luz, movimento, distância, corrente elétrica e presença de gases.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: SENSORIAMENTO ===== -->
+        <section id="sensoriamento" class="servicos" style="background: #f5f5f5;">
+            <div class="container">
+                <h2>O PROCESSO DE SENSORIAMENTO</h2>
+                <div class="img-container">
+                    <img src="../img/diagrama_sensoriamento.png" alt="Diagrama de funcionamento de um sensor" class="img-diagrama">
+                    <p class="img-caption">Figura 1: Princípio básico do sensoriamento (Variável Física → Sensor → Sinal Elétrico)</p>
+                </div>
+                <p>
+                    Sensoriamento é o processo de detectar ou medir uma determinada grandeza utilizando um sensor. 
+                    O sensor converte uma característica do ambiente em um sinal mensurável, que pode ser 
+                    posteriormente interpretado por um microcontrolador, computador ou CLP.
+                </p>
+                <h3 class="sub-section"><i class="fas fa-arrow-right" style="color:#d62828;"></i> Exemplos de sensoriamento:</h3>
+                <ul class="lista-aplicacoes">
+                    <li><i class="fas fa-thermometer-half" style="color:#d62828; margin-right:8px;"></i> Temperatura → sinal elétrico</li>
+                    <li><i class="fas fa-arrows-alt-v" style="color:#d62828; margin-right:8px;"></i> Pressão → sinal elétrico</li>
+                    <li><i class="fas fa-sun" style="color:#d62828; margin-right:8px;"></i> Luz → alteração de resistência ou sinal digital</li>
+                    <li><i class="fas fa-running" style="color:#d62828; margin-right:8px;"></i> Movimento → sinal digital</li>
+                    <li><i class="fas fa-ruler-combined" style="color:#d62828; margin-right:8px;"></i> Distância → tempo de propagação de onda</li>
+                    <li><i class="fas fa-bolt" style="color:#d62828; margin-right:8px;"></i> Corrente → sinal proporcional à corrente</li>
+                    <li><i class="fas fa-wind" style="color:#d62828; margin-right:8px;"></i> Gás → alteração da propriedade elétrica do sensor</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: SENSOR x TRANSDUTOR ===== -->
+        <section id="transdutor" class="servicos">
+            <div class="container">
+                <h2>SENSOR x TRANSDUTOR</h2>
+                <div class="grid-texto">
+                    <p>
+                        Embora relacionados, <strong>sensor</strong> e <strong>transdutor</strong> não são sinônimos. 
+                        O sensor detecta e mede uma grandeza, enquanto o transdutor converte uma forma de energia 
+                        em outra, produzindo uma saída utilizável. Na prática, esses conceitos aparecem juntos, 
+                        pois todo sensor possui um elemento transdutor em sua composição.
+                    </p>
+                    <p>
+                        Por exemplo: um sensor de temperatura LM35 converte a temperatura em uma tensão elétrica 
+                        proporcional — ele é tanto sensor quanto transdutor.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: CARACTERÍSTICAS ===== -->
+        <section id="caracteristicas" class="servicos" style="background: #f5f5f5;">
+            <div class="container">
+                <h2>CARACTERÍSTICAS IMPORTANTES</h2>
+                <p class="subtitulo">Principais parâmetros para escolha de sensores</p>
+                <div class="specs-grid">
+                    <div class="spec-item"><strong>Faixa de medição</strong> Intervalo no qual o sensor opera (ex: 0 °C a 100 °C)</div>
+                    <div class="spec-item"><strong>Precisão</strong> Proximidade do valor real (quanto maior, menor o erro)</div>
+                    <div class="spec-item"><strong>Resolução</strong> Menor variação distinguível (ex: 25.0 °C vs 25 °C)</div>
+                    <div class="spec-item"><strong>Sensibilidade</strong> Relação entre alteração da entrada e da saída</div>
+                    <div class="spec-item"><strong>Tempo de resposta</strong> Tempo para responder a uma alteração</div>
+                    <div class="spec-item"><strong>Repetibilidade</strong> Resultados semelhantes em medições repetidas</div>
+                    <div class="spec-item"><strong>Alimentação</strong> Tensão necessária (3,3 V, 5 V, 12 V, 24 V)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: CLASSIFICAÇÃO ===== -->
+        <section id="classificacao" class="servicos">
+            <div class="container">
+                <h2>CLASSIFICAÇÃO DOS SENSORES</h2>
+                <div class="specs-grid">
+                    <div class="spec-item"><strong>Analógicos</strong> Saída contínua (ex: 0–5 V)</div>
+                    <div class="spec-item"><strong>Digitais</strong> Saída discreta (LOW/HIGH, protocolos)</div>
+                    <div class="spec-item"><strong>Contato</strong> Contato físico com o objeto/processo</div>
+                    <div class="spec-item"><strong>Sem contato</strong> Detecção remota (ultrassônico, fotoelétrico, indutivo)</div>
+                </div>
+                <div class="grid-duas-colunas">
+                    <div class="img-container">
+                        <img src="../img/sinal_analogico.png" alt="Gráfico de Sinal Analógico" class="img-diagrama">
+                        <p class="img-caption">Figura 2: Exemplo de sinal analógico (contínuo)</p>
+                    </div>
+                    <div class="img-container">
+                        <img src="../img/sinal_digital.png" alt="Gráfico de Sinal Digital" class="img-diagrama">
+                        <p class="img-caption">Figura 3: Exemplo de sinal digital (discreto)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: VANTAGENS E LIMITAÇÕES ===== -->
+        <section id="vantagens" class="servicos" style="background: #f5f5f5;">
+            <div class="container">
+                <h2>VANTAGENS E LIMITAÇÕES</h2>
+                <div class="img-container">
+                    <img src="../img/automacao-linha-producao.png" alt="Linha de produção com sensores" class="img-diagrama" style="max-height: 300px;">
+                    <p class="img-caption">Figura 4: Sensores aplicados em uma linha de produção automatizada</p>
+                </div>
+                
+                <h3 class="sub-section"><i class="fas fa-check-circle" style="color:#d62828;"></i> Vantagens</h3>
+                <ul class="lista-aplicacoes">
+                    <li><i class="fas fa-robot" style="color:#d62828; margin-right:8px;"></i> Automação de processos</li>
+                    <li><i class="fas fa-chart-line" style="color:#d62828; margin-right:8px;"></i> Monitoramento contínuo</li>
+                    <li><i class="fas fa-user-slash" style="color:#d62828; margin-right:8px;"></i> Redução da intervenção manual</li>
+                    <li><i class="fas fa-exclamation-triangle" style="color:#d62828; margin-right:8px;"></i> Identificação de anormalidades</li>
+                    <li><i class="fas fa-cogs" style="color:#d62828; margin-right:8px;"></i> Otimização de processos</li>
+                    <li><i class="fas fa-wifi" style="color:#d62828; margin-right:8px;"></i> Controle remoto</li>
+                    <li><i class="fas fa-tools" style="color:#d62828; margin-right:8px;"></i> Apoio à manutenção preditiva</li>
+                </ul>
+
+                <h3 class="sub-section"><i class="fas fa-exclamation-circle" style="color:#d62828;"></i> Limitações e Desafios</h3>
+                <ul class="lista-aplicacoes">
+                    <li><i class="fas fa-sliders-h" style="color:#d62828; margin-right:8px;"></i> Calibração necessária para manter qualidade</li>
+                    <li><i class="fas fa-cloud-rain" style="color:#d62828; margin-right:8px;"></i> Influência do ambiente (temperatura, umidade, interferência)</li>
+                    <li><i class="fas fa-bullseye" style="color:#d62828; margin-right:8px;"></i> Nenhum sensor é perfeitamente exato</li>
+                    <li><i class="fas fa-plug" style="color:#d62828; margin-right:8px;"></i> Falhas na comunicação podem interromper dados</li>
+                    <li><i class="fas fa-lock" style="color:#d62828; margin-right:8px;"></i> Segurança em sistemas IoT conectados</li>
+                    <li><i class="fas fa-sync" style="color:#d62828; margin-right:8px;"></i> Manutenção e substituição periódica</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-coluna">
+                    <h3>Sobre nós</h3>
+                    <ul>
+                        <li><a href="../sobre_nos.html">Descubra quem somos</a></li>
+                        <li><a href="../missao.html">Nossa missão</a></li>
+                        <li><a href="../equipe.html">Nossa equipe</a></li>
+                    </ul>
+                </div>
+                <div class="footer-coluna">
+                    <h3>Navegação</h3>
+                    <ul>
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="../algoritmos/algoritmos.html">Algoritmos & Lógica</a></li>
+                        <li><a href="../componentes.html">Componentes</a></li>
+                        <li><a href="../contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-coluna">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><a href="https://wa.me/5548999545106" target="_blank">WhatsApp</a></li>
+                        <li><a href="https://github.com/mariobiluk" target="_blank">GitHub</a></li>
+                        <li><a href="mailto:contato@agenciablook.com">E-mail</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Agência b-Look. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

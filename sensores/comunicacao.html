@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agência b-Look - Comunicação com Sensores: protocolos I²C, SPI, UART, 4-20mA e IO-Link para integração de sensores.">
+    <link rel="shortcut icon" href="../img/icone.png" type="image/png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Agência b-Look - Comunicação com Sensores</title>
+    <style>
+        /* ===== Dropdown ===== */
+        nav ul li.dropdown {
+            position: relative;
+        }
+        nav ul li.dropdown .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #1a1a1a;
+            min-width: 180px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            border-radius: 4px;
+            padding: 0.5rem 0;
+            z-index: 9999;
+            list-style: none;
+            margin: 0;
+        }
+        nav ul li.dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        nav ul li.dropdown .dropdown-menu li {
+            display: block;
+            margin: 0;
+        }
+        nav ul li.dropdown .dropdown-menu li a {
+            display: block;
+            padding: 0.5rem 1.2rem;
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+            white-space: nowrap;
+        }
+        nav ul li.dropdown .dropdown-menu li a:hover {
+            background: #d62828;
+        }
+        .fa-caret-down {
+            margin-left: 5px;
+        }
+
+        /* ===== Estilos específicos ===== */
+        .img-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 1.5rem 0;
+        }
+        .img-diagrama {
+            max-width: 100%;
+            height: auto;
+            max-height: 250px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            background: #fff;
+            padding: 0.5rem;
+        }
+        .img-caption {
+            font-size: 0.85rem;
+            color: #555;
+            margin-top: 0.5rem;
+            font-style: italic;
+            text-align: center;
+        }
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.8rem;
+            margin-top: 2rem;
+        }
+        .spec-item {
+            background: #f0f0f0;
+            padding: 0.8rem 1rem;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 500;
+            color: #222;
+            font-size: 0.9rem;
+        }
+        .spec-item strong {
+            display: block;
+            color: #d62828;
+            font-size: 0.85rem;
+            margin-bottom: 0.2rem;
+        }
+        .protocolo-card {
+            background: #f0f0f0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #d62828;
+        }
+        .protocolo-card h3 {
+            color: #d62828;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .protocolo-card p {
+            color: #333;
+            line-height: 1.6;
+        }
+        .protocolo-card em {
+            color: #555;
+            font-style: italic;
+        }
+        .destaque {
+            background: #fff3cd;
+            border-left: 4px solid #d62828;
+            padding: 1rem 1.5rem;
+            border-radius: 4px;
+            margin-top: 1.5rem;
+        }
+        .destaque p {
+            margin: 0;
+            font-weight: 500;
+        }
+        .destaque i {
+            color: #d62828;
+            margin-right: 0.5rem;
+        }
+        .subtitulo {
+            font-size: 1.2rem;
+            color: #444;
+            margin-top: -0.5rem;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../img/logoOficial.png" alt="Agência b-Look Logo">
+                    </a>
+                </div>
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="../algoritmos/algoritmos.html">Algoritmos & Lógica</a></li>
+                    <li><a href="../componentes.html">Componentes</a></li>
+                    <li><a href="../contato.html">Contato</a></li>
+                    <li class="dropdown">
+                        <a href="../robotica.html">Robotização <i class="fas fa-caret-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../robots/cartesiano.html">Robô Cartesiano</a></li>
+                            <li><a href="../robots/scara.html">Robô SCARA</a></li>
+                            <li><a href="../robots/articulado.html">Robô Articulado</a></li>
+                            <li><a href="../robots/cilindrico.html">Robô Cilíndrico</a></li>
+                            <li><a href="../robots/delta.html">Robô Delta</a></li>
+                            <li><a href="../robots/polar.html">Robô Polar</a></li>
+                            <li><a href="../robots/colaborativo.html">Robô Colaborativo</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="../sensores.html">Sensores <i class="fas fa-caret-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="introducao.html">Introdução a Sensores</a></li>
+                            <li><a href="tipos.html">Tipos de Sensores</a></li>
+                            <li><a href="comunicacao.html">Comunicação</a></li>
+                            <li><a href="plataformas.html">Plataformas IoT</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Banner -->
+        <div class="banner">
+            <div class="banner-content">
+                <h1>COMUNICAÇÃO COM SENSORES</h1>
+                <p>Protocolos e padrões para integração</p>
+                <a href="#i2c" class="btn">Explorar</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== SEÇÃO: INTRODUÇÃO ===== -->
+        <section id="introducao" class="servicos">
+            <div class="container">
+                <h2>COMUNICAÇÃO COM SENSORES</h2>
+                <div class="grid-texto">
+                    <p>
+                        Os sensores digitais modernos transmitem dados através de diversos protocolos de 
+                        comunicação. Conhecer esses protocolos é essencial para integrar sensores a 
+                        microcontroladores, CLPs e sistemas IoT, garantindo a correta interpretação dos 
+                        sinais e a confiabilidade do sistema.
+                    </p>
+                    <p>
+                        Cada protocolo possui características específicas de velocidade, distância, 
+                        quantidade de dispositivos e complexidade de implementação, sendo escolhido de 
+                        acordo com a aplicação e os requisitos do projeto.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: I²C ===== -->
+        <section id="i2c" class="servicos" style="background: #f5f5f5;">
+            <div class="container">
+                <div class="protocolo-card">
+                    <h3><i class="fas fa-microchip" style="color:#d62828;"></i> I²C (Inter-Integrated Circuit)</h3>
+                    <div class="img-container">
+                        <img src="../img/diagrama-i2c.png" alt="Diagrama de comunicação I2C (SDA/SCL)" class="img-diagrama">
+                        <p class="img-caption">Figura 1: Topologia I²C mostrando um mestre e múltiplos escravos via SDA/SCL</p>
+                    </div>
+                    <p>Protocolo serial que utiliza duas linhas: <strong>SDA</strong> (dados) e <strong>SCL</strong> (clock). Permite conectar vários dispositivos com endereços únicos no mesmo barramento.</p>
+                    <p><strong>Aplicações:</strong> Sensores, displays, memórias, RTCs, expansores de GPIO.</p>
+                    <em>Exemplo: Raspberry Pi possui suporte a I²C em seus GPIOs.</em>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: SPI ===== -->
+        <section id="spi" class="servicos">
+            <div class="container">
+                <div class="protocolo-card">
+                    <h3><i class="fas fa-bolt" style="color:#d62828;"></i> SPI (Serial Peripheral Interface)</h3>
+                    <div class="img-container">
+                        <img src="../img/diagrama-spi.png" alt="Diagrama de comunicação SPI (MOSI/MISO/SCLK/CS)" class="img-diagrama">
+                        <p class="img-caption">Figura 2: Conexão SPI com as linhas MOSI, MISO, SCLK e seleção (CS)</p>
+                    </div>
+                    <p>Protocolo serial rápido com quatro sinais principais: <strong>MOSI</strong> (Master Out, Slave In), <strong>MISO</strong> (Master In, Slave Out), <strong>SCLK</strong> (clock) e <strong>CS/CE</strong> (seleção do dispositivo).</p>
+                    <p><strong>Uso:</strong> Comunicação rápida entre controlador e periféricos.</p>
+                    <em>Raspberry Pi também oferece SPI via GPIOs.</em>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: UART ===== -->
+        <section id="uart" class="servicos" style="background: #f5f5f5;">
+            <div class="container">
+                <div class="protocolo-card">
+                    <h3><i class="fas fa-comment" style="color:#d62828;"></i> UART (Universal Asynchronous Receiver/Transmitter)</h3>
+                    <div class="img-container">
+                        <img src="../img/diagrama-uart.png" alt="Diagrama de comunicação UART (TX/RX)" class="img-diagrama">
+                        <p class="img-caption">Figura 3: Comunicação serial UART cruzando linhas TX e RX</p>
+                    </div>
+                    <p>Comunicação serial assíncrona com duas linhas: <strong>TX</strong> (transmissão) e <strong>RX</strong> (recepção). Muito usada para conectar módulos, sensores, GPS, equipamentos industriais e microcontroladores.</p>
+                    <em>Raspberry Pi e outros microcontroladores oferecem UART.</em>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: 4-20 mA ===== -->
+        <section id="ma" class="servicos">
+            <div class="container">
+                <div class="protocolo-card">
+                    <h3><i class="fas fa-bolt" style="color:#d62828;"></i> Sinal 4–20 mA</h3>
+                    <div class="img-container">
+                        <img src="../img/transmissor-4-20ma.png" alt="Transmissor industrial 4-20mA ligado a um CLP" class="img-diagrama">
+                        <p class="img-caption">Figura 4: Exemplo de laço de corrente 4-20 mA em ambiente industrial</p>
+                    </div>
+                    <p>Padrão industrial onde uma corrente representa a variável medida: <strong>4 mA → valor mínimo</strong>, <strong>20 mA → valor máximo</strong>. Muito utilizado em ambientes industriais para transmissão de sinais entre instrumentos e sistemas de controle.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: IO-Link ===== -->
+        <section id="iolink" class="servicos" style="background: #f5f5f5;">
+            <div class="container">
+                <div class="protocolo-card">
+                    <h3><i class="fas fa-link" style="color:#d62828;"></i> IO-Link</h3>
+                    <div class="img-container">
+                        <img src="../img/diagrama-iolink.png" alt="Arquitetura IO-Link com Sensor, Mestre e CLP" class="img-diagrama">
+                        <p class="img-caption">Figura 5: Topologia IO-Link conectando sensores ao controlador principal</p>
+                    </div>
+                    <p>Tecnologia de comunicação para conectar sensores e atuadores a sistemas de controle na Indústria 4.0. Permite transmitir valores medidos, diagnósticos, parâmetros, identificação do dispositivo e informações de funcionamento.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: COMPARAÇÃO ===== -->
+        <section id="comparacao" class="servicos">
+            <div class="container">
+                <h2>COMPARAÇÃO DAS TECNOLOGIAS</h2>
+                <p class="subtitulo">Visão geral dos protocolos de comunicação</p>
+                <div class="specs-grid">
+                    <div class="spec-item"><strong>Tecnologia</strong> → <strong>Tipo</strong> → <strong>Aplicação típica</strong></div>
+                    <div class="spec-item"><strong>Analógico</strong> → Sinal contínuo → Temperatura, corrente</div>
+                    <div class="spec-item"><strong>Digital</strong> → Dados digitais → Presença, sensores digitais</div>
+                    <div class="spec-item"><strong>I²C</strong> → Comunicação serial → Sensores digitais</div>
+                    <div class="spec-item"><strong>SPI</strong> → Comunicação serial rápida → Sensores e periféricos</div>
+                    <div class="spec-item"><strong>UART</strong> → Comunicação serial → Módulos e equipamentos</div>
+                    <div class="spec-item"><strong>1‑Wire</strong> → Comunicação serial → Temperatura (DS18B20)</div>
+                    <div class="spec-item"><strong>4‑20 mA</strong> → Sinal industrial → Instrumentação</div>
+                    <div class="spec-item"><strong>IO‑Link</strong> → Comunicação industrial → Sensores inteligentes</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-coluna">
+                    <h3>Sobre nós</h3>
+                    <ul>
+                        <li><a href="../sobre_nos.html">Descubra quem somos</a></li>
+                        <li><a href="../missao.html">Nossa missão</a></li>
+                        <li><a href="../equipe.html">Nossa equipe</a></li>
+                    </ul>
+                </div>
+                <div class="footer-coluna">
+                    <h3>Navegação</h3>
+                    <ul>
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="../algoritmos/algoritmos.html">Algoritmos & Lógica</a></li>
+                        <li><a href="../componentes.html">Componentes</a></li>
+                        <li><a href="../contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-coluna">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><a href="https://wa.me/5548999545106" target="_blank">WhatsApp</a></li>
+                        <li><a href="https://github.com/mariobiluk" target="_blank">GitHub</a></li>
+                        <li><a href="mailto:contato@agenciablook.com">E-mail</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Agência b-Look. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

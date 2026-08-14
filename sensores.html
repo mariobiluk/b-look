@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agência b-Look - Sensores: aprenda sobre sensoriamento, tipos de sensores, protocolos de comunicação e plataformas IoT como Arduino, ESP32 e Raspberry Pi.">
     <link rel="shortcut icon" href="../img/icone.png" type="image/png">
-    <link rel="stylesheet" href="./eletroeletronica.css">
-    <script src="leideohm.js" defer></script>
-    <title>Calculadora Lei de Ohm</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Agência b-Look - Sensores</title>
     <style>
         /* ===== Dropdown ===== */
         nav ul li.dropdown {
@@ -207,59 +208,125 @@
                 </ul>
             </div>
         </nav>
+
+        <!-- Banner -->
+        <div class="banner">
+            <div class="banner-content">
+                <h1>SENSORES</h1>
+                <p>Fundamentos · Tipos · Comunicação · Plataformas</p>
+                <a href="#conceito" class="btn">Explorar</a>
+            </div>
+        </div>
     </header>
-           <main>
-            <h1>Calculadora de Circuito com 3 Resistores</h1>
-            <p>Preencha os valores do circuito para calcular correntes, tensões e potências</p>
-            <section class="formulario-circuito">
-                <h2>Dados do Circuito</h2>
-                <form id="formCircuito">
-                    <div class="campo-entrada">
-                        <label for="voltagem">Voltagem da Fonte (V):</label>
-                        <input type="number" id="voltagem" step="0.1" placeholder="Ex: 12">
-                    </div>
 
-                    <div class="campo-entrada">
-                        <label for="resistenciaA">Resistor A (Ω):</label>
-                        <input type="number" id="resistenciaA" step="0.1" placeholder="Ex: 100">
+    <main>
+        <!-- ===== SEÇÃO: CONCEITO ===== -->
+        <section id="conceito" class="servicos">
+            <div class="container">
+                <h2>O QUE É UM SENSOR?</h2>
+                <div class="grid-texto">
+                    <p>
+                        Os <strong>sensores</strong> são os olhos e ouvidos dos sistemas automatizados. 
+                        Dispositivos capazes de detectar grandezas físicas, químicas ou ambientais e convertê-las 
+                        em sinais elétricos interpretáveis por microcontroladores, computadores e sistemas de 
+                        controle industrial.
+                    </p>
+                    <p>
+                        Um <strong>sensor</strong> é um dispositivo que detecta uma grandeza física e produz uma 
+                        saída mensurável relacionada a ela. A grandeza detectada é chamada de 
+                        <strong>variável de processo</strong>. Sensores são a base de qualquer sistema 
+                        automatizado: sem eles, não há percepção do ambiente e, consequentemente, nenhuma ação 
+                        inteligente é possível.
+                    </p>
+                    <div class="destaque">
+                        <p><i class="fas fa-eye"></i> Exemplos cotidianos: sensores de temperatura em climatizadores, sensores de movimento em iluminação automática, sensores de presença em portas automáticas e sensores de gás em detectores de fumaça.</p>
                     </div>
-
-                    <div class="campo-entrada">
-                        <label for="resistenciaB">Resistor B (Ω):</label>
-                        <input type="number" id="resistenciaB" step="0.1" placeholder="Ex: 200">
-                    </div>
-
-                    <div class="campo-entrada">
-                        <label for="resistenciaC">Resistor C (Ω):</label>
-                        <input type="number" id="resistenciaC" step="0.1" placeholder="Ex: 300">
-                    </div>
-
-                    <div class="acoes-formulario">
-                        <button type="button" onclick="iniciarCalculo()">Calcular Circuito</button>
-                        <button type="reset">Limpar Valores</button>
-                    </div>
-                </form>
-            </section>
-
-            <section class="resultado-calculo">
-                <h2>Resultados do Cálculo</h2>
-                <div id="resultado">
-                    <!-- Resultados serão inseridos aqui pelo JavaScript -->
-                    <p>Preencha os valores acima e clique em "Calcular Circuito"</p>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="info-circuito">
-                <h2>Informações sobre o Circuito</h2>
-                <div class="configuracao">
-                    <h3>Configuração do Circuito:</h3>
-                    <p>• Resistor A está em série com a combinação paralela de B e C</p>
-                    <p>• Fórmula do paralelo: R<sub>paralelo</sub> = (R<sub>B</sub> × R<sub>C</sub>) ÷ (R<sub>B</sub> + R<sub>C</sub>)</p>
-                    <p>• Resistência total: R<sub>total</sub> = R<sub>A</sub> + R<sub>paralelo</sub></p>
+        <!-- ===== SEÇÃO: PRINCIPAIS APLICAÇÕES ===== -->
+        <section id="aplicacoes" class="servicos" style="background: #f5f5f5;">
+            <div class="container">
+                <h2>PRINCIPAIS APLICAÇÕES</h2>
+                <p class="subtitulo">Sensores mais utilizados em projetos</p>
+                <div class="aplicacoes-grid">
+                    <div class="aplicacao-card">
+                        <h4><i class="fas fa-thermometer-half" style="color:#d62828;"></i> Temperatura</h4>
+                        <p>LM35, DHT11, DHT22, DS18B20 — automação climática, máquinas e IoT.</p>
+                    </div>
+                    <div class="aplicacao-card">
+                        <h4><i class="fas fa-ruler-combined" style="color:#d62828;"></i> Distância</h4>
+                        <p>HC-SR04, sensores laser — robótica, detecção de obstáculos e nível de tanques.</p>
+                    </div>
+                    <div class="aplicacao-card">
+                        <h4><i class="fas fa-running" style="color:#d62828;"></i> Movimento</h4>
+                        <p>PIR, acelerômetros — iluminação automática, segurança e controle de acesso.</p>
+                    </div>
+                    <div class="aplicacao-card">
+                        <h4><i class="fas fa-wind" style="color:#d62828;"></i> Gás</h4>
+                        <p>MQ-2, MQ-135 — detecção de gases inflamáveis e qualidade do ar.</p>
+                    </div>
                 </div>
-            </section>
-        </main>
-    
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: SETORES DE APLICAÇÃO ===== -->
+        <section id="setores" class="servicos">
+            <div class="container">
+                <h2>SETORES DE APLICAÇÃO</h2>
+                <div class="setores-grid">
+                    <div class="setor-card">
+                        <h4><i class="fas fa-industry" style="color:#d62828;"></i> Indústria</h4>
+                        <p>Monitoramento de máquinas, controle de produção e manutenção preditiva.</p>
+                    </div>
+                    <div class="setor-card">
+                        <h4><i class="fas fa-tractor" style="color:#d62828;"></i> Agricultura</h4>
+                        <p>Umidade do solo, temperatura, irrigação automatizada e rastreamento.</p>
+                    </div>
+                    <div class="setor-card">
+                        <h4><i class="fas fa-home" style="color:#d62828;"></i> Automação Residencial</h4>
+                        <p>Iluminação automática, climatização inteligente e segurança doméstica.</p>
+                    </div>
+                    <div class="setor-card">
+                        <h4><i class="fas fa-cloud" style="color:#d62828;"></i> IoT / IIoT</h4>
+                        <p>Monitoramento remoto, alertas em tempo real e análise de dados na nuvem.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO: EXPLORE O CONTEÚDO ===== -->
+        <section id="explorar" class="servicos" style="background: #f5f5f5;">
+            <div class="container">
+                <h2>EXPLORE O CONTEÚDO</h2>
+                <p class="subtitulo">Aprofunde-se nos temas de sensoriamento</p>
+                <div class="classificacao-grid">
+                    <div class="class-card">
+                        <h4><i class="fas fa-book-open" style="color:#d62828;"></i> Introdução aos Sensores</h4>
+                        <p>Fundamentos do sensoriamento: o que é um sensor, variáveis de processo, características técnicas e classificação geral.</p>
+                        <a href="sensores/introducao.html" class="btn-ver">Ver conteúdo →</a>
+                    </div>
+                    <div class="class-card">
+                        <h4><i class="fas fa-list" style="color:#d62828;"></i> Tipos de Sensores</h4>
+                        <p>Catálogo dos principais sensores: temperatura, umidade, distância, luz, movimento, gás e sensores industriais.</p>
+                        <a href="sensores/tipos.html" class="btn-ver">Ver conteúdo →</a>
+                    </div>
+                    <div class="class-card">
+                        <h4><i class="fas fa-comments" style="color:#d62828;"></i> Comunicação com Sensores</h4>
+                        <p>Protocolos I²C, SPI, UART, sinal 4–20 mA e IO-Link para integração de sensores a microcontroladores e CLPs.</p>
+                        <a href="sensores/comunicacao.html" class="btn-ver">Ver conteúdo →</a>
+                    </div>
+                    <div class="class-card">
+                        <h4><i class="fas fa-microchip" style="color:#d62828;"></i> Plataformas &amp; IoT</h4>
+                        <p>Arduino, ESP32, Raspberry Pi, CLPs e integração com Internet das Coisas (IoT/IIoT) e Indústria 4.0.</p>
+                        <a href="sensores/plataformas.html" class="btn-ver">Ver conteúdo →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer class="site-footer">
         <div class="container">
             <div class="footer-content">
@@ -275,7 +342,7 @@
                     <h3>Navegação</h3>
                     <ul>
                         <li><a href="../index.html">Início</a></li>
-                        <li><a href="../algoritmos.html">Algoritmos & Lógica</a></li>
+                        <li><a href="../algoritmos/algoritmos.html">Algoritmos & Lógica</a></li>
                         <li><a href="../componentes.html">Componentes</a></li>
                         <li><a href="../contato.html">Contato</a></li>
                     </ul>
@@ -283,10 +350,8 @@
                 <div class="footer-coluna">
                     <h3>Contato</h3>
                     <ul>
-                        <li><a href="https://wa.me/5548999545106" target="_blank">
-                                WhatsApp</a></li>
-                        <li><a href="https://github.com/mariobiluk" target="_blank">
-                                GitHub</a></li>
+                        <li><a href="https://wa.me/5548999545106" target="_blank">WhatsApp</a></li>
+                        <li><a href="https://github.com/mariobiluk" target="_blank">GitHub</a></li>
                         <li><a href="mailto:contato@agenciablook.com">E-mail</a></li>
                     </ul>
                 </div>
@@ -297,5 +362,4 @@
         </div>
     </footer>
 </body>
-
 </html>
